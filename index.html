@@ -1336,6 +1336,23 @@ button { color: inherit; font: inherit; }
       font-size: 17px;
     }
   }
+  #about-view #story .section-top,
+  #about-view #story-zh .section-top,
+  #about-view #story-ja .section-top {
+    margin-bottom: clamp(30px, 4vw, 44px);
+    align-items: start;
+  }
+  #about-view #story .section-top h2,
+  #about-view #story-zh .section-top h2,
+  #about-view #story-ja .section-top h2 {
+    line-height: 1.04;
+    text-wrap: balance;
+  }
+  #about-view #story .copy > p:first-child,
+  #about-view #story-zh .copy > p:first-child,
+  #about-view #story-ja .copy > p:first-child {
+    margin-top: 0;
+  }
   </style>
 </head>
 <body style="--page-bg:var(--paper)">
@@ -1990,6 +2007,19 @@ button { color: inherit; font: inherit; }
       if (button.textContent.trim() === 'Why this workshop') {
         button.textContent = 'Explore the two-day journey';
       }
+    });
+
+    [
+      ['#story', 'At first, we were simply too curious about one question.'],
+      ['#story-zh', '起初，我們只是對一個問題太過好奇。'],
+      ['#story-ja', '最初、私たちはただ一つの問いが気になって仕方ありませんでした。']
+    ].forEach(([sectionSelector, title]) => {
+      const section = document.querySelector(sectionSelector);
+      if (!section) return;
+      const heading = section.querySelector('.section-top h2');
+      if (heading) heading.textContent = title;
+      const repeatedSubtitle = section.querySelector('.copy .lead');
+      if (repeatedSubtitle) repeatedSubtitle.remove();
     });
 
     setLanguage('en', false);
