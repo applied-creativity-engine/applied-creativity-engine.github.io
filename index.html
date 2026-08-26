@@ -2021,6 +2021,19 @@ button { color: inherit; font: inherit; }
     transform:rotate(-1deg)!important;
     pointer-events:none!important;
   }
+  @media(max-width:760px){
+    #home-view .locale-page[data-locale="en"] .home-marker{
+      white-space:normal!important;
+      padding:0 .08em!important;
+      background:linear-gradient(transparent 8%,var(--lime) 8% 94%,transparent 94%)!important;
+      -webkit-box-decoration-break:clone!important;
+      box-decoration-break:clone!important;
+    }
+    #home-view .locale-page[data-locale="en"] .home-marker::before{
+      content:none!important;
+      display:none!important;
+    }
+  }
   #home-view .home-pathways {
     border-bottom:2px solid var(--ink)!important;
   }
