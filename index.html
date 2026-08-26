@@ -1353,13 +1353,809 @@ button { color: inherit; font: inherit; }
   #about-view #story-ja .copy > p:first-child {
     margin-top: 0;
   }
+  #home-view {
+    background: var(--paper);
+    color: var(--ink);
+    overflow: hidden;
+  }
+  #home-view .home-page {
+    overflow: hidden;
+  }
+  #home-view .home-shell {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+  }
+  #home-view .home-hero {
+    position: relative;
+    min-height: min(960px, 100vh);
+    padding: clamp(138px, 16vw, 205px) 0 105px;
+    background: #fff4bc;
+    isolation: isolate;
+  }
+  #home-view .home-hero .home-shell { position: relative; }
+  #home-view .home-stamp {
+    position: absolute;
+    top: -45px;
+    right: 0;
+    display: grid;
+    place-content: center;
+    width: 148px;
+    height: 148px;
+    padding: 18px;
+    border: 4px solid var(--ink);
+    border-radius: 50%;
+    background: var(--pink);
+    box-shadow: 6px 7px 0 var(--ink);
+    font-size: 15px;
+    font-weight: 950;
+    line-height: 1.02;
+    text-align: center;
+    text-transform: uppercase;
+    transform: rotate(8deg);
+  }
+  #home-view .home-wave {
+    position: absolute;
+    z-index: -1;
+    border: clamp(44px, 7vw, 94px) solid currentColor;
+    border-radius: 50%;
+    opacity: .82;
+  }
+  #home-view .home-wave.one { width: 760px; height: 270px; top: -150px; right: -180px; color: var(--pink); transform: rotate(-10deg); }
+  #home-view .home-wave.two { width: 670px; height: 250px; left: -280px; top: 410px; color: var(--sky); transform: rotate(12deg); }
+  #home-view .home-wave.three { width: 560px; height: 205px; right: -210px; bottom: -125px; color: var(--lime); transform: rotate(-8deg); }
+  #home-view .home-eyebrow {
+    display: inline-block;
+    margin: 0 0 25px;
+    padding: 8px 17px;
+    border: 3px solid var(--ink);
+    background: var(--sun);
+    font-size: 14px;
+    font-weight: 950;
+    letter-spacing: .08em;
+    transform: rotate(-1.5deg);
+  }
+  #home-view .home-hero h1 {
+    max-width: 1050px;
+    margin: 0;
+    font-size: clamp(64px, 10vw, 148px);
+    font-weight: 900;
+    line-height: .84;
+    letter-spacing: -.065em;
+  }
+  #home-view .home-hero h1 span { display: block; }
+  #home-view .home-outline {
+    color: var(--paper);
+    -webkit-text-stroke: 3px var(--ink);
+    paint-order: stroke fill;
+  }
+  #home-view .home-subtitle {
+    max-width: 830px;
+    margin: 48px 0 58px auto;
+    font-size: clamp(20px, 2.4vw, 31px);
+    font-weight: 700;
+    line-height: 1.45;
+  }
+  #home-view .home-questions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+  #home-view .home-question {
+    min-height: 270px;
+    padding: 25px;
+    border: 3px solid var(--ink);
+    background: rgba(255,253,246,.95);
+    box-shadow: 7px 8px 0 var(--ink);
+  }
+  #home-view .home-question:nth-child(1) { transform: rotate(-1deg); }
+  #home-view .home-question:nth-child(2) { background: #dceaff; transform: translateY(13px) rotate(.8deg); }
+  #home-view .home-question:nth-child(3) { background: #f7dcff; transform: rotate(-.7deg); }
+  #home-view .home-question small { font-weight: 950; }
+  #home-view .home-question h2 { margin: 35px 0 18px; font-size: clamp(29px, 3vw, 45px); line-height: 1; }
+  #home-view .home-question p { margin: 0; font-size: 17px; font-weight: 700; line-height: 1.45; }
+  #home-view .home-scroll-link,
+  #home-view .home-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 48px;
+    padding: 14px 22px;
+    border: 3px solid var(--ink);
+    border-radius: 999px;
+    background: var(--ink);
+    color: #fff;
+    font-weight: 900;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  #home-view .home-section { padding: clamp(90px, 11vw, 150px) 0; }
+  #home-view .home-capacity { text-align: center; background: var(--paper); }
+  #home-view .home-capacity h2 { max-width: 930px; margin: 28px auto; font-size: clamp(48px, 7vw, 93px); line-height: .98; }
+  #home-view .home-capacity .home-highlight { margin: 0; font-size: clamp(31px, 4.2vw, 60px); font-weight: 900; }
+  #home-view .home-marker { padding: 0 .08em; background: linear-gradient(transparent 56%, rgba(255,91,167,.68) 56% 88%, transparent 88%); -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+  #home-view .home-bridge { margin: 45px 0 0; font-size: 20px; font-weight: 800; }
+  #home-view .home-practice { background: #dceaff; }
+  #home-view .home-heading { display: grid; grid-template-columns: 190px 1fr; gap: 35px; align-items: start; margin-bottom: 65px; }
+  #home-view .home-heading h2 { margin: 0; font-size: clamp(55px, 8vw, 108px); line-height: .9; }
+  #home-view .home-method-grid { display: grid; grid-template-columns: minmax(300px,.9fr) minmax(0,1.1fr); gap: clamp(40px,7vw,95px); align-items: center; }
+  #home-view .home-cycle { position: relative; aspect-ratio: 1; }
+  #home-view .home-cycle img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+  #home-view .home-cycle img:first-child { animation: home-cycle-spin 15s linear infinite; }
+  @keyframes home-cycle-spin { to { transform: rotate(-360deg); } }
+  @media (prefers-reduced-motion: reduce) { #home-view .home-cycle img:first-child { animation: none; } }
+  #home-view .home-cycle-line { display: flex; flex-wrap: wrap; gap: 8px 12px; font-size: clamp(17px,2vw,24px); }
+  #home-view .home-method-copy h3 { margin: 28px 0; font-size: clamp(35px,4.8vw,61px); line-height: 1.02; }
+  #home-view .home-stage-list p { margin: 0; padding: 17px 0; border-top: 2px solid var(--ink); font-size: 18px; line-height: 1.52; }
+  #home-view .home-stage-list b { display: inline-block; min-width: 112px; }
+  #home-view .home-pathways { background: #fff4bc; }
+  #home-view .home-pathways-intro { max-width: 850px; margin-bottom: 62px; }
+  #home-view .home-pathways-intro h2 { margin: 22px 0 12px; font-size: clamp(55px,8vw,104px); line-height: .92; }
+  #home-view .home-pathways-intro > p:last-child { font-size: 23px; font-weight: 800; }
+  #home-view .home-pathway-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 28px; }
+  #home-view .home-pathway {
+    padding: clamp(25px,4vw,45px);
+    border: 3px solid var(--ink);
+    box-shadow: 9px 10px 0 var(--ink);
+    background: #dceaff;
+  }
+  #home-view .home-pathway.communication { background: #ffe0ef; transform: translateY(20px) rotate(.5deg); }
+  #home-view .home-pathway.leadership { transform: rotate(-.5deg); }
+  #home-view .home-pathway-top { display: flex; justify-content: space-between; gap: 15px; font-size: 12px; font-weight: 950; letter-spacing: .05em; }
+  #home-view .home-pathway img { display: block; width: min(100%, 410px); margin: 15px auto 8px; }
+  #home-view .home-pathway h3 { margin: 18px 0 24px; font-size: clamp(45px,5.3vw,74px); line-height: .92; }
+  #home-view .home-pathway-copy { min-height: 118px; font-size: 18px; font-weight: 700; line-height: 1.52; }
+  #home-view .home-pathway blockquote { margin: 28px 0 0; padding: 22px; border: 3px solid var(--ink); background: rgba(255,253,246,.8); font-size: 23px; font-weight: 900; line-height: 1.2; }
+  #home-view .home-closing { position: relative; padding: clamp(120px,15vw,210px) 0; background: #c9f45b; isolation: isolate; overflow: hidden; }
+  #home-view .home-closing h2 { max-width: 1050px; margin: 24px 0 0; font-size: clamp(64px,10vw,140px); line-height: .84; }
+  @media (max-width: 760px) {
+    #home-view .home-shell { width: min(100% - 34px, 680px); }
+    #home-view .home-hero { min-height: 0; padding: 110px 0 78px; }
+    #home-view .home-hero h1 { font-size: clamp(57px,17vw,86px); }
+    #home-view .home-stamp { position: relative; top: auto; right: auto; width: 110px; height: 110px; margin: 0 0 30px auto; padding: 12px; font-size: 12px; }
+    #home-view .home-outline { -webkit-text-stroke-width: 2px; }
+    #home-view .home-subtitle { margin: 35px 0 42px; font-size: 19px; }
+    #home-view .home-questions, #home-view .home-method-grid, #home-view .home-pathway-grid { grid-template-columns: 1fr; }
+    #home-view .home-question { min-height: 0; }
+    #home-view .home-question:nth-child(2) { transform: rotate(.7deg); }
+    #home-view .home-heading { grid-template-columns: 1fr; gap: 17px; margin-bottom: 42px; }
+    #home-view .home-method-grid { gap: 35px; }
+    #home-view .home-cycle { width: min(100%, 440px); margin: auto; }
+    #home-view .home-stage-list b { min-width: 0; display: block; margin-bottom: 5px; }
+    #home-view .home-pathway.communication { transform: rotate(.4deg); }
+    #home-view .home-pathway-copy { min-height: 0; }
+    #home-view .home-pathway-top { flex-direction: column; }
+  }
+  /* Home uses the same paper, typography, spacing, and handmade composition as About. */
+  #home-view {
+    --ink:#151515; --cream:#fffdf6; --pink:#ff8bd8; --blue:#86ccff; --lime:#c9f45b; --yellow:#ffd84d; --violet:#cbb8ff; --orange:#ff9f7f;
+    background: var(--cream);
+    line-height: 1.65;
+  }
+  #home-view .home-page { position: relative; z-index: 1; }
+  #home-view .home-brushes { position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; opacity: .38; }
+  #home-view .home-brushes .marker-svg { position: absolute; inset: 0; width: 100%; height: auto; min-height: 6500px; will-change: transform; transform: translate3d(0,var(--parallax-y,0px),0); }
+  #home-view .home-brushes .marker-stroke { fill: none; stroke-width: 140; stroke-linecap: round; stroke-linejoin: round; }
+  #home-view .home-brushes .marker-mid .marker-stroke { stroke-width: 110; opacity: .44; }
+  #home-view .home-hero,
+  #home-view .home-capacity,
+  #home-view .home-practice,
+  #home-view .home-pathways,
+  #home-view .home-closing { background: transparent; }
+  #home-view .home-wave { display: none; }
+  #home-view .home-hero { min-height: 650px; padding: 105px 24px 110px; display: grid; place-items: center; }
+  #home-view .home-hero .home-shell { width: min(1040px,100%); text-align: center; }
+  #home-view .home-stamp { position: relative; top: auto; right: auto; width: 132px; height: 132px; margin: 0 auto 28px; box-shadow: none; transform: rotate(-2deg); }
+  #home-view .home-eyebrow { border: 0; border-radius: 0; padding: 0; background: transparent; font: 500 13px "DM Mono",monospace; letter-spacing: 0; transform: none; }
+  #home-view .home-eyebrow::after { content:""; display:block; width:46px; height:10px; margin-top:9px; background:var(--pink); border:2px solid var(--ink); transform:rotate(-3deg); }
+  #home-view .home-hero > .home-shell > .home-eyebrow::after,
+  #home-view .home-pathway .home-eyebrow::after { margin-left: auto; margin-right: auto; }
+  #home-view .home-hero h1 { max-width: 1040px; margin: 0 auto; font-size: clamp(58px,10vw,138px); line-height: .98; letter-spacing: -.012em; }
+  #home-view .home-outline { color:#fff; -webkit-text-stroke:0; text-shadow:3px 3px 0 var(--ink),-1px -1px 0 var(--ink),1px -1px 0 var(--ink),-1px 1px 0 var(--ink); }
+  #home-view .home-subtitle { max-width: 675px; margin: 34px auto 55px; font-size: clamp(19px,2.1vw,25px); font-weight: 500; }
+  #home-view .home-question { min-height: 245px; padding: 22px; border: 2px solid var(--ink); box-shadow: none; }
+  #home-view .home-question h2 { margin-top: 30px; font-size: clamp(29px,3.2vw,44px); letter-spacing: -.035em; }
+  #home-view .home-scroll-link,
+  #home-view .home-link { border: 2px solid var(--ink); font: 700 13px var(--ace-english-font),sans-serif; }
+  #home-view .home-section,
+  #home-view .home-closing { width: min(1080px,calc(100% - 40px)); margin: 0 auto; padding: 110px 0; border-top: 2px solid var(--ink); }
+  #home-view .home-section .home-shell,
+  #home-view .home-closing .home-shell { width: 100%; }
+  #home-view .home-capacity { text-align: left; }
+  #home-view .home-capacity .home-shell { display: grid; grid-template-columns: 150px 1fr; column-gap: 32px; }
+  #home-view .home-capacity .home-eyebrow { grid-column: 1; grid-row: 1 / span 3; }
+  #home-view .home-capacity h2 { grid-column: 2; max-width: 850px; margin: 0 0 40px; font-size: clamp(40px,6vw,77px); line-height: .98; letter-spacing: -.035em; }
+  #home-view .home-capacity .home-highlight,
+  #home-view .home-capacity .home-bridge { grid-column: 2; max-width: 785px; }
+  #home-view .home-capacity .home-highlight { font-size: clamp(25px,3.5vw,43px); line-height: 1.16; }
+  #home-view .home-capacity .home-bridge { margin-top: 25px; font-size:18px; }
+  #home-view .home-heading { grid-template-columns:150px 1fr; gap:32px; margin-bottom:56px; }
+  #home-view .home-heading h2,
+  #home-view .home-pathways-intro h2 { max-width:850px; font-size:clamp(40px,6vw,77px); line-height:.98; letter-spacing:-.035em; }
+  #home-view .home-method-grid { grid-template-columns:minmax(300px,.9fr) minmax(0,1.1fr); gap:clamp(40px,6vw,80px); }
+  #home-view .home-cycle { background:var(--ink); border-radius:50%; overflow:hidden; box-shadow:16px 16px 0 var(--pink); }
+  #home-view .home-method-copy h3 { font-size:clamp(30px,4vw,52px); line-height:1.04; letter-spacing:-.035em; }
+  #home-view .home-stage-list p { font-size:18px; }
+  #home-view .home-pathways-intro { display:grid; grid-template-columns:150px 1fr; column-gap:32px; max-width:none; margin-bottom:56px; }
+  #home-view .home-pathways-intro .home-eyebrow { grid-column:1; grid-row:1 / span 2; }
+  #home-view .home-pathways-intro h2,
+  #home-view .home-pathways-intro > p:last-child { grid-column:2; }
+  #home-view .home-pathways-intro h2 { margin:0 0 22px; }
+  #home-view .home-pathways-intro > p:last-child { margin:0; font-size:18px; }
+  #home-view .home-pathway { padding:30px; border:2px solid var(--ink); background:#fff; box-shadow:0 10px 18px rgba(17,24,39,.2); }
+  #home-view .home-pathway.leadership { transform:translateY(-8px) rotate(-2deg); }
+  #home-view .home-pathway.communication { background:#fff; transform:translateY(16px) rotate(2deg); }
+  #home-view .home-pathway h3 { font-size:clamp(40px,5vw,66px); letter-spacing:-.035em; }
+  #home-view .home-pathway blockquote { border:2px solid var(--ink); box-shadow:7px 7px 0 var(--ink); background:var(--blue); }
+  #home-view .home-pathway.communication blockquote { background:var(--pink); }
+  #home-view .home-closing { min-height:650px; display:grid; place-items:center; text-align:center; }
+  #home-view .home-closing h2 { max-width:1040px; margin:28px auto 0; font-size:clamp(58px,10vw,125px); line-height:.98; letter-spacing:-.012em; }
+  #home-view .home-closing .home-link { margin-top:42px; }
+  @media(max-width:760px){
+    #home-view .home-brushes .marker-svg{width:200%;left:-50%;max-width:none}
+    #home-view .home-hero{padding:82px 17px 76px}
+    #home-view .home-hero h1{font-size:clamp(52px,16vw,78px)}
+    #home-view .home-section,#home-view .home-closing{width:min(100% - 34px,680px);padding:76px 0}
+    #home-view .home-capacity .home-shell,#home-view .home-heading,#home-view .home-pathways-intro{grid-template-columns:1fr;gap:17px}
+    #home-view .home-capacity .home-eyebrow,#home-view .home-capacity h2,#home-view .home-capacity .home-highlight,#home-view .home-capacity .home-bridge,#home-view .home-pathways-intro .home-eyebrow,#home-view .home-pathways-intro h2,#home-view .home-pathways-intro>p:last-child{grid-column:1;grid-row:auto}
+    #home-view .home-capacity h2{margin-bottom:18px}
+    #home-view .home-method-grid{grid-template-columns:1fr}
+    #home-view .home-cycle{box-shadow:10px 10px 0 var(--pink)}
+    #home-view .home-pathway.leadership{transform:rotate(-1deg)}
+    #home-view .home-pathway.communication{transform:rotate(1deg)}
+  }
+  /* Restore the original 20260826 Home composition; keep only About's clean white-outline lettering. */
+  #home-view { --home-pad:clamp(24px,5.5vw,84px); background:#fffdf7; font-size:18px; line-height:1.55; }
+  #home-view .home-brushes { display:none!important; }
+  #home-view .home-page { overflow:hidden; }
+  #home-view .home-shell { width:auto; max-width:none; }
+  #home-view .home-hero,
+  #home-view .home-closing { position:relative; isolation:isolate; overflow:hidden; width:100%; margin:0; border:0; }
+  #home-view .home-hero { min-height:980px; padding:78px var(--home-pad) 70px; display:block; }
+  #home-view .home-hero .home-shell { max-width:1380px; margin:0 auto; text-align:center; }
+  #home-view .home-wave { position:absolute; display:block; z-index:-1; pointer-events:none; width:130%; left:-15%; border:0; border-radius:50%; opacity:1; transform:none; }
+  #home-view .home-wave.one { width:130%; height:36%; top:7%; right:auto; bottom:auto; left:-15%; color:transparent; background:#f7dbea; transform:rotate(6deg); }
+  #home-view .home-wave.two { width:130%; height:36%; top:42%; right:auto; bottom:auto; left:-15%; color:transparent; background:#dfeef6; transform:rotate(-8deg); }
+  #home-view .home-wave.three { width:130%; height:30%; top:72%; right:auto; bottom:auto; left:-15%; color:transparent; background:#dff3ec; transform:rotate(5deg); }
+  #home-view .home-hero::before,#home-view .home-hero::after,#home-view .home-closing::before,#home-view .home-closing::after { content:""; position:absolute; z-index:-1; left:-20%; width:140%; height:20%; background:#fffdf7; border-radius:50%; }
+  #home-view .home-hero::before,#home-view .home-closing::before { top:31%; transform:rotate(-5deg); }
+  #home-view .home-hero::after,#home-view .home-closing::after { top:66%; transform:rotate(7deg); }
+  #home-view .home-stamp { display:inline-flex; position:relative; top:auto; right:auto; flex-direction:column; align-items:flex-end; width:auto; height:auto; margin:0 0 20px; padding:6px 10px 8px; border:3px solid var(--ink); border-radius:0; background:transparent; box-shadow:none; clip-path:polygon(0 0,100% 0,100% 100%,28% 100%,0 70%); font-size:23px; line-height:.79; transform:none; }
+  #home-view .home-hero .home-eyebrow { display:none; }
+  #home-view .home-eyebrow { display:block; margin:0 0 15px; padding:0; border:0; background:transparent; font:900 14px/1 var(--ace-english-font),sans-serif; letter-spacing:.06em; transform:none; }
+  #home-view .home-eyebrow::after { content:none; display:none; }
+  #home-view .home-hero h1 { max-width:1250px; margin:0 auto; font-size:clamp(64px,8.6vw,138px); line-height:.88; letter-spacing:-.055em; }
+  #home-view .home-outline { color:#fff; -webkit-text-stroke:0!important; paint-order:normal; text-shadow:3px 3px 0 var(--ink),-1px -1px 0 var(--ink),1px -1px 0 var(--ink),-1px 1px 0 var(--ink); }
+  #home-view .home-subtitle { max-width:830px; margin:44px auto 0; font-size:clamp(20px,2vw,27px); line-height:1.5; font-weight:550; }
+  #home-view .home-questions { margin-top:70px; display:grid; grid-template-columns:repeat(3,1fr); gap:0; text-align:left; border-top:2px solid var(--ink); border-bottom:2px solid var(--ink); }
+  #home-view .home-question,#home-view .home-question:nth-child(n) { min-height:235px; padding:23px 28px 28px; border:0; background:transparent; box-shadow:none; transform:none; }
+  #home-view .home-question + .home-question { border-left:2px solid var(--ink); }
+  #home-view .home-question small { font-size:13px; }
+  #home-view .home-question h2 { margin:28px 0 10px; font-size:clamp(25px,2.25vw,38px); line-height:1.05; letter-spacing:-.035em; }
+  #home-view .home-question p { max-width:320px; font-size:18px; line-height:1.35; }
+  #home-view .home-scroll-link { display:inline-block; margin-top:40px; padding:0; border:0; border-bottom:4px solid var(--lime); border-radius:0; background:transparent; color:var(--ink); font-weight:900; }
+  #home-view .home-section { width:100%; margin:0; border:0; }
+  #home-view .home-section .home-shell { width:auto; }
+  #home-view .home-capacity { padding:120px var(--home-pad) 140px; background:var(--ink); color:#fffdf7; text-align:center; }
+  #home-view .home-capacity .home-shell { display:block; max-width:none; }
+  #home-view .home-capacity .home-eyebrow { display:block; margin-bottom:34px; color:#fffdf7; }
+  #home-view .home-capacity .home-eyebrow::before { content:""; display:block; width:74px; height:12px; margin:0 auto 34px; background:var(--pink); transform:rotate(-4deg); }
+  #home-view .home-capacity h2 { max-width:1100px; margin:0 auto; font-size:clamp(46px,6vw,92px); line-height:.98; letter-spacing:-.05em; }
+  #home-view .home-capacity .home-highlight { max-width:none; margin:36px auto 0; font-size:clamp(36px,4.4vw,70px); line-height:1.05; }
+  #home-view .home-marker { position:relative; z-index:0; color:var(--ink); white-space:nowrap; padding:0; background:none; }
+  #home-view .home-marker::before { content:""; position:absolute; z-index:-1; inset:4px -12px 0; background:var(--lime); transform:rotate(-1deg); }
+  #home-view .home-capacity .home-bridge { max-width:none; margin:70px 0 0; font-size:19px; font-weight:900; letter-spacing:.05em; text-transform:uppercase; }
+  #home-view .home-practice { padding:120px var(--home-pad) 130px; background:#fffdf7; }
+  #home-view .home-practice>.home-shell { width:auto; }
+  #home-view .home-heading { display:grid; grid-template-columns:220px 1fr; gap:28px; margin:0; padding-top:24px; border-top:2px solid var(--ink); }
+  #home-view .home-heading .home-eyebrow::after { content:""; display:block; width:56px; height:13px; margin-top:18px; border:3px solid var(--ink); background:var(--pink); transform:rotate(-3deg); }
+  #home-view .home-heading h2 { max-width:none; margin:0; font-size:clamp(61px,8vw,126px); line-height:.87; letter-spacing:-.055em; }
+  #home-view .home-method-grid { margin-top:78px; display:grid; grid-template-columns:minmax(430px,.9fr) 1.1fr; gap:clamp(48px,7vw,110px); align-items:center; }
+  #home-view .home-cycle { width:auto; margin:0; background:var(--ink); aspect-ratio:1; border-radius:50%; overflow:hidden; box-shadow:24px 24px 0 var(--pink); }
+  #home-view .home-cycle img { position:static; inset:auto; width:100%; height:100%; object-fit:contain; animation:none!important; }
+  #home-view .home-cycle img[src="ACE-Learning-Cycle-2.png"] { display:none; }
+  #home-view .home-cycle-line { display:flex; align-items:center; flex-wrap:wrap; gap:9px; margin:0 0 30px; font-size:clamp(19px,1.9vw,29px); }
+  #home-view .home-cycle-line span { color:#e74f99; }
+  #home-view .home-method-copy h3 { margin:0 0 28px; font-size:clamp(34px,4vw,61px); line-height:1; letter-spacing:-.045em; }
+  #home-view .home-stage-list { border-top:2px solid var(--ink); }
+  #home-view .home-stage-list p { margin:0; padding:14px 0; border-top:0; border-bottom:1px solid var(--ink); font-size:18px; line-height:1.45; }
+  #home-view .home-stage-list b { min-width:106px; }
+  #home-view .home-link { display:inline-flex; align-items:center; justify-content:space-between; gap:28px; margin-top:34px; padding:13px 19px 12px 22px; border:2px solid var(--ink); border-radius:999px; background:transparent; color:var(--ink); font-weight:900; text-decoration:none; }
+  #home-view .home-pathways { padding:0; border-top:2px solid var(--ink); background:transparent; }
+  #home-view .home-pathways>.home-shell { width:100%; }
+  #home-view .home-pathways-intro { display:block; max-width:none; margin:0; padding:90px var(--home-pad); background:var(--sun); text-align:center; }
+  #home-view .home-pathways-intro .home-eyebrow,#home-view .home-pathways-intro h2,#home-view .home-pathways-intro>p:last-child { display:block; margin-left:auto; margin-right:auto; }
+  #home-view .home-pathways-intro h2 { max-width:none; margin-top:0; margin-bottom:0; font-size:clamp(50px,6.4vw,100px); line-height:.95; letter-spacing:-.05em; }
+  #home-view .home-pathways-intro>p:last-child { margin-top:25px; font-size:21px; font-weight:800; }
+  #home-view .home-pathway-grid { display:grid; grid-template-columns:1fr 1fr; gap:0; border-top:2px solid var(--ink); }
+  #home-view .home-pathway,#home-view .home-pathway:nth-child(n) { padding:30px clamp(28px,4.6vw,70px) 80px; border:0; background:#f8e7f0; box-shadow:none; transform:none; }
+  #home-view .home-pathway.communication { border-left:2px solid var(--ink); background:#e7f1fc; }
+  #home-view .home-pathway-top { padding-bottom:18px; border-bottom:2px solid var(--ink); }
+  #home-view .home-pathway img { width:min(100%,520px); max-height:500px; min-height:420px; margin:14px auto 12px; object-fit:contain; filter:drop-shadow(10px 13px 0 rgba(255,255,255,.45)); }
+  #home-view .home-pathway .home-eyebrow { margin-bottom:15px; }
+  #home-view .home-pathway h3 { margin:0 0 24px; font-size:clamp(46px,5.2vw,82px); line-height:.91; letter-spacing:-.055em; }
+  #home-view .home-pathway-copy { min-height:150px; margin:0; font-size:20px; line-height:1.5; }
+  #home-view .home-pathway blockquote,#home-view .home-pathway.communication blockquote { margin:20px 0 0; padding:18px 0; border:0; border-top:2px solid var(--ink); border-bottom:2px solid var(--ink); background:transparent; box-shadow:none; font-size:clamp(22px,2.15vw,32px); line-height:1.12; }
+  #home-view .home-closing { min-height:720px; padding:110px var(--home-pad); display:grid; place-items:center; text-align:center; }
+  #home-view .home-closing .home-shell { position:relative; max-width:1050px; }
+  #home-view .home-closing .home-shell::before { content:""; position:absolute; z-index:-1; width:140vw; height:210px; left:50%; top:62%; border-radius:50%; background:#dff3ec; transform:translate(-50%,-50%) rotate(5deg); }
+  #home-view .home-closing h2 { max-width:none; margin:0; font-size:clamp(70px,8.5vw,132px); line-height:.86; letter-spacing:-.06em; }
+  #home-view .home-closing .home-link { margin-top:34px; background:var(--ink); color:#fff; }
+  @media(max-width:1100px){
+    #home-view .home-method-grid{grid-template-columns:1fr}
+    #home-view .home-cycle{width:min(78vw,680px);margin:0 auto}
+    #home-view .home-pathway-copy{min-height:180px}
+  }
+  @media(max-width:760px){
+    #home-view{font-size:16px}
+    #home-view .home-hero{min-height:0;padding:50px var(--home-pad) 70px}
+    #home-view .home-stamp{font-size:18px}
+    #home-view .home-hero h1{font-size:clamp(51px,15.2vw,82px)}
+    #home-view .home-subtitle{margin-top:30px}
+    #home-view .home-questions{grid-template-columns:1fr;margin-top:46px}
+    #home-view .home-question,#home-view .home-question:nth-child(n){min-height:0;padding:22px 4px 26px}
+    #home-view .home-question+.home-question{border-left:0;border-top:2px solid var(--ink)}
+    #home-view .home-capacity{padding:90px var(--home-pad) 100px}
+    #home-view .home-marker{white-space:normal}
+    #home-view .home-capacity .home-bridge{margin-top:48px}
+    #home-view .home-practice{padding:82px var(--home-pad) 90px}
+    #home-view .home-heading{grid-template-columns:1fr}
+    #home-view .home-method-grid{margin-top:48px}
+    #home-view .home-cycle{width:90vw;max-width:520px;box-shadow:12px 12px 0 var(--pink)}
+    #home-view .home-stage-list b{display:block}
+    #home-view .home-pathways-intro{padding:72px var(--home-pad)}
+    #home-view .home-pathway-grid{grid-template-columns:1fr}
+    #home-view .home-pathway.communication{border-left:0;border-top:2px solid var(--ink)}
+    #home-view .home-pathway img{min-height:300px}
+    #home-view .home-pathway-copy{min-height:0}
+    #home-view .home-closing{min-height:580px}
+  }
+
+  /* Homepage identity, typography and full-page parallax circles. */
+  #home-view {
+    position:relative;
+    isolation:isolate;
+    overflow:hidden;
+  }
+  #home-view .home-page {
+    position:relative;
+    z-index:1;
+    background:transparent;
+  }
+  #home-view .home-logo {
+    display:block;
+    width:min(132px,28.5vw);
+    height:auto;
+    margin:0 auto 22px;
+  }
+  #home-view .home-wave,
+  #home-view .home-hero::before,
+  #home-view .home-hero::after,
+  #home-view .home-closing::before,
+  #home-view .home-closing::after,
+  #home-view .home-closing .home-shell::before {
+    display:none!important;
+  }
+  #home-view .home-orbs {
+    position:absolute;
+    z-index:0;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+  }
+  #home-view .home-orb {
+    position:absolute;
+    display:block;
+    width:var(--orb-size);
+    height:var(--orb-size);
+    border-radius:50%;
+    opacity:.32;
+    transform:translate3d(0,var(--orb-y,0),0);
+    will-change:transform;
+  }
+  #home-view .home-orb:nth-child(1){--orb-size:1200px;top:-320px;left:-420px;background:#ff8ac8}
+  #home-view .home-orb:nth-child(2){--orb-size:900px;top:620px;right:-310px;background:#73c8ff}
+  #home-view .home-orb:nth-child(3){--orb-size:1000px;top:1450px;left:12%;background:#baf05a}
+  #home-view .home-orb:nth-child(4){--orb-size:1200px;top:2450px;right:-500px;background:#ba9cff}
+  #home-view .home-orb:nth-child(5){--orb-size:800px;top:3450px;left:-210px;background:#ffd247}
+  #home-view .home-orb:nth-child(6){--orb-size:1000px;top:4300px;right:-330px;background:#ff8d78}
+  #home-view .home-orb:nth-child(7){--orb-size:900px;top:5200px;left:18%;background:#52d9bd}
+  #home-view .home-orb:nth-child(8){--orb-size:1200px;top:6150px;right:-430px;background:#88a9ff}
+  #home-view .home-orb:nth-child(9){--orb-size:760px;top:260px;right:8%;background:#ffd86b}
+  #home-view .home-orb:nth-child(10){--orb-size:1080px;top:1180px;left:-390px;background:#ffb0da}
+  #home-view .home-orb:nth-child(11){--orb-size:860px;top:2180px;left:42%;background:#88e6cf}
+  #home-view .home-orb:nth-child(12){--orb-size:1280px;top:3180px;right:-620px;background:#aabfff}
+  #home-view .home-orb:nth-child(13){--orb-size:940px;top:4720px;left:-360px;background:#e1c8ff}
+  #home-view .home-orb:nth-child(14){--orb-size:1100px;top:5750px;left:26%;background:#ffb08f}
+
+  #home-view .home-hero,
+  #home-view .home-closing { background:transparent; }
+  #home-view .home-capacity { background:rgba(23,23,23,.95); }
+  #home-view .home-practice { background:rgba(255,253,247,.76); }
+  #home-view .home-pathways-intro { background:rgba(255,240,146,.78); }
+  #home-view .home-pathway,
+  #home-view .home-pathway:nth-child(n) { background:rgba(248,231,240,.86); }
+  #home-view .home-pathway.communication { background:rgba(231,241,252,.86); }
+
+  /* One authoritative homepage type system, matched directly to About. */
+  #home-view {
+    font-family:var(--ace-english-font),-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",Arial,sans-serif;
+    font-size:18px!important;
+    font-style:normal;
+    font-stretch:normal;
+    font-synthesis:none;
+    font-kerning:normal;
+    font-variant-ligatures:common-ligatures contextual;
+    font-optical-sizing:auto;
+    line-height:1.65!important;
+    letter-spacing:normal;
+    text-rendering:optimizeLegibility;
+  }
+  #home-view h1,
+  #home-view h2,
+  #home-view h3 {
+    font-family:inherit!important;
+    font-style:normal!important;
+    font-stretch:normal!important;
+    font-weight:900!important;
+    line-height:.98!important;
+    letter-spacing:-.035em!important;
+    word-spacing:normal!important;
+  }
+  #home-view .home-hero h1 {
+    max-width:1040px!important;
+    font-size:clamp(58px,10vw,138px)!important;
+    font-weight:900!important;
+    line-height:.98!important;
+    letter-spacing:-.012em!important;
+  }
+  #home-view .home-hero h1 span { display:block; }
+  #home-view .home-hero h1 .home-outline { transform:rotate(-2deg); }
+  #home-view .home-capacity h2,
+  #home-view .home-heading h2,
+  #home-view .home-pathways-intro h2,
+  #home-view .home-closing h2 {
+    max-width:850px!important;
+    font-size:clamp(40px,6vw,77px)!important;
+    line-height:.98!important;
+    letter-spacing:-.035em!important;
+  }
+  #home-view .home-closing h2 { margin-left:auto; margin-right:auto; }
+  #home-view .home-question h2 {
+    font-size:clamp(29px,3.2vw,44px)!important;
+    line-height:1.05!important;
+    letter-spacing:-.035em!important;
+  }
+  #home-view .home-method-copy h3,
+  #home-view .home-pathway h3 {
+    font-size:clamp(34px,4.8vw,63px)!important;
+    line-height:.98!important;
+    letter-spacing:-.035em!important;
+  }
+  #home-view .home-subtitle {
+    max-width:675px!important;
+    font-size:clamp(19px,2.1vw,25px)!important;
+    font-weight:500!important;
+    line-height:1.65!important;
+    letter-spacing:0!important;
+    word-spacing:normal!important;
+  }
+  #home-view .home-cycle-line {
+    font-size:clamp(20px,2.5vw,29px)!important;
+    font-weight:700!important;
+    line-height:1.45!important;
+    letter-spacing:0!important;
+  }
+  #home-view .home-highlight,
+  #home-view .home-pathway blockquote {
+    font-size:clamp(24px,3.5vw,43px)!important;
+    font-weight:900!important;
+    line-height:1.16!important;
+    letter-spacing:-.045em!important;
+  }
+  #home-view .home-subtitle,
+  #home-view .home-question p,
+  #home-view .home-stage-list p,
+  #home-view .home-pathway-copy,
+  #home-view .home-pathways-intro>p:last-child,
+  #home-view .home-capacity .home-bridge {
+    font-style:normal!important;
+    word-spacing:normal!important;
+  }
+  #home-view .home-question p,
+  #home-view .home-stage-list p,
+  #home-view .home-pathway-copy,
+  #home-view .home-pathways-intro>p:last-child {
+    font-size:18px!important;
+    font-weight:400!important;
+    line-height:1.72!important;
+    letter-spacing:0!important;
+  }
+  #home-view .home-capacity .home-bridge {
+    font-size:clamp(20px,2.5vw,29px)!important;
+    font-weight:700!important;
+    line-height:1.45!important;
+    letter-spacing:0!important;
+    text-transform:none!important;
+  }
+  #home-view .home-pathways-intro>p:last-child {
+    font-size:clamp(19px,2.1vw,25px)!important;
+    font-weight:500!important;
+    line-height:1.65!important;
+  }
+  #home-view .home-eyebrow,
+  #home-view .home-question small,
+  #home-view .home-pathway-top {
+    font-size:13px!important;
+    font-weight:500!important;
+    line-height:1.35!important;
+    letter-spacing:0!important;
+    word-spacing:normal!important;
+  }
+  #home-view .home-scroll-link,
+  #home-view .home-link {
+    font-family:inherit!important;
+    font-size:13px!important;
+    font-weight:700!important;
+    line-height:1.2!important;
+    letter-spacing:0!important;
+    word-spacing:normal!important;
+  }
+  @media(max-width:760px){
+    #home-view .home-logo{width:118px;margin-bottom:20px}
+    #home-view .home-hero h1{font-size:clamp(64px,18vw,78px)!important;line-height:.98!important}
+    #home-view .home-capacity h2,
+    #home-view .home-heading h2,
+    #home-view .home-pathways-intro h2,
+    #home-view .home-closing h2{font-size:clamp(44px,12.2vw,56px)!important;line-height:1.02!important}
+    #home-view .home-subtitle{font-size:22px!important;line-height:1.55!important}
+    #home-view .home-cycle-line{font-size:23px!important;line-height:1.5!important}
+    #home-view .home-capacity .home-bridge{font-size:23px!important;line-height:1.5!important}
+    #home-view .home-pathways-intro>p:last-child{font-size:22px!important;line-height:1.55!important}
+    #home-view .home-highlight,
+    #home-view .home-pathway blockquote{font-size:30px!important;line-height:1.2!important}
+    #home-view .home-question p,
+    #home-view .home-stage-list p,
+    #home-view .home-pathway-copy,
+    #home-view .home-pathways-intro>p:last-child{font-size:18px!important;line-height:1.72!important}
+    #home-view .home-orb{opacity:.27}
+  }
+
+  /* Match the workshop title rhythm, primary buttons, and Methodology cycle. */
+  #home-view .home-hero h1 {
+    max-width:1050px!important;
+    font-size:clamp(58px,8vw,112px)!important;
+    line-height:.98!important;
+    letter-spacing:-.055em!important;
+  }
+  #home-view .home-hero h1 .home-outline { transform:none!important; }
+
+  #home-view .home-scroll-link,
+  #home-view .home-link {
+    display:inline-flex!important;
+    min-height:58px!important;
+    align-items:center!important;
+    justify-content:center!important;
+    gap:12px!important;
+    padding:0 28px!important;
+    color:#fff!important;
+    background:var(--ink)!important;
+    border:3px solid var(--ink)!important;
+    border-radius:19px 14px 20px 12px!important;
+    box-shadow:6px 7px 0 var(--pink)!important;
+    font-size:16px!important;
+    font-weight:900!important;
+    line-height:1.2!important;
+    text-decoration:none!important;
+    cursor:pointer!important;
+    transition:transform 160ms ease,box-shadow 160ms ease!important;
+  }
+  #home-view .home-scroll-link:hover,
+  #home-view .home-scroll-link:focus-visible,
+  #home-view .home-link:hover,
+  #home-view .home-link:focus-visible {
+    transform:translate(-2px,-2px)!important;
+    box-shadow:8px 9px 0 var(--pink)!important;
+  }
+
+  #home-view .home-cycle {
+    position:relative!important;
+    width:100%!important;
+    aspect-ratio:1!important;
+    margin:0!important;
+    background:transparent!important;
+    border:0!important;
+    border-radius:0!important;
+    box-shadow:none!important;
+    overflow:visible!important;
+  }
+  #home-view .home-practice { background:var(--cream)!important; }
+  #home-view .home-cycle img {
+    position:absolute!important;
+    inset:0!important;
+    display:block!important;
+    width:100%!important;
+    height:100%!important;
+    object-fit:contain!important;
+    background:transparent!important;
+  }
+  #home-view .home-cycle img[src="ACE-Learning-Cycle-1.png"] {
+    z-index:1!important;
+    transform-origin:50% 50%!important;
+    animation:ace-learning-cycle-spin 15s linear infinite!important;
+    will-change:transform;
+  }
+  #home-view .home-cycle img[src="ACE-Learning-Cycle-2.png"] {
+    z-index:2!important;
+    display:block!important;
+    animation:none!important;
+  }
+  @media(max-width:760px){
+    #home-view .home-hero h1{
+      font-size:clamp(50px,15vw,72px)!important;
+      line-height:.98!important;
+      letter-spacing:-.055em!important;
+    }
+    #home-view .home-scroll-link,
+    #home-view .home-link{min-height:54px!important;padding:0 22px!important;font-size:15px!important}
+  }
+
+  /* Keep the Applied Creativity marker behind the complete line of text. */
+  #home-view .home-highlight {
+    position:relative!important;
+    z-index:0!important;
+    isolation:isolate!important;
+  }
+  #home-view .home-marker {
+    position:relative!important;
+    z-index:auto!important;
+    isolation:auto!important;
+    padding:0!important;
+    background:none!important;
+  }
+  #home-view .home-marker::before {
+    content:""!important;
+    position:absolute!important;
+    z-index:-1!important;
+    inset:4px -10px 0!important;
+    background:var(--lime)!important;
+    transform:rotate(-1deg)!important;
+    pointer-events:none!important;
+  }
+  #home-view .home-pathways {
+    border-bottom:2px solid var(--ink)!important;
+  }
+  #home-view .home-three-spaces { white-space:pre!important; }
+
+  /* Homepage copy alignment and desktop line lengths. */
+  #home-view .home-stage-list p {
+    display:grid!important;
+    grid-template-columns:clamp(112px,12vw,150px) minmax(0,1fr)!important;
+    column-gap:18px!important;
+    align-items:start!important;
+  }
+  #home-view .home-stage-list b {
+    display:block!important;
+    min-width:0!important;
+  }
+  #home-view .home-stage-list p>span {
+    display:block;
+    min-width:0;
+  }
+  @media(min-width:981px){
+    .site-header nav{gap:1.5em!important}
+    #home-view .locale-page[data-locale="en"] .home-subtitle{max-width:800px!important}
+    #home-view .locale-page[data-locale="en"] .home-pathways-intro h2{
+      max-width:100%!important;
+      font-size:clamp(40px,5.3vw,77px)!important;
+      white-space:nowrap!important;
+    }
+    #home-view .locale-page[data-locale="ja"] .home-pathways-intro h2,
+    #home-view .locale-page[data-locale="zh-TW"] .home-pathways-intro h2{
+      max-width:100%!important;
+      font-size:clamp(48px,5.2vw,74px)!important;
+      white-space:nowrap!important;
+    }
+  }
+  /* Collapse the primary navigation before the language switcher runs out of room. */
+  @media(max-width:1040px){
+    .site-header nav{
+      position:absolute;
+      top:calc(100% + 3px);
+      right:0;
+      left:0;
+      display:grid;
+      max-height:0;
+      gap:0!important;
+      overflow:hidden;
+      background:var(--paper);
+      border-bottom:0 solid var(--ink);
+      opacity:0;
+      transition:max-height 220ms ease,opacity 180ms ease,border-width 180ms ease;
+    }
+    .site-header nav.open{max-height:420px;border-bottom-width:3px;opacity:1}
+    .site-header nav a{padding:15px 5.5vw;border-bottom:1px dashed rgba(23,23,23,.35);font-size:16px}
+    .site-header nav a::after{display:none}
+    .menu-toggle{display:grid;flex:0 0 auto;place-items:center}
+  }
+  @media(max-width:1040px){
+    .site-header nav.open .nav-button.active{
+      text-decoration-line:underline!important;
+      text-decoration-color:var(--pink)!important;
+      text-decoration-thickness:4px!important;
+      text-underline-offset:7px!important;
+    }
+  }
+  #home-view .home-questions{
+    gap:clamp(24px,4vw,56px)!important;
+    border:0!important;
+  }
+  #home-view .home-question,
+  #home-view .home-question+.home-question{
+    min-height:270px!important;
+    padding:28px 26px 32px!important;
+    border:2px solid var(--ink)!important;
+    background:rgba(255,253,246,.96)!important;
+    box-shadow:8px 8px 0 var(--ink)!important;
+  }
+  #home-view .home-question:nth-child(1){transform:rotate(-.55deg)!important}
+  #home-view .home-question:nth-child(2){transform:translateY(18px) rotate(.55deg)!important}
+  #home-view .home-question:nth-child(3){transform:rotate(-.55deg)!important}
+  @media(max-width:760px){
+    #home-view .home-question,
+    #home-view .home-question:nth-child(1),
+    #home-view .home-question:nth-child(2),
+    #home-view .home-question:nth-child(3){
+      min-height:0!important;
+      padding:25px 22px 28px!important;
+      transform:none!important;
+    }
+  }
+  @media(min-width:1000px){
+    #home-view .locale-page[data-locale="en"] .home-practice .home-heading{
+      grid-template-columns:190px minmax(0,1fr)!important;
+    }
+    #home-view .locale-page[data-locale="en"] .home-practice .home-heading h2{
+      max-width:none!important;
+      white-space:nowrap!important;
+      font-size:clamp(52px,5.7vw,77px)!important;
+    }
+  }
+  @media(min-width:981px){
+    #home-view .locale-page[data-locale="ja"] .home-practice .home-heading{
+      grid-template-columns:150px minmax(0,1fr)!important;
+      gap:24px!important;
+    }
+    #home-view .locale-page[data-locale="ja"] .home-practice .home-heading h2{
+      max-width:none!important;
+      white-space:nowrap!important;
+      font-size:clamp(52px,4.8vw,68px)!important;
+    }
+  }
+  #home-view .home-nowrap-title{display:block;white-space:nowrap!important}
+  #home-view .locale-page[data-locale="ja"] .home-nowrap-title{
+    font-size:min(1em,8.5vw,92px)!important;
+  }
+  #home-view .locale-page[data-locale="zh-TW"] .home-nowrap-title{
+    font-size:min(1em,13vw,112px)!important;
+  }
+  #leadership-view .hero-inner,
+  #communication-view .hero-inner{min-width:0}
+  @media(max-width:340px){
+    #communication-view .locale-en .hero h1{font-size:38px}
+    #communication-view .primary-button{
+      max-width:100%;
+      justify-content:center;
+      padding-inline:18px;
+      text-align:center;
+    }
+  }
   </style>
 </head>
 <body style="--page-bg:var(--paper)">
 <header class="site-header">
-    <a class="brand" href="#leadership" data-page="leadership">Applied Creativity Engine</a>
+    <a class="brand" href="#home" data-page="home">Applied Creativity Engine</a>
     <nav aria-label="Workshop navigation">
-      <a class="nav-button" href="#about" data-page="about">About</a><a class="nav-button" href="#methodology" data-page="methodology">Methodology</a><a class="nav-button" href="#leadership" data-page="leadership">Leadership</a><a class="nav-button" href="#communication" data-page="communication">Communication</a>
+      <a class="nav-button" href="#about" data-page="about">Story</a><a class="nav-button" href="#methodology" data-page="methodology">Methodology</a><a class="nav-button" href="#leadership" data-page="leadership">CL Workshops</a><a class="nav-button" href="#communication" data-page="communication">CC Workshops</a>
       <div class="language-switcher mobile-language-switcher" role="group" aria-label="Language">
         <button type="button" data-language="en" aria-label="English" aria-pressed="true"><span class="lang-full">EN</span><span class="lang-short" aria-hidden="true">EN</span></button>
         <button type="button" data-language="ja" aria-label="日本語" aria-pressed="false"><span class="lang-full">日本語</span><span class="lang-short" aria-hidden="true">日</span></button>
@@ -1373,6 +2169,54 @@ button { color: inherit; font: inherit; }
     </div>
     <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false"><span aria-hidden="true">☰</span></button>
   </header>
+  <section id="home-view" class="ace-view" hidden>
+    <div class="home-page locale-page" data-locale="en">
+      <section class="home-hero" data-home-section="top"><i class="home-wave one" aria-hidden="true"></i><i class="home-wave two" aria-hidden="true"></i><i class="home-wave three" aria-hidden="true"></i><div class="home-shell">
+        <div class="home-stamp" aria-label="Applied Creativity Engine">Applied<br>Creativity<br>Engine</div><p class="home-eyebrow">APPLIED CREATIVITY ENGINE</p>
+        <h1><span>Activate Your</span><span class="home-outline">Cross-Disciplinary</span><span>Creativity.</span></h1>
+        <p class="home-subtitle">In the age of AI, your advantage is not simply knowing more or working faster. It is your ability to see beyond your expertise, connect ideas across disciplines, and create something meaningful from what others overlook.</p>
+        <div class="home-questions" aria-label="Three questions"><article class="home-question"><small>01</small><h2>Can you see<br>what others don’t?</h2><p>Discover opportunities beyond the obvious.</p></article><article class="home-question"><small>02</small><h2>Can you connect<br>what others haven’t?</h2><p>Bring together ideas and perspectives that rarely meet.</p></article><article class="home-question"><small>03</small><h2>Can you create<br>what doesn’t yet exist?</h2><p>Turn new connections into something meaningful and real.</p></article></div>
+      </div></section>
+      <section class="home-section home-capacity" data-home-section="capacity"><div class="home-shell"><p class="home-eyebrow">THE HUMAN CAPACITY</p><h2>There’s a practical way to develop this human capacity.</h2><p class="home-highlight">We call it<span class="home-three-spaces" aria-hidden="true">   </span><span class="home-marker">Applied Creativity.</span></p><p class="home-bridge">Learn the practice. Then put it to work.</p></div></section>
+      <section class="home-section home-practice"><div class="home-shell"><div class="home-heading"><p class="home-eyebrow">THE PRACTICE</p><h2>The Self-Learning <span class="home-outline">Cycle</span></h2></div><div class="home-method-grid"><div class="home-cycle" role="img" aria-label="ACE Self-Learning Cycle"><img src="ACE-Learning-Cycle-1.png" alt="" aria-hidden="true"><img src="ACE-Learning-Cycle-2.png" alt="" aria-hidden="true"></div><div class="home-method-copy"><p class="home-cycle-line"><strong>Curious</strong><span>→</span><strong>Remix</strong><span>→</span><strong>Empathize</strong><span>→</span><strong>Storycraft</strong></p><h3>A repeatable practice for turning curiosity into meaningful creation.</h3><div class="home-stage-list"><p><b>Curious</b><span>Explore beyond the obvious and ask better questions.</span></p><p><b>Remix</b><span>Connect ideas, technologies, industries, business models, and experiences that do not normally sit together.</span></p><p><b>Empathize</b><span>Move beyond assumptions to understand real people and what genuinely matters to them.</span></p><p><b>Storycraft</b><span>Turn a vague possibility into something others can understand, experience, discuss, and move forward.</span></p></div><a class="home-link" href="#methodology" data-page="methodology">Explore the Methodology <span aria-hidden="true">↗</span></a></div></div></div></section>
+      <section class="home-section home-pathways"><div class="home-shell"><div class="home-pathways-intro"><p class="home-eyebrow">PUT IT TO WORK</p><h2>Where will you put it to work?</h2><p>Two pathways. One creative engine.</p></div><div class="home-pathway-grid">
+        <article class="home-pathway leadership"><div class="home-pathway-top"><span>01 / FOR LEADERS</span><span>2 WORKSHOP SESSIONS</span></div><img src="who-its-for-leadership.png" alt="A leader looking across disciplines toward new possibilities"><p class="home-eyebrow">MODERN-DAY LEADERS</p><h3>Think Beyond<br><span class="home-outline">Your Expertise.</span></h3><p class="home-pathway-copy">For leaders who need to see across disciplines, discover which problems are worth solving, and decide what should be created next.</p><blockquote>Can you lead when there is no proven playbook?</blockquote><a class="home-link" href="#leadership" data-page="leadership">Explore Creative Leadership <span aria-hidden="true">↗</span></a></article>
+        <article class="home-pathway communication"><div class="home-pathway-top"><span>02 / FOR COMMUNICATORS</span><span>3 CREATIVE WORKSHOPS</span></div><img src="who-its-for-communication.png" alt="A communicator carrying one idea across words, images, sound, motion, and experiences"><p class="home-eyebrow">CREATIVE COMMUNICATORS</p><h3>Make Meaning<br><span class="home-outline">Travel.</span></h3><p class="home-pathway-copy">Turn an idea into something people can understand, care about, remember, and carry forward—across words, images, sound, motion, websites, campaigns, and experiences.</p><blockquote>Can people understand the idea, feel its value, and carry it forward?</blockquote><a class="home-link" href="#communication" data-page="communication">Explore Creative Communication <span aria-hidden="true">↗</span></a></article>
+      </div></div></section>
+      <section class="home-closing"><i class="home-wave one" aria-hidden="true"></i><i class="home-wave two" aria-hidden="true"></i><div class="home-shell"><p class="home-eyebrow">START THE ENGINE</p><h2>See more.<br>Connect further.<br><span class="home-outline">Create what matters.</span></h2><a class="home-link" href="#about" data-page="about">Discover the story behind ACE <span aria-hidden="true">↗</span></a></div></section>
+    </div>
+
+    <div class="home-page locale-page" data-locale="ja" hidden>
+      <section class="home-hero" data-home-section="top"><i class="home-wave one" aria-hidden="true"></i><i class="home-wave two" aria-hidden="true"></i><i class="home-wave three" aria-hidden="true"></i><div class="home-shell">
+        <div class="home-stamp" aria-label="実用創造力エンジン">実用<br>創造力<br>エンジン</div><p class="home-eyebrow">実用創造力エンジン</p><h1><span>分野を越える</span><span class="home-outline home-nowrap-title">創造力を、起動する。</span></h1>
+        <p class="home-subtitle">AI時代の強みは、単に多くを知ることでも、速く働くことでもありません。自分の専門領域を越えて見渡し、異なる分野のアイデアをつなぎ、他の人が見落としているものから意味のある何かを生み出す力です。</p>
+        <div class="home-questions" aria-label="三つの問い"><article class="home-question"><small>01</small><h2>他の人に見えないものが、<br>見えますか？</h2><p>明白なものの先にある機会を見つける。</p></article><article class="home-question"><small>02</small><h2>まだ誰も結んでいないものを、<br>つなげますか？</h2><p>普段は交わらないアイデアと視点を結び合わせる。</p></article><article class="home-question"><small>03</small><h2>まだ存在しないものを、<br>つくれますか？</h2><p>新しいつながりを、意味のある現実へ変える。</p></article></div>
+      </div></section>
+      <section class="home-section home-capacity" data-home-section="capacity"><div class="home-shell"><p class="home-eyebrow">人間の力</p><h2>この人間の力は、実践によって育てられます。</h2><p class="home-highlight">私たちはそれを<span class="home-marker">「実用創造力」</span>と呼びます。</p><p class="home-bridge">方法を学び、実際に活かす。</p></div></section>
+      <section class="home-section home-practice"><div class="home-shell"><div class="home-heading"><p class="home-eyebrow">実践</p><h2>セルフラーニング・<span class="home-outline">サイクル</span></h2></div><div class="home-method-grid"><div class="home-cycle" role="img" aria-label="ACEセルフラーニング・サイクル"><img src="ACE-Learning-Cycle-1.png" alt="" aria-hidden="true"><img src="ACE-Learning-Cycle-2.png" alt="" aria-hidden="true"></div><div class="home-method-copy"><p class="home-cycle-line"><strong>好奇心を探る</strong><span>→</span><strong>組み直す</strong><span>→</span><strong>共感する</strong><span>→</span><strong>物語をつくる</strong></p><h3>好奇心を、意味のある創造へ変えるための反復可能な実践。</h3><div class="home-stage-list"><p><b>好奇心を探る</b><span>明白な答えの先を探り、より良い問いを立てます。</span></p><p><b>組み直す</b><span>普段は並ばないアイデア、技術、産業、事業モデル、経験をつなぎます。</span></p><p><b>共感する</b><span>思い込みを越えて、実在する人と、彼らが本当に大切にしていることを理解します。</span></p><p><b>物語をつくる</b><span>曖昧な可能性を、他者が理解し、体験し、議論し、前へ進められるものに変えます。</span></p></div><a class="home-link" href="#methodology" data-page="methodology">方法論を見る <span aria-hidden="true">↗</span></a></div></div></div></section>
+      <section class="home-section home-pathways"><div class="home-shell"><div class="home-pathways-intro"><p class="home-eyebrow">実際に活かす</p><h2>どこで、この力を活かしますか？</h2><p>二つの道。一つの創造力エンジン。</p></div><div class="home-pathway-grid">
+        <article class="home-pathway leadership"><div class="home-pathway-top"><span>01 / リーダーのために</span><span>2回のワークショップ</span></div><img src="who-its-for-leadership.png" alt="分野を越えて新しい可能性を見渡すリーダー"><p class="home-eyebrow">現代のリーダー</p><h3>専門領域の<br><span class="home-outline">その先へ。</span></h3><p class="home-pathway-copy">分野を越えて全体を見渡し、取り組む価値のある問題を見つけ、次に何をつくるべきかを決める必要があるリーダーのために。</p><blockquote>前例も正解もないとき、あなたは導けますか？</blockquote><a class="home-link" href="#leadership" data-page="leadership">創造力リーダーシップを見る <span aria-hidden="true">↗</span></a></article>
+        <article class="home-pathway communication"><div class="home-pathway-top"><span>02 / 伝える人のために</span><span>3回のクリエイティブ・ワークショップ</span></div><img src="who-its-for-communication.png" alt="一つのアイデアを多様な表現で人々へ届けるコミュニケーター"><p class="home-eyebrow">クリエイティブ・コミュニケーター</p><h3>意味を、<br><span class="home-outline">遠くまで届ける。</span></h3><p class="home-pathway-copy">アイデアを、人が理解し、関心を持ち、記憶し、受け継ぎたくなるものへ。言葉、画像、音、動き、ウェブサイト、キャンペーン、体験へ展開します。</p><blockquote>人はそのアイデアを理解し、価値を感じ、次へ運んでくれるでしょうか？</blockquote><a class="home-link" href="#communication" data-page="communication">創造力コミュニケーションを見る <span aria-hidden="true">↗</span></a></article>
+      </div></div></section>
+      <section class="home-closing"><i class="home-wave one" aria-hidden="true"></i><i class="home-wave two" aria-hidden="true"></i><div class="home-shell"><p class="home-eyebrow">エンジンを起動する</p><h2>もっと見る。<br>さらに結ぶ。<br><span class="home-outline">大切なものをつくる。</span></h2><a class="home-link" href="#about" data-page="about">ACE誕生の物語を見る <span aria-hidden="true">↗</span></a></div></section>
+    </div>
+
+    <div class="home-page locale-page" data-locale="zh-TW" hidden>
+      <section class="home-hero" data-home-section="top"><i class="home-wave one" aria-hidden="true"></i><i class="home-wave two" aria-hidden="true"></i><i class="home-wave three" aria-hidden="true"></i><div class="home-shell">
+        <div class="home-stamp" aria-label="實用創造力引擎">實用<br>創造力<br>引擎</div><p class="home-eyebrow">實用創造力引擎</p><h1><span>啟動你的</span><span class="home-outline home-nowrap-title">跨領域創造力。</span></h1>
+        <p class="home-subtitle">在 AI 時代，你的優勢不只是知道得更多或工作得更快，而是能夠超越自己的專業領域、連結不同領域的想法，並從別人忽略的事物中創造出有意義的成果。</p>
+        <div class="home-questions" aria-label="三個問題"><article class="home-question"><small>01</small><h2>你能看見<br>別人沒看見的嗎？</h2><p>在顯而易見之外，發現新的機會。</p></article><article class="home-question"><small>02</small><h2>你能連結<br>別人尚未連結的嗎？</h2><p>讓平常不會相遇的想法與觀點產生連結。</p></article><article class="home-question"><small>03</small><h2>你能創造<br>尚未存在的事物嗎？</h2><p>把新的連結變成真實而有意義的成果。</p></article></div>
+      </div></section>
+      <section class="home-section home-capacity" data-home-section="capacity"><div class="home-shell"><p class="home-eyebrow">人類的能力</p><h2>這種人類能力，可以透過實踐逐步培養。</h2><p class="home-highlight">我們稱它為<span class="home-marker">「實用創造力」。</span></p><p class="home-bridge">學會方法，然後實際運用。</p></div></section>
+      <section class="home-section home-practice"><div class="home-shell"><div class="home-heading"><p class="home-eyebrow">實踐方法</p><h2>自我學習<span class="home-outline">循環</span></h2></div><div class="home-method-grid"><div class="home-cycle" role="img" aria-label="ACE 自我學習循環"><img src="ACE-Learning-Cycle-1.png" alt="" aria-hidden="true"><img src="ACE-Learning-Cycle-2.png" alt="" aria-hidden="true"></div><div class="home-method-copy"><p class="home-cycle-line"><strong>好奇探索</strong><span>→</span><strong>重新組合</strong><span>→</span><strong>移情同理</strong><span>→</span><strong>打造故事</strong></p><h3>一套可以反覆練習，把好奇心轉化為有意義創造的方法。</h3><div class="home-stage-list"><p><b>好奇探索</b><span>超越顯而易見的答案，提出更好的問題。</span></p><p><b>重新組合</b><span>連結原本不會放在一起的想法、科技、產業、商業模式與經驗。</span></p><p><b>移情同理</b><span>放下自己的假設，理解真實的人，以及他們真正重視的事。</span></p><p><b>打造故事</b><span>把模糊的可能，變成其他人能理解、體驗、討論，並繼續推進的事物。</span></p></div><a class="home-link" href="#methodology" data-page="methodology">探索方法論 <span aria-hidden="true">↗</span></a></div></div></div></section>
+      <section class="home-section home-pathways"><div class="home-shell"><div class="home-pathways-intro"><p class="home-eyebrow">實際運用</p><h2>你會把這股力量用在哪裡？</h2><p>兩條路徑，一具創造力引擎。</p></div><div class="home-pathway-grid">
+        <article class="home-pathway leadership"><div class="home-pathway-top"><span>01 / 為領導者而設</span><span>2 堂工作坊</span></div><img src="who-its-for-leadership.png" alt="跨越不同領域、看向新可能的領導者"><p class="home-eyebrow">現代領導者</p><h3>跨越你的<br><span class="home-outline">專業領域。</span></h3><p class="home-pathway-copy">適合需要跨領域看見全貌、發現哪些問題值得解決，並決定下一步應該創造什麼的領導者。</p><blockquote>當沒有現成的成功模式時，你能帶領團隊前進嗎？</blockquote><a class="home-link" href="#leadership" data-page="leadership">探索創造力領導工作坊 <span aria-hidden="true">↗</span></a></article>
+        <article class="home-pathway communication"><div class="home-pathway-top"><span>02 / 為傳達者而設</span><span>3 堂創意工作坊</span></div><img src="who-its-for-communication.png" alt="把一個想法透過不同形式傳達給人群的創意傳達者"><p class="home-eyebrow">創意傳達者</p><h3>讓意義<br><span class="home-outline">傳得更遠。</span></h3><p class="home-pathway-copy">把想法轉化為人們能理解、在意、記住並願意繼續傳遞的內容，橫跨文字、圖像、聲音、動態、網站、宣傳活動與各種體驗。</p><blockquote>人們能理解這個想法、感受它的價值，並願意繼續傳遞嗎？</blockquote><a class="home-link" href="#communication" data-page="communication">探索創造力傳達工作坊 <span aria-hidden="true">↗</span></a></article>
+      </div></div></section>
+      <section class="home-closing"><i class="home-wave one" aria-hidden="true"></i><i class="home-wave two" aria-hidden="true"></i><div class="home-shell"><p class="home-eyebrow">啟動引擎</p><h2>看見更多。<br>連結更遠。<br><span class="home-outline">創造真正重要的事。</span></h2><a class="home-link" href="#about" data-page="about">探索 ACE 背後的故事 <span aria-hidden="true">↗</span></a></div></section>
+    </div>
+  </section>
+
   <section id="about-view" class="ace-view" hidden>
 <div class="brushes" aria-hidden="true"><svg class="marker-svg" data-speed=".35" viewBox="0 0 1000 4400" preserveAspectRatio="none"><path class="marker-stroke" stroke="#ff8bd8" d="M -180 220 C 35 20 255 342 500 165 S 810 60 1180 315"/><path class="marker-stroke" stroke="#86ccff" d="M 1180 845 C 930 545 730 1010 485 765 S 160 555 -180 915"/><path class="marker-stroke" stroke="#c9f45b" d="M -160 1660 C 110 1400 290 1820 520 1610 S 840 1510 1170 1780"/><path class="marker-stroke" stroke="#ffd84d" d="M 1160 2420 C 920 2180 750 2580 500 2340 S 130 2190 -160 2495"/><path class="marker-stroke" stroke="#cbb8ff" d="M -170 3190 C 85 2940 285 3375 505 3150 S 835 3070 1170 3350"/><path class="marker-stroke" stroke="#ff9f7f" d="M 1170 3960 C 940 3720 730 4130 490 3890 S 130 3750 -170 4050"/></svg><svg class="marker-svg marker-mid" data-speed=".22" viewBox="0 0 1000 4400" preserveAspectRatio="none"><path class="marker-stroke" stroke="#6edfc9" d="M -150 580 C 130 340 305 800 520 570 S 830 430 1160 690"/><path class="marker-stroke" stroke="#9bbcff" d="M 1150 1260 C 850 1010 675 1470 455 1235 S 115 1075 -160 1320"/><path class="marker-stroke" stroke="#ffb8df" d="M -155 2180 C 90 1990 300 2380 515 2140 S 835 2030 1165 2280"/><path class="marker-stroke" stroke="#b7ef74" d="M 1160 2940 C 900 2725 695 3150 480 2915 S 140 2780 -150 3050"/><path class="marker-stroke" stroke="#ffd15c" d="M -150 3760 C 85 3540 280 3980 500 3735 S 830 3640 1160 3910"/></svg><svg class="marker-svg marker-near" data-speed=".48" viewBox="0 0 1000 4400" preserveAspectRatio="none"><path class="marker-stroke" stroke="#8ed4ff" d="M -150 375 C 105 205 300 590 510 355 S 810 250 1160 460"/><path class="marker-stroke" stroke="#d5bfff" d="M 1160 1080 C 920 870 710 1270 490 1050 S 150 900 -160 1130"/><path class="marker-stroke" stroke="#ffad91" d="M -150 1920 C 110 1690 290 2150 520 1900 S 845 1810 1165 2075"/><path class="marker-stroke" stroke="#9ee6b1" d="M 1160 2600 C 915 2400 730 2825 500 2580 S 140 2450 -160 2710"/><path class="marker-stroke" stroke="#f7a6d8" d="M -150 3450 C 100 3230 295 3660 515 3420 S 840 3320 1160 3590"/></svg></div>
 <main class="about-main">
@@ -1380,8 +2224,9 @@ button { color: inherit; font: inherit; }
 <section class="hero"><div class="hero-inner"><img class="kicker" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMDkwLjg2IDY1Ny44MiI+CiAgPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDMwLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDIuMS4xIEJ1aWxkIDEyMykgIC0tPgogIDxwYXRoIGQ9Ik0wLDB2NDM0LjU3bDM2My4xNiwyMjMuMjVoNzI3LjdWMEgwWk0xMDU2LjE5LDYyMy4xNUgzNzMuNDRMMzQuNjcsNDE1Ljc3VjM0LjY3aDEwMjEuNTJ2NTg4LjQ4WiIvPgogIDxnPgogICAgPHBhdGggZD0iTTEzMC4zNiwxODUuODNoNDUuOWw4LjgsMzAuODZoMzcuN2wtNDcuNDYtMTQwLjkyaC00My45NWwtNDcuNDYsMTQwLjkyaDM3LjdsOC43Ny0zMC44NlpNMTUzLjYyLDEwNi40M2wxNS4yNiw1My41MmgtMzEuMTZsMTUuMjItNTMuNTJoLjY4WiIvPgogICAgPHBhdGggZD0iTTI2OC41NiwxOTguNDJoLjY4YzEuODIsNC4yMyw0LjI4LDcuODgsNy4zNywxMC45NCwzLjA5LDMuMDYsNi43NSw1LjQyLDEwLjk5LDcuMDgsNC4yMywxLjY2LDguOTIsMi40OSwxNC4wNiwyLjQ5LDguODUsMCwxNi40Mi0yLjE4LDIyLjcxLTYuNTQsNi4yOC00LjM2LDExLjA3LTEwLjY4LDE0LjM2LTE4Ljk1LDMuMjktOC4yNyw0LjkzLTE4LjIzLDQuOTMtMjkuODh2LS4xYzAtMTEuNzItMS42OC0yMS43MS01LjAzLTI5Ljk4LTMuMzUtOC4yNy04LjE5LTE0LjU3LTE0LjUtMTguOS02LjMyLTQuMzMtMTMuOTYtNi40OS0yMi45NS02LjQ5LTUuMDEsMC05LjU5Ljg1LTEzLjcyLDIuNTQtNC4xNCwxLjY5LTcuNzMsNC4xMi0xMC43OSw3LjI4LTMuMDYsMy4xNi01LjUsNi45NS03LjMyLDExLjM4aC0uNzh2LTE4Ljk1aC0zNC42N3YxNDAuNTNoMzQuNjd2LTUyLjQ0Wk0yNjguNDYsMTYzLjQ2YzAtNS42Ni44My0xMC41MSwyLjQ5LTE0LjU1LDEuNjYtNC4wNCw0LTcuMTQsNy4wMy05LjMzLDMuMDMtMi4xOCw2LjUzLTMuMjcsMTAuNS0zLjI3czcuNjMsMS4wNywxMC42LDMuMjJjMi45NiwyLjE1LDUuMjcsNS4yNiw2LjkzLDkuMzMsMS42Niw0LjA3LDIuNDksOC45NCwyLjQ5LDE0LjZ2LjFjMCw1LjYtLjgxLDEwLjQyLTIuNDQsMTQuNDUtMS42Myw0LjA0LTMuOTQsNy4xNi02LjkzLDkuMzgtMywyLjIxLTYuNTQsMy4zMi0xMC42NCwzLjMycy03LjQ3LTEuMDktMTAuNS0zLjI3Yy0zLjAzLTIuMTgtNS4zNy01LjI5LTcuMDMtOS4zMy0xLjY2LTQuMDQtMi40OS04Ljg5LTIuNDktMTQuNTV2LS4xWiIvPgogICAgPHBhdGggZD0iTTM5MS45LDE5OC40MmguNjhjMS44Miw0LjIzLDQuMjgsNy44OCw3LjM3LDEwLjk0LDMuMDksMy4wNiw2Ljc1LDUuNDIsMTAuOTksNy4wOCw0LjIzLDEuNjYsOC45MiwyLjQ5LDE0LjA2LDIuNDksOC44NSwwLDE2LjQyLTIuMTgsMjIuNzEtNi41NCw2LjI4LTQuMzYsMTEuMDctMTAuNjgsMTQuMzYtMTguOTUsMy4yOS04LjI3LDQuOTMtMTguMjMsNC45My0yOS44OHYtLjFjMC0xMS43Mi0xLjY4LTIxLjcxLTUuMDMtMjkuOTgtMy4zNS04LjI3LTguMTktMTQuNTctMTQuNS0xOC45LTYuMzItNC4zMy0xMy45Ni02LjQ5LTIyLjk1LTYuNDktNS4wMSwwLTkuNTkuODUtMTMuNzIsMi41NC00LjE0LDEuNjktNy43Myw0LjEyLTEwLjc5LDcuMjgtMy4wNiwzLjE2LTUuNSw2Ljk1LTcuMzIsMTEuMzhoLS43OHYtMTguOTVoLTM0LjY3djE0MC41M2gzNC42N3YtNTIuNDRaTTM5MS44LDE2My40NmMwLTUuNjYuODMtMTAuNTEsMi40OS0xNC41NSwxLjY2LTQuMDQsNC03LjE0LDcuMDMtOS4zMywzLjAzLTIuMTgsNi41My0zLjI3LDEwLjUtMy4yN3M3LjYzLDEuMDcsMTAuNiwzLjIyYzIuOTYsMi4xNSw1LjI3LDUuMjYsNi45Myw5LjMzLDEuNjYsNC4wNywyLjQ5LDguOTQsMi40OSwxNC42di4xYzAsNS42LS44MSwxMC40Mi0yLjQ0LDE0LjQ1LTEuNjMsNC4wNC0zLjk0LDcuMTYtNi45Myw5LjM4LTMsMi4yMS02LjU0LDMuMzItMTAuNjQsMy4zMnMtNy40Ny0xLjA5LTEwLjUtMy4yN2MtMy4wMy0yLjE4LTUuMzctNS4yOS03LjAzLTkuMzMtMS42Ni00LjA0LTIuNDktOC44OS0yLjQ5LTE0LjU1di0uMVoiLz4KICAgIDxyZWN0IHg9IjQ4MS4xNiIgeT0iNzUuNzciIHdpZHRoPSIzNC42NyIgaGVpZ2h0PSIxNDAuOTIiLz4KICAgIDxwYXRoIGQ9Ik01NTAuNjksOTguOTFjNS4wMSwwLDkuMjEtMS42OSwxMi42LTUuMDhzNS4wOC03LjM5LDUuMDgtMTIuMDEtMS42OS04LjcxLTUuMDgtMTIuMDZjLTMuMzktMy4zNS03LjU4LTUuMDMtMTIuNi01LjAzcy05LjEzLDEuNjgtMTIuNTUsNS4wM2MtMy40MiwzLjM1LTUuMTMsNy4zNy01LjEzLDEyLjA2czEuNzEsOC42Myw1LjEzLDEyLjAxYzMuNDIsMy4zOSw3LjYsNS4wOCwxMi41NSw1LjA4WiIvPgogICAgPHJlY3QgeD0iNTMzLjQxIiB5PSIxMTAuMzQiIHdpZHRoPSIzNC42NyIgaGVpZ2h0PSIxMDYuMzUiLz4KICAgIDxwYXRoIGQ9Ik02MDYuODQsMjEyLjI0YzguMDcsNC40NiwxNy43MSw2LjY5LDI4LjkxLDYuNjksOC41MywwLDE1LjgtMS4wOSwyMS44My0zLjI3LDYuMDItMi4xOCwxMS01LjAzLDE0Ljk0LTguNTQsMy45NC0zLjUyLDcuMDEtNy4yOCw5LjIzLTExLjI4LDIuMjEtNCwzLjcxLTcuODYsNC40OS0xMS41N2wuMjktMS4xN2gtMzEuMjVsLS4xLjM5Yy0uNTIsMS41LTEuNTUsMy4wOS0zLjA4LDQuNzktMS41MywxLjY5LTMuNiwzLjEyLTYuMiw0LjMtMi42LDEuMTctNS43NiwxLjc2LTkuNDcsMS43Ni00LjMsMC03Ljk5LS45Ni0xMS4wOC0yLjg4LTMuMDktMS45Mi01LjQ3LTQuNjctNy4xMy04LjI1LTEuNTMtMy4zLTIuMzQtNy4yMS0yLjQ3LTExLjcyaDcxLjQ2di0xMC4xNmMwLTEwLjc0LTIuMTUtMjAuMS02LjQ1LTI4LjA4LTQuMy03Ljk3LTEwLjM5LTE0LjE2LTE4LjI2LTE4LjU1LTcuODgtNC4zOS0xNy4xOS02LjU5LTI3LjkzLTYuNTlzLTIwLjA3LDIuMjUtMjcuOTgsNi43NC0xNC4wMywxMC44Ny0xOC4zNiwxOS4xNGMtNC4zMyw4LjI3LTYuNDksMTguMS02LjQ5LDI5LjQ5di4xYzAsMTEuNDYsMi4xNiwyMS4zMiw2LjQ5LDI5LjU5LDQuMzMsOC4yNywxMC41MywxNC42MywxOC42LDE5LjA5Wk02MjUuMDYsMTM1LjUzYzIuOTYtMS44OSw2LjQtMi44MywxMC4zLTIuODNzNy4zMi45MywxMC4yNSwyLjc4LDUuMjEsNC41OSw2Ljg0LDguMmMuOTcsMi4xNSwxLjY0LDQuNTgsMi4wMyw3LjI4aC0zOC4zNGMuMzktMi42NSwxLjA2LTUuMDQsMi4wMy03LjE4LDEuNjMtMy42MSwzLjkyLTYuMzYsNi44OC04LjI1WiIvPgogICAgPHBhdGggZD0iTTcxNi44NSwyMTIuMzljNi4zNSw0LjM2LDEzLjk1LDYuNTQsMjIuOCw2LjU0LDcuNjgsMCwxNC4zMi0xLjgxLDE5LjkyLTUuNDIsNS42LTMuNjEsOS43LTguNjEsMTIuMy0xNC45OWguNjh2MTguMTZoMzQuNjdWNzUuNzdoLTM0LjY3djUzLjQyaC0uNjhjLTIuNzMtNi41OC02Ljg4LTExLjczLTEyLjQ1LTE1LjQ4LTUuNTctMy43NC0xMi4xNi01LjYyLTE5Ljc4LTUuNjItOC44NSwwLTE2LjQ2LDIuMTctMjIuOCw2LjQ5LTYuMzUsNC4zMy0xMS4yLDEwLjYxLTE0LjU1LDE4Ljg1LTMuMzUsOC4yNC01LjAzLDE4LjIxLTUuMDMsMjkuOTN2LjFjMCwxMS43MiwxLjY4LDIxLjcxLDUuMDMsMjkuOTgsMy4zNSw4LjI3LDguMiwxNC41OCwxNC41NSwxOC45NVpNNzMyLjQzLDE2My4zN2MwLTUuNi44My0xMC40MywyLjQ5LTE0LjUsMS42Ni00LjA3LDMuOTktNy4xOCw2Ljk4LTkuMzMsMi45OS0yLjE1LDYuNTEtMy4yMiwxMC41NS0zLjIyczcuNTUsMS4wOSwxMC41NSwzLjI3YzIuOTksMi4xOCw1LjM0LDUuMjksNy4wMyw5LjMzLDEuNjksNC4wNCwyLjU0LDguODksMi41NCwxNC41NXYuMWMwLDUuNi0uODMsMTAuNDMtMi40OSwxNC41LTEuNjYsNC4wNy00LDcuMTktNy4wMyw5LjM4LTMuMDMsMi4xOC02LjU2LDMuMjctMTAuNiwzLjI3cy03LjU3LTEuMTEtMTAuNi0zLjMyYy0zLjAzLTIuMjEtNS4zNi01LjM0LTYuOTgtOS4zOC0xLjYzLTQuMDQtMi40NC04Ljg5LTIuNDQtMTQuNTV2LS4xWiIvPgogICAgPHBhdGggZD0iTTE4Mi4zOCwzMzQuMDVjLS44NSw1LjI3LTIuNTcsOS44MS01LjE4LDEzLjYyLTIuNiwzLjgxLTUuOTIsNi43NC05Ljk2LDguNzktNC4wNCwyLjA1LTguNjYsMy4wOC0xMy44NywzLjA4LTYuNTEsMC0xMi4xNy0xLjcyLTE2Ljk5LTUuMTgtNC44Mi0zLjQ1LTguNTMtOC40My0xMS4xMy0xNC45NC0yLjYtNi41MS0zLjkxLTE0LjI5LTMuOTEtMjMuMzR2LS4xYzAtOC45OCwxLjMtMTYuNjgsMy45MS0yMy4xLDIuNi02LjQxLDYuMy0xMS4zNCwxMS4wOC0xNC43OSw0Ljc5LTMuNDUsMTAuNDMtNS4xOCwxNi45NC01LjE4LDUuNTMsMCwxMC4zMiwxLjA3LDE0LjM2LDMuMjIsNC4wNCwyLjE1LDcuMjgsNS4wOSw5LjcyLDguODQsMi40NCwzLjc0LDQuMDUsOC4wOSw0LjgzLDEzLjA0bC4yLDEuMzdoMzQuNTdsLS4xLS44OGMtLjM5LTEwLjU1LTMuMzEtMTkuOTktOC43NC0yOC4zMi01LjQ0LTguMzMtMTIuODYtMTQuOTEtMjIuMjctMTkuNzMtOS40MS00LjgyLTIwLjI2LTcuMjMtMzIuNTctNy4yMy0xNCwwLTI2LjEyLDIuODgtMzYuMzgsOC42NHMtMTguMTgsMTQuMDgtMjMuNzgsMjQuOTVjLTUuNiwxMC44Ny04LjQsMjMuOTYtOC40LDM5LjI2di4xYzAsMTUuMywyLjc4LDI4LjQsOC4zNSwzOS4zMSw1LjU3LDEwLjkxLDEzLjQ4LDE5LjI1LDIzLjczLDI1LjA1LDEwLjI1LDUuOCwyMi40MSw4LjY5LDM2LjQ3LDguNjksMTIuMjQsMCwyMy4wNi0yLjQxLDMyLjQ3LTcuMjMsOS40MS00LjgyLDE2Ljg2LTExLjM4LDIyLjM2LTE5LjY4LDUuNS04LjMsOC40OC0xNy42OSw4Ljk0LTI4LjE3di0xLjA3aC0zNC40N2wtLjIuOThaIi8+CiAgICA8cGF0aCBkPSJNMjY2LjE3LDMzMC4yNGMwLTUuMDEuODYtOS4yMywyLjU5LTEyLjY1LDEuNzItMy40Miw0LjI2LTYuMDEsNy42Mi03Ljc2LDMuMzUtMS43Niw3LjQ3LTIuNjQsMTIuMzUtMi42NCwyLjA4LDAsNC4wOC4xNiw2LjAxLjQ5LDEuOTIuMzMsMy42LjgxLDUuMDMsMS40NnYtMjkuNjljLTEuMy0uNDUtMi43Mi0uOC00LjI1LTEuMDMtMS41My0uMjMtMy4xMS0uMzQtNC43NC0uMzQtNi4zMiwwLTExLjUxLDEuODItMTUuNTgsNS40Ny00LjA3LDMuNjUtNi44NSw4Ljg1LTguMzUsMTUuNjJoLS42OHYtMTguODVoLTM0LjY3djEwNi4zNWgzNC42N3YtNTYuNDVaIi8+CiAgICA8cGF0aCBkPSJNMzEwLjg1LDMwMy45N2MtNC4zMyw4LjI3LTYuNDksMTguMS02LjQ5LDI5LjQ5di4xYzAsMTEuNDYsMi4xNiwyMS4zMiw2LjQ5LDI5LjU5LDQuMzMsOC4yNywxMC41MywxNC42MywxOC42LDE5LjA5LDguMDcsNC40NiwxNy43MSw2LjY5LDI4LjkxLDYuNjksOC41MywwLDE1LjgtMS4wOSwyMS44My0zLjI3LDYuMDItMi4xOCwxMS01LjAzLDE0Ljk0LTguNTQsMy45NC0zLjUyLDcuMDEtNy4yOCw5LjIzLTExLjI4LDIuMjEtNCwzLjcxLTcuODYsNC40OS0xMS41N2wuMjktMS4xN2gtMzEuMjVsLS4xLjM5Yy0uNTIsMS41LTEuNTUsMy4wOS0zLjA4LDQuNzktMS41MywxLjY5LTMuNiwzLjEyLTYuMiw0LjMtMi42LDEuMTctNS43NiwxLjc2LTkuNDcsMS43Ni00LjMsMC03Ljk5LS45Ni0xMS4wOC0yLjg4LTMuMDktMS45Mi01LjQ3LTQuNjctNy4xMy04LjI1LTEuNTMtMy4zLTIuMzQtNy4yMS0yLjQ3LTExLjcyaDcxLjQ2di0xMC4xNmMwLTEwLjc0LTIuMTUtMjAuMS02LjQ1LTI4LjA4LTQuMy03Ljk3LTEwLjM5LTE0LjE2LTE4LjI2LTE4LjU1LTcuODgtNC4zOS0xNy4xOS02LjU5LTI3LjkzLTYuNTlzLTIwLjA3LDIuMjUtMjcuOTgsNi43NC0xNC4wMywxMC44Ny0xOC4zNiwxOS4xNFpNMzQ3LjY2LDMwNS41M2MyLjk2LTEuODksNi40LTIuODMsMTAuMy0yLjgzczcuMzIuOTMsMTAuMjUsMi43OCw1LjIxLDQuNTksNi44NCw4LjJjLjk3LDIuMTUsMS42NCw0LjU4LDIuMDMsNy4yOGgtMzguMzRjLjM5LTIuNjUsMS4wNi01LjA0LDIuMDItNy4xOCwxLjYzLTMuNjEsMy45Mi02LjM2LDYuODgtOC4yNVoiLz4KICAgIDxwYXRoIGQ9Ik00MzEuMjEsMjk0LjY5Yy0zLjk3LDUuMjEtNi4yNSwxMS4zLTYuODQsMTguMjZsLS4xLDEuMjdoMzEuMjVsLjItLjk4Yy41OS0yLjczLDIuMjEtNS4wNCw0Ljg4LTYuOTMsMi42Ny0xLjg5LDYuMzUtMi44MywxMS4wNC0yLjgzczguMzYsMS4xMiwxMC44NCwzLjM3YzIuNDcsMi4yNSwzLjcxLDUuMjksMy43MSw5LjEzdjUuMjhsLTI0LjIyLDEuNTZjLTEzLjY3LjkxLTI0LjI0LDQuMTUtMzEuNjksOS43Mi03LjQ2LDUuNTctMTEuMTgsMTMuMzYtMTEuMTgsMjMuMzl2LjFjMCw2LjE5LDEuNTEsMTEuNyw0LjU0LDE2LjU1LDMuMDMsNC44NSw3LjI0LDguNjYsMTIuNjUsMTEuNDMsNS40LDIuNzcsMTEuNjUsNC4xNSwxOC43NSw0LjE1LDQuNjIsMCw4Ljg1LS42NSwxMi43LTEuOTUsMy44NC0xLjMsNy4yNi0zLjE5LDEwLjI1LTUuNjYsMi45OS0yLjQ3LDUuNS01LjQ0LDcuNTItOC44OWguNjh2MTUuMDRoMzQuNjd2LTcyLjY2YzAtNy4xNi0xLjk3LTEzLjQ0LTUuOTEtMTguODUtMy45NC01LjQtOS40Ny05LjYtMTYuNi0xMi42LTcuMTMtMi45OS0xNS40NS00LjQ5LTI0Ljk1LTQuNDlzLTE4LjQxLDEuNDYtMjUuNTQsNC4zOS0xMi42OCw3LTE2LjY1LDEyLjIxWk00ODMuNywzNTYuNTZjLTEuNjYsMi4zOC0zLjkxLDQuMjMtNi43NCw1LjU3LTIuODMsMS4zMy02LjEsMi05LjgxLDItNC4yMywwLTcuNjMtLjg5LTEwLjIxLTIuNjktMi41Ny0xLjc5LTMuODYtNC4zNS0zLjg2LTcuNjd2LS4xYzAtMy4xOSwxLjItNS43NSwzLjYxLTcuNjcsMi40MS0xLjkyLDYuMDItMy4wMSwxMC44NC0zLjI3bDE4LjY1LTEuMjh2Ny4xNGMwLDIuOTMtLjgzLDUuNTgtMi40OSw3Ljk2WiIvPgogICAgPHBhdGggZD0iTTU0Ni4wNSwzNTUuNjNjMCwxMS45OCwzLjA0LDIwLjUyLDkuMTMsMjUuNjMsNi4wOSw1LjExLDE1LjU0LDcuNjcsMjguMzcsNy42NywzLjY1LDAsNi44LS4xMyw5LjQ3LS4zOSwyLjY3LS4yNiw0Ljk1LS41NSw2Ljg0LS44OHYtMjQuNjFjLS45OC4xMy0xLjk1LjI0LTIuOTMuMzRzLTIuMTguMTUtMy42MS4xNWMtNC4xNywwLTcuMjktLjk2LTkuMzgtMi44OC0yLjA4LTEuOTItMy4xMi01LjE2LTMuMTItOS43MnYtNDUuMjFoMTkuMDR2LTI1LjM5aC0xOS4wNHYtMjQuNTFoLTM0Ljc3djI0LjUxaC0xNC40NXYyNS4zOWgxNC40NXY0OS45WiIvPgogICAgPHBhdGggZD0iTTY0NC4yOSwyMzkuNzZjLTMuMzktMy4zNS03LjU4LTUuMDMtMTIuNi01LjAzcy05LjEzLDEuNjgtMTIuNTUsNS4wM2MtMy40MiwzLjM1LTUuMTMsNy4zNy01LjEzLDEyLjA2czEuNzEsOC42Myw1LjEzLDEyLjAxYzMuNDIsMy4zOSw3LjYsNS4wOCwxMi41NSw1LjA4czkuMjEtMS42OSwxMi42LTUuMDgsNS4wOC03LjM5LDUuMDgtMTIuMDEtMS42OS04LjcxLTUuMDgtMTIuMDZaIi8+CiAgICA8cmVjdCB4PSI2MTQuNDEiIHk9IjI4MC4zNCIgd2lkdGg9IjM0LjY3IiBoZWlnaHQ9IjEwNi4zNSIvPgogICAgPHBvbHlnb24gcG9pbnRzPSI2OTMuMDIgMzg2LjY5IDczMy4xNiAzODYuNjkgNzY4LjMyIDI4MC4zNCA3MzIuMDkgMjgwLjM0IDcxMy45MiAzNTcuNjggNzEzLjI0IDM1Ny42OCA2OTQuNjkgMjgwLjM0IDY1Ny40OCAyODAuMzQgNjkzLjAyIDM4Ni42OSIvPgogICAgPHBhdGggZD0iTTc5NCwyMzQuNzNjLTQuOTUsMC05LjEzLDEuNjgtMTIuNTUsNS4wMy0zLjQyLDMuMzUtNS4xMyw3LjM3LTUuMTMsMTIuMDZzMS43MSw4LjYzLDUuMTMsMTIuMDFjMy40MiwzLjM5LDcuNiw1LjA4LDEyLjU1LDUuMDhzOS4yMS0xLjY5LDEyLjYtNS4wOCw1LjA4LTcuMzksNS4wOC0xMi4wMS0xLjY5LTguNzEtNS4wOC0xMi4wNmMtMy4zOS0zLjM1LTcuNTgtNS4wMy0xMi42LTUuMDNaIi8+CiAgICA8cmVjdCB4PSI3NzYuNzIiIHk9IjI4MC4zNCIgd2lkdGg9IjM0LjY3IiBoZWlnaHQ9IjEwNi4zNSIvPgogICAgPHBhdGggZD0iTTgzNi45NywzNTUuNjNjMCwxMS45OCwzLjA0LDIwLjUyLDkuMTMsMjUuNjMsNi4wOSw1LjExLDE1LjU0LDcuNjcsMjguMzcsNy42NywzLjY0LDAsNi44LS4xMyw5LjQ3LS4zOSwyLjY3LS4yNiw0Ljk1LS41NSw2Ljg0LS44OHYtMjQuNjFjLS45OC4xMy0xLjk1LjI0LTIuOTMuMzRzLTIuMTguMTUtMy42MS4xNWMtNC4xNywwLTcuMjktLjk2LTkuMzgtMi44OC0yLjA4LTEuOTItMy4xMi01LjE2LTMuMTItOS43MnYtNDUuMjFoMTkuMDR2LTI1LjM5aC0xOS4wNHYtMjQuNTFoLTM0Ljc3djI0LjUxaC0xNC40NXYyNS4zOWgxNC40NXY0OS45WiIvPgogICAgPHBhdGggZD0iTTkzMi4yOCwzODguODNjLS43OCwyLjM0LTIuMjMsNC4xLTQuMzUsNS4yNy0yLjEyLDEuMTctNSwxLjc2LTguNjQsMS43Ni0yLjY3LDAtNS0uMTMtNi45OC0uMzktMS45OS0uMjYtMy41Ni0uNDktNC43NC0uNjh2MjUuMWMyLjAyLjMzLDQuNTcuNjUsNy42Ny45OCwzLjA5LjMzLDYuMzMuNDksOS43Mi40OSw4LjY2LDAsMTYuMzEtMS4wMywyMi45NS0zLjA4czEyLjMyLTUuNjIsMTcuMDQtMTAuNjljNC43Mi01LjA4LDguNTQtMTIuMjEsMTEuNDctMjEuMzlsMzMuODktMTA1Ljg2aC0zNi42MmwtMTguOTQsODAuMzdoLS44OWwtMTkuMDMtODAuMzdoLTM4LjI4bDM2LjUyLDEwNi4zNS0uNzgsMi4xNVoiLz4KICAgIDxwb2x5Z29uIHBvaW50cz0iMzczLjQ0IDU1Ni42OSA0NzAuMDIgNTU2LjY5IDQ3MC4wMiA1MjcuODggNDA5LjI4IDUyNy44OCA0MDkuMjggNDk5LjM2IDQ2Ni40MSA0OTkuMzYgNDY2LjQxIDQ3Mi40MSA0MDkuMjggNDcyLjQxIDQwOS4yOCA0NDQuNTggNDcwLjAyIDQ0NC41OCA0NzAuMDIgNDE1Ljc3IDM3My40NCA0MTUuNzcgMzczLjQ0IDU1Ni42OSIvPgogICAgPHBhdGggZD0iTTQ4Ny44OSw0NTAuMzR2MTA2LjM1aDM0LjY3di02MC4zNWMwLTMuOTcuNzMtNy40NSwyLjItMTAuNDUsMS40Ni0yLjk5LDMuNTMtNS4zNCw2LjItNy4wMywyLjY3LTEuNjksNS44My0yLjU0LDkuNDctMi41NCw1LjY2LDAsOS45MywxLjcxLDEyLjc5LDUuMTMsMi44NiwzLjQyLDQuMyw4LjE1LDQuMywxNC4yMXY2MS4wNGgzNC42N3YtNjguNDZjMC0xMi42My0zLjE3LTIyLjQ4LTkuNTItMjkuNTQtNi4zNS03LjA2LTE1LjM4LTEwLjYtMjcuMS0xMC42LTguMDEsMC0xNC43MSwxLjgyLTIwLjEyLDUuNDctNS40LDMuNjUtOS40Nyw4LjgyLTEyLjIxLDE1LjUzaC0uNjh2LTE4Ljc1aC0zNC42N1oiLz4KICAgIDxwYXRoIGQ9Ik02ODAuMTgsNDY4LjZoLS43OGMtMS43Ni00LjIzLTQuMTctNy44OC03LjIzLTEwLjk0LTMuMDYtMy4wNi02LjY2LTUuNDItMTAuNzktNy4wOC00LjE0LTEuNjYtOC43MS0yLjQ5LTEzLjcyLTIuNDktOC45OCwwLTE2LjY0LDIuMTItMjIuOTUsNi4zNS02LjMyLDQuMjMtMTEuMTcsMTAuMzQtMTQuNTUsMTguMzEtMy4zOSw3Ljk4LTUuMDgsMTcuNzItNS4wOCwyOS4yNXYuMWMwLDEwLjk0LDEuNjYsMjAuMjYsNC45OCwyNy45OHM4LjEyLDEzLjYyLDE0LjQsMTcuNzJjNi4yOCw0LjEsMTMuODUsNi4xNSwyMi43MSw2LjE1LDUuMTQsMCw5LjgzLS43MiwxNC4wNi0yLjE1LDQuMjMtMS40Myw3LjkxLTMuNDUsMTEuMDQtNi4wNSwzLjEyLTIuNiw1LjUzLTUuNzMsNy4yMy05LjM4aC42OHYxNy42OGMwLDQuNzUtMS42NSw4LjU5LTQuOTMsMTEuNTItMy4yOSwyLjkzLTguMTksNC4zOS0xNC43LDQuMzktNS40NywwLTkuOC0uOTEtMTIuOTktMi43My0zLjE5LTEuODItNS4yNC0zLjc0LTYuMTUtNS43NmwtLjItLjU5aC0zMy41bC4xLjg4Yy43OCw1LjkyLDMuMzgsMTEuMjYsNy44MSwxNi4wMiw0LjQzLDQuNzUsMTAuNDMsOC41LDE4LjAyLDExLjIzLDcuNTgsMi43MywxNi40OSw0LjEsMjYuNzEsNC4xLDExLjIsMCwyMC44Ni0xLjY4LDI5LTUuMDMsOC4xNC0zLjM1LDE0LjQyLTcuOTksMTguODUtMTMuOTIsNC40My01LjkyLDYuNjQtMTIuNzYsNi42NC0yMC41MXYtMTAzLjMyaC0zNC42N3YxOC4yNlpNNjgwLjM3LDUwMy4xN2MwLDUuNTMtLjgzLDEwLjMtMi40OSwxNC4zMXMtMy45OSw3LjA4LTYuOTgsOS4yM2MtMywyLjE1LTYuNTEsMy4yMi0xMC41NSwzLjIycy03LjU4LTEuMDctMTAuNjQtMy4yMmMtMy4wNi0yLjE1LTUuNC01LjI0LTcuMDMtOS4yOC0xLjYzLTQuMDQtMi40NC04LjgyLTIuNDQtMTQuMzZ2LS4xYzAtNS42LjgzLTEwLjM4LDIuNDktMTQuMzYsMS42Ni0zLjk3LDQtNy4wMSw3LjAzLTkuMTMsMy4wMy0yLjExLDYuNTYtMy4xNywxMC42LTMuMTdzNy41MywxLjA2LDEwLjUsMy4xN2MyLjk2LDIuMTIsNS4yOSw1LjE4LDYuOTgsOS4xOCwxLjY5LDQsMi41NCw4LjgxLDIuNTQsMTQuNHYuMVoiLz4KICAgIDxyZWN0IHg9IjczMS45NCIgeT0iNDUwLjM0IiB3aWR0aD0iMzQuNjciIGhlaWdodD0iMTA2LjM1Ii8+CiAgICA8cGF0aCBkPSJNNzQ5LjIyLDQwNC43M2MtNC45NSwwLTkuMTMsMS42OC0xMi41NSw1LjAzLTMuNDIsMy4zNS01LjEzLDcuMzctNS4xMywxMi4wNnMxLjcxLDguNjMsNS4xMywxMi4wMWMzLjQyLDMuMzksNy42LDUuMDgsMTIuNTUsNS4wOHM5LjIxLTEuNjksMTIuNi01LjA4LDUuMDgtNy4zOSw1LjA4LTEyLjAxLTEuNjktOC43MS01LjA4LTEyLjA2Yy0zLjM5LTMuMzUtNy41OC01LjAzLTEyLjYtNS4wM1oiLz4KICAgIDxwYXRoIGQ9Ik03ODMuNSw0NTAuMzR2MTA2LjM1aDM0LjY3di02MC4zNWMwLTMuOTcuNzMtNy40NSwyLjItMTAuNDUsMS40Ni0yLjk5LDMuNTMtNS4zNCw2LjItNy4wMywyLjY3LTEuNjksNS44My0yLjU0LDkuNDctMi41NCw1LjY2LDAsOS45MywxLjcxLDEyLjc5LDUuMTMsMi44NiwzLjQyLDQuMyw4LjE1LDQuMywxNC4yMXY2MS4wNGgzNC42N3YtNjguNDZjMC0xMi42My0zLjE3LTIyLjQ4LTkuNTItMjkuNTQtNi4zNS03LjA2LTE1LjM4LTEwLjYtMjcuMS0xMC42LTguMDEsMC0xNC43MSwxLjgyLTIwLjEyLDUuNDctNS40LDMuNjUtOS40Nyw4LjgyLTEyLjIxLDE1LjUzaC0uNjh2LTE4Ljc1aC0zNC42N1oiLz4KICAgIDxwYXRoIGQ9Ik05ODEuNDUsNDU0LjY4Yy03Ljg4LTQuMzktMTcuMTktNi41OS0yNy45My02LjU5cy0yMC4wNywyLjI1LTI3Ljk4LDYuNzQtMTQuMDMsMTAuODctMTguMzYsMTkuMTRjLTQuMzMsOC4yNy02LjQ5LDE4LjEtNi40OSwyOS40OXYuMWMwLDExLjQ2LDIuMTYsMjEuMzIsNi40OSwyOS41OSw0LjMzLDguMjcsMTAuNTMsMTQuNjMsMTguNiwxOS4wOSw4LjA3LDQuNDYsMTcuNzEsNi42OSwyOC45MSw2LjY5LDguNTMsMCwxNS44LTEuMDksMjEuODMtMy4yNyw2LjAyLTIuMTgsMTEtNS4wMywxNC45NC04LjU0LDMuOTQtMy41Miw3LjAxLTcuMjgsOS4yMy0xMS4yOCwyLjIxLTQsMy43MS03Ljg2LDQuNDktMTEuNTdsLjI5LTEuMTdoLTMxLjI1bC0uMS4zOWMtLjUyLDEuNS0xLjU1LDMuMDktMy4wOCw0Ljc5LTEuNTMsMS42OS0zLjYsMy4xMi02LjIsNC4zLTIuNiwxLjE3LTUuNzYsMS43Ni05LjQ3LDEuNzYtNC4zLDAtNy45OS0uOTYtMTEuMDgtMi44OC0zLjA5LTEuOTItNS40Ny00LjY3LTcuMTMtOC4yNS0xLjUzLTMuMy0yLjM0LTcuMjEtMi40Ny0xMS43Mmg3MS40NnYtMTAuMTZjMC0xMC43NC0yLjE1LTIwLjEtNi40NS0yOC4wOC00LjMtNy45Ny0xMC4zOC0xNC4xNi0xOC4yNi0xOC41NVpNOTQ0LDQ3NS41M2MyLjk2LTEuODksNi40LTIuODMsMTAuMy0yLjgzczcuMzIuOTMsMTAuMjUsMi43OCw1LjIxLDQuNTksNi44NCw4LjJjLjk3LDIuMTUsMS42NCw0LjU4LDIuMDMsNy4yOGgtMzguMzRjLjM5LTIuNjUsMS4wNi01LjA0LDIuMDItNy4xOCwxLjYzLTMuNjEsMy45Mi02LjM2LDYuODgtOC4yNVoiLz4KICA8L2c+Cjwvc3ZnPg==" alt="Applied Creativity Engine"><h1><span>The Story</span><span>Behind ACE</span></h1><p class="hero-copy">Our journey began with a question: when intelligence becomes widely accessible, where does human value begin to show up?</p><a class="scroll" href="#story">Read the story <i>↓</i></a></div></section>
       <section id="story" class="article"><div class="section-top"><span class="number">01 / THE QUESTION</span><h2>We did not start out trying to create a workshop.</h2></div><div class="copy"><p class="lead">We started with a question.</p><p>In early 2023, as Generative AI began moving into everyday life, the three of us found ourselves wondering what its rapid development would mean for people like us.</p><p>We had spent much of our careers building things from scratch. Two of us came from entrepreneurship and venture building. The third came from design, branding, and communication. We had always valued our ability to think, solve problems, create ideas, and turn those ideas into something real.</p><p>But as AI became more capable, we began to question some of our most basic assumptions. What if many of the abilities we had worked so hard to develop were about to become standard equipment? If knowing more, analyzing faster, producing better work, and executing efficiently became available to almost everyone, would those abilities still set us apart?</p><p>And if not, what would?</p><p>We did not have an answer, so we decided to explore the question ourselves.</p></div><div class="photo-pair photo-trio"><button type="button" aria-label="Expand photo"><img src="ace-01.webp" alt="ACE workshop photo 1"><span class="photo-caption">2023 Creative Confidence AI Summer Lab</span></button><button type="button" aria-label="Expand photo"><img src="ace-02.webp" alt="ACE workshop photo 2"><span class="photo-caption">2024 UWC ISAK JAPAN Teacher Training</span></button><button type="button" aria-label="Expand photo"><img src="ace-03.webp" alt="ACE workshop photo 3"><span class="photo-caption">2025 Junyi School of Innovation Training</span></button></div></section>
       <section class="article"><div class="section-top"><span class="number">02 / 2023—2026</span><h2>A three-year social experiment.</h2></div><div class="copy"><p>Over the next three years, we conducted a social experiment across Taiwan and Japan. More than 500 people between the ages of 12 and 65 took part. They included students, professionals, entrepreneurs, executives, respected CEOs, and retired CEOs.</p><p>We invited them into a series of creative challenges where they used AI to research, explore ideas, make decisions, design concepts, and build something that other people could see and respond to.</p><p>Then we observed closely.</p><p>We were not simply interested in whether AI could help people work faster. That part was already becoming obvious. We wanted to understand something more fundamental:</p></div><p class="quote">When people and AI work together, where does real human value begin to show up?</p><div class="copy"><p>As we ran more workshops and observed people from different ages, professions, and levels of experience, a consistent pattern began to emerge.</p><p>For generations, education and work have trained us to know more, analyze faster, solve problems accurately, and execute efficiently. These abilities helped many of us build successful careers and distinguish ourselves professionally.</p><p>They still matter. But they are also the areas where AI is advancing most quickly.</p><p>Knowledge is becoming easier to access. Analysis that once required years of experience can now happen in minutes. Ideas, presentations, strategies, designs, prototypes, and business plans can be produced faster than most of us would have imagined only a few years ago.</p><p>These abilities are not disappearing, but they are becoming less rare. As they become widely available, it becomes harder to build meaningful differentiation around them.</p></div><div class="photo-pair photo-trio"><button type="button" aria-label="Expand photo"><img src="ace-04.webp" alt="ACE workshop photo 4"><span class="photo-caption">2025 Sharestart Education Foundation Training</span></button><button type="button" aria-label="Expand photo"><img src="ace-05.webp" alt="ACE workshop photo 5"><span class="photo-caption">2024 UWC ISAK JAPAN Teacher Training</span></button><button type="button" aria-label="Expand photo"><img src="ace-06.webp" alt="ACE workshop photo 6"><span class="photo-caption">2025 Chunghwa Telecom Institute Training</span></button></div></section>
-      <section id="discovery" class="article"><div class="section-top"><span class="number">03 / THE DISCOVERY</span><h2>What we discovered.</h2></div><div class="copy"><p>That realization led us to a different set of questions.</p><p>If AI can help almost anyone produce an answer, who decides which questions are worth asking? Who notices the opportunities that others have missed? Who decides which problems are meaningful enough to solve? Who understands what people genuinely need? And who can turn an unclear possibility into something others can see, experience, discuss, and believe in?</p><p> This was where we began to see human value appearing.</p><p>The participants who created the most interesting work were not always the ones with the most experience, knowledge, or technical ability.</p><p>They were often the ones who stayed curious for longer. They looked beyond the first obvious answer. They connected ideas from different industries, technologies, business models, cultures, and personal experiences. They tried to understand real people instead of relying only on their own assumptions. Then they gave their ideas a form that others could understand, question, and improve.</p><p>We came to see these behaviors as parts of one larger human capacity. We call it <strong>Applied Creativity.</strong></p>
-<p>Applied Creativity is not simply about producing more ideas, and it is not limited to people in creative professions. It is the ability to use curiosity, imagination, empathy, and judgment to decide what is worth exploring, which problems are worth solving, what should be created, and who it should create value for.</p>
+      <section id="discovery" class="article"><div class="section-top"><span class="number">03 / THE DISCOVERY</span><h2>What we discovered.</h2></div><div class="copy"><p>That realization led us to a different set of questions.</p><p>If AI can help almost anyone produce an answer, who decides which questions are worth asking? Who notices the opportunities that others have missed? Who decides which problems are meaningful enough to solve? Who understands what people genuinely need? And who can turn an unclear possibility into something others can see, experience, discuss, and believe in?</p><p> This was where we began to see human value appearing.</p><p>The participants who created the most interesting work were not always the ones with the most experience, knowledge, or technical ability.</p><p>They were often the ones who stayed curious for longer. They looked beyond the first obvious answer. They connected ideas from different industries, technologies, business models, cultures, and personal experiences. They tried to understand real people instead of relying only on their own assumptions. Then they gave their ideas a form that others could understand, question, and improve.</p><p>What they were demonstrating was <strong>cross-disciplinary creativity</strong>: the ability to look beyond one's own domain, connect seemingly unrelated ideas and perspectives, and turn those connections into something meaningful and useful.</p><p>We came to see these behaviors as a distinct human capacity: a way of thinking and working that puts cross-disciplinary creativity into practice. We call it <strong>Applied Creativity</strong>.</p></div>
+<p class="quote"><strong>"Applied Creativity" is a way of thinking and working that puts cross-disciplinary creativity into practice.</strong></p>
+<div class="copy"><p>Applied Creativity is not simply about producing more ideas, and it is not limited to people in creative professions. It is the ability to use curiosity, imagination, empathy, and judgment to decide what is worth exploring, which problems are worth solving, what should be created, and who it should create value for.</p>
 <p>It can be distilled into a simple yet powerful self-mastery mental model:</p>
 </div>
 <div class="principles-gallery" aria-label="Four principles of Applied Creativity"><figure class="principle-card"><img class="principle-image" src="1.png" alt="A curious person surrounded by many possible directions"><figcaption class="principle-title">1. Be Curious</figcaption></figure><figure class="principle-card"><img class="principle-image" src="2.png" alt="A person investigating meaningful problems with a magnifying glass"><figcaption class="principle-title">2. Find Meaningful Problems</figcaption></figure><figure class="principle-card"><img class="principle-image" src="3.png" alt="A creative idea represented by a light bulb and gears"><figcaption class="principle-title">3. Solve Them Creatively</figcaption></figure><figure class="principle-card"><img class="principle-image" src="4.png" alt="People helping one another move forward together"><figcaption class="principle-title">4. Bring Value to Others</figcaption></figure></div>
@@ -1395,7 +2240,9 @@ button { color: inherit; font: inherit; }
   <section class="hero"><div class="hero-inner"><img class="kicker" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMDkwLjg2IDY1Ny44MiI+CiAgPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDMwLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDIuMS4xIEJ1aWxkIDEyMykgIC0tPgogIDxwYXRoIGQ9Ik0wLDB2NDM0LjU3bDM2My4xNiwyMjMuMjVoNzI3LjdWMEgwWk0xMDU2LjE5LDYyMy4xNUgzNzMuNDRMMzQuNjcsNDE1Ljc3VjM0LjY3aDEwMjEuNTJ2NTg4LjQ4WiIvPgogIDxnPgogICAgPHBhdGggZD0iTTEzMC4zNiwxODUuODNoNDUuOWw4LjgsMzAuODZoMzcuN2wtNDcuNDYtMTQwLjkyaC00My45NWwtNDcuNDYsMTQwLjkyaDM3LjdsOC43Ny0zMC44NlpNMTUzLjYyLDEwNi40M2wxNS4yNiw1My41MmgtMzEuMTZsMTUuMjItNTMuNTJoLjY4WiIvPgogICAgPHBhdGggZD0iTTI2OC41NiwxOTguNDJoLjY4YzEuODIsNC4yMyw0LjI4LDcuODgsNy4zNywxMC45NCwzLjA5LDMuMDYsNi43NSw1LjQyLDEwLjk5LDcuMDgsNC4yMywxLjY2LDguOTIsMi40OSwxNC4wNiwyLjQ5LDguODUsMCwxNi40Mi0yLjE4LDIyLjcxLTYuNTQsNi4yOC00LjM2LDExLjA3LTEwLjY4LDE0LjM2LTE4Ljk1LDMuMjktOC4yNyw0LjkzLTE4LjIzLDQuOTMtMjkuODh2LS4xYzAtMTEuNzItMS42OC0yMS43MS01LjAzLTI5Ljk4LTMuMzUtOC4yNy04LjE5LTE0LjU3LTE0LjUtMTguOS02LjMyLTQuMzMtMTMuOTYtNi40OS0yMi45NS02LjQ5LTUuMDEsMC05LjU5Ljg1LTEzLjcyLDIuNTQtNC4xNCwxLjY5LTcuNzMsNC4xMi0xMC43OSw3LjI4LTMuMDYsMy4xNi01LjUsNi45NS03LjMyLDExLjM4aC0uNzh2LTE4Ljk1aC0zNC42N3YxNDAuNTNoMzQuNjd2LTUyLjQ0Wk0yNjguNDYsMTYzLjQ2YzAtNS42Ni44My0xMC41MSwyLjQ5LTE0LjU1LDEuNjYtNC4wNCw0LTcuMTQsNy4wMy05LjMzLDMuMDMtMi4xOCw2LjUzLTMuMjcsMTAuNS0zLjI3czcuNjMsMS4wNywxMC42LDMuMjJjMi45NiwyLjE1LDUuMjcsNS4yNiw2LjkzLDkuMzMsMS42Niw0LjA3LDIuNDksOC45NCwyLjQ5LDE0LjZ2LjFjMCw1LjYtLjgxLDEwLjQyLTIuNDQsMTQuNDUtMS42Myw0LjA0LTMuOTQsNy4xNi02LjkzLDkuMzgtMywyLjIxLTYuNTQsMy4zMi0xMC42NCwzLjMycy03LjQ3LTEuMDktMTAuNS0zLjI3Yy0zLjAzLTIuMTgtNS4zNy01LjI5LTcuMDMtOS4zMy0xLjY2LTQuMDQtMi40OS04Ljg5LTIuNDktMTQuNTV2LS4xWiIvPgogICAgPHBhdGggZD0iTTM5MS45LDE5OC40MmguNjhjMS44Miw0LjIzLDQuMjgsNy44OCw3LjM3LDEwLjk0LDMuMDksMy4wNiw2Ljc1LDUuNDIsMTAuOTksNy4wOCw0LjIzLDEuNjYsOC45MiwyLjQ5LDE0LjA2LDIuNDksOC44NSwwLDE2LjQyLTIuMTgsMjIuNzEtNi41NCw2LjI4LTQuMzYsMTEuMDctMTAuNjgsMTQuMzYtMTguOTUsMy4yOS04LjI3LDQuOTMtMTguMjMsNC45My0yOS44OHYtLjFjMC0xMS43Mi0xLjY4LTIxLjcxLTUuMDMtMjkuOTgtMy4zNS04LjI3LTguMTktMTQuNTctMTQuNS0xOC45LTYuMzItNC4zMy0xMy45Ni02LjQ5LTIyLjk1LTYuNDktNS4wMSwwLTkuNTkuODUtMTMuNzIsMi41NC00LjE0LDEuNjktNy43Myw0LjEyLTEwLjc5LDcuMjgtMy4wNiwzLjE2LTUuNSw2Ljk1LTcuMzIsMTEuMzhoLS43OHYtMTguOTVoLTM0LjY3djE0MC41M2gzNC42N3YtNTIuNDRaTTM5MS44LDE2My40NmMwLTUuNjYuODMtMTAuNTEsMi40OS0xNC41NSwxLjY2LTQuMDQsNC03LjE0LDcuMDMtOS4zMywzLjAzLTIuMTgsNi41My0zLjI3LDEwLjUtMy4yN3M3LjYzLDEuMDcsMTAuNiwzLjIyYzIuOTYsMi4xNSw1LjI3LDUuMjYsNi45Myw5LjMzLDEuNjYsNC4wNywyLjQ5LDguOTQsMi40OSwxNC42di4xYzAsNS42LS44MSwxMC40Mi0yLjQ0LDE0LjQ1LTEuNjMsNC4wNC0zLjk0LDcuMTYtNi45Myw5LjM4LTMsMi4yMS02LjU0LDMuMzItMTAuNjQsMy4zMnMtNy40Ny0xLjA5LTEwLjUtMy4yN2MtMy4wMy0yLjE4LTUuMzctNS4yOS03LjAzLTkuMzMtMS42Ni00LjA0LTIuNDktOC44OS0yLjQ5LTE0LjU1di0uMVoiLz4KICAgIDxyZWN0IHg9IjQ4MS4xNiIgeT0iNzUuNzciIHdpZHRoPSIzNC42NyIgaGVpZ2h0PSIxNDAuOTIiLz4KICAgIDxwYXRoIGQ9Ik01NTAuNjksOTguOTFjNS4wMSwwLDkuMjEtMS42OSwxMi42LTUuMDhzNS4wOC03LjM5LDUuMDgtMTIuMDEtMS42OS04LjcxLTUuMDgtMTIuMDZjLTMuMzktMy4zNS03LjU4LTUuMDMtMTIuNi01LjAzcy05LjEzLDEuNjgtMTIuNTUsNS4wM2MtMy40MiwzLjM1LTUuMTMsNy4zNy01LjEzLDEyLjA2czEuNzEsOC42Myw1LjEzLDEyLjAxYzMuNDIsMy4zOSw3LjYsNS4wOCwxMi41NSw1LjA4WiIvPgogICAgPHJlY3QgeD0iNTMzLjQxIiB5PSIxMTAuMzQiIHdpZHRoPSIzNC42NyIgaGVpZ2h0PSIxMDYuMzUiLz4KICAgIDxwYXRoIGQ9Ik02MDYuODQsMjEyLjI0YzguMDcsNC40NiwxNy43MSw2LjY5LDI4LjkxLDYuNjksOC41MywwLDE1LjgtMS4wOSwyMS44My0zLjI3LDYuMDItMi4xOCwxMS01LjAzLDE0Ljk0LTguNTQsMy45NC0zLjUyLDcuMDEtNy4yOCw5LjIzLTExLjI4LDIuMjEtNCwzLjcxLTcuODYsNC40OS0xMS41N2wuMjktMS4xN2gtMzEuMjVsLS4xLjM5Yy0uNTIsMS41LTEuNTUsMy4wOS0zLjA4LDQuNzktMS41MywxLjY5LTMuNiwzLjEyLTYuMiw0LjMtMi42LDEuMTctNS43NiwxLjc2LTkuNDcsMS43Ni00LjMsMC03Ljk5LS45Ni0xMS4wOC0yLjg4LTMuMDktMS45Mi01LjQ3LTQuNjctNy4xMy04LjI1LTEuNTMtMy4zLTIuMzQtNy4yMS0yLjQ3LTExLjcyaDcxLjQ2di0xMC4xNmMwLTEwLjc0LTIuMTUtMjAuMS02LjQ1LTI4LjA4LTQuMy03Ljk3LTEwLjM5LTE0LjE2LTE4LjI2LTE4LjU1LTcuODgtNC4zOS0xNy4xOS02LjU5LTI3LjkzLTYuNTlzLTIwLjA3LDIuMjUtMjcuOTgsNi43NC0xNC4wMywxMC44Ny0xOC4zNiwxOS4xNGMtNC4zMyw4LjI3LTYuNDksMTguMS02LjQ5LDI5LjQ5di4xYzAsMTEuNDYsMi4xNiwyMS4zMiw2LjQ5LDI5LjU5LDQuMzMsOC4yNywxMC41MywxNC42MywxOC42LDE5LjA5Wk02MjUuMDYsMTM1LjUzYzIuOTYtMS44OSw2LjQtMi44MywxMC4zLTIuODNzNy4zMi45MywxMC4yNSwyLjc4LDUuMjEsNC41OSw2Ljg0LDguMmMuOTcsMi4xNSwxLjY0LDQuNTgsMi4wMyw3LjI4aC0zOC4zNGMuMzktMi42NSwxLjA2LTUuMDQsMi4wMy03LjE4LDEuNjMtMy42MSwzLjkyLTYuMzYsNi44OC04LjI1WiIvPgogICAgPHBhdGggZD0iTTcxNi44NSwyMTIuMzljNi4zNSw0LjM2LDEzLjk1LDYuNTQsMjIuOCw2LjU0LDcuNjgsMCwxNC4zMi0xLjgxLDE5LjkyLTUuNDIsNS42LTMuNjEsOS43LTguNjEsMTIuMy0xNC45OWguNjh2MTguMTZoMzQuNjdWNzUuNzdoLTM0LjY3djUzLjQyaC0uNjhjLTIuNzMtNi41OC02Ljg4LTExLjczLTEyLjQ1LTE1LjQ4LTUuNTctMy43NC0xMi4xNi01LjYyLTE5Ljc4LTUuNjItOC44NSwwLTE2LjQ2LDIuMTctMjIuOCw2LjQ5LTYuMzUsNC4zMy0xMS4yLDEwLjYxLTE0LjU1LDE4Ljg1LTMuMzUsOC4yNC01LjAzLDE4LjIxLTUuMDMsMjkuOTN2LjFjMCwxMS43MiwxLjY4LDIxLjcxLDUuMDMsMjkuOTgsMy4zNSw4LjI3LDguMiwxNC41OCwxNC41NSwxOC45NVpNNzMyLjQzLDE2My4zN2MwLTUuNi44My0xMC40MywyLjQ5LTE0LjUsMS42Ni00LjA3LDMuOTktNy4xOCw2Ljk4LTkuMzMsMi45OS0yLjE1LDYuNTEtMy4yMiwxMC41NS0zLjIyczcuNTUsMS4wOSwxMC41NSwzLjI3YzIuOTksMi4xOCw1LjM0LDUuMjksNy4wMyw5LjMzLDEuNjksNC4wNCwyLjU0LDguODksMi41NCwxNC41NXYuMWMwLDUuNi0uODMsMTAuNDMtMi40OSwxNC41LTEuNjYsNC4wNy00LDcuMTktNy4wMyw5LjM4LTMuMDMsMi4xOC02LjU2LDMuMjctMTAuNiwzLjI3cy03LjU3LTEuMTEtMTAuNi0zLjMyYy0zLjAzLTIuMjEtNS4zNi01LjM0LTYuOTgtOS4zOC0xLjYzLTQuMDQtMi40NC04Ljg5LTIuNDQtMTQuNTV2LS4xWiIvPgogICAgPHBhdGggZD0iTTE4Mi4zOCwzMzQuMDVjLS44NSw1LjI3LTIuNTcsOS44MS01LjE4LDEzLjYyLTIuNiwzLjgxLTUuOTIsNi43NC05Ljk2LDguNzktNC4wNCwyLjA1LTguNjYsMy4wOC0xMy44NywzLjA4LTYuNTEsMC0xMi4xNy0xLjcyLTE2Ljk5LTUuMTgtNC44Mi0zLjQ1LTguNTMtOC40My0xMS4xMy0xNC45NC0yLjYtNi41MS0zLjkxLTE0LjI5LTMuOTEtMjMuMzR2LS4xYzAtOC45OCwxLjMtMTYuNjgsMy45MS0yMy4xLDIuNi02LjQxLDYuMy0xMS4zNCwxMS4wOC0xNC43OSw0Ljc5LTMuNDUsMTAuNDMtNS4xOCwxNi45NC01LjE4LDUuNTMsMCwxMC4zMiwxLjA3LDE0LjM2LDMuMjIsNC4wNCwyLjE1LDcuMjgsNS4wOSw5LjcyLDguODQsMi40NCwzLjc0LDQuMDUsOC4wOSw0LjgzLDEzLjA0bC4yLDEuMzdoMzQuNTdsLS4xLS44OGMtLjM5LTEwLjU1LTMuMzEtMTkuOTktOC43NC0yOC4zMi01LjQ0LTguMzMtMTIuODYtMTQuOTEtMjIuMjctMTkuNzMtOS40MS00LjgyLTIwLjI2LTcuMjMtMzIuNTctNy4yMy0xNCwwLTI2LjEyLDIuODgtMzYuMzgsOC42NHMtMTguMTgsMTQuMDgtMjMuNzgsMjQuOTVjLTUuNiwxMC44Ny04LjQsMjMuOTYtOC40LDM5LjI2di4xYzAsMTUuMywyLjc4LDI4LjQsOC4zNSwzOS4zMSw1LjU3LDEwLjkxLDEzLjQ4LDE5LjI1LDIzLjczLDI1LjA1LDEwLjI1LDUuOCwyMi40MSw4LjY5LDM2LjQ3LDguNjksMTIuMjQsMCwyMy4wNi0yLjQxLDMyLjQ3LTcuMjMsOS40MS00LjgyLDE2Ljg2LTExLjM4LDIyLjM2LTE5LjY4LDUuNS04LjMsOC40OC0xNy42OSw4Ljk0LTI4LjE3di0xLjA3aC0zNC40N2wtLjIuOThaIi8+CiAgICA8cGF0aCBkPSJNMjY2LjE3LDMzMC4yNGMwLTUuMDEuODYtOS4yMywyLjU5LTEyLjY1LDEuNzItMy40Miw0LjI2LTYuMDEsNy42Mi03Ljc2LDMuMzUtMS43Niw3LjQ3LTIuNjQsMTIuMzUtMi42NCwyLjA4LDAsNC4wOC4xNiw2LjAxLjQ5LDEuOTIuMzMsMy42LjgxLDUuMDMsMS40NnYtMjkuNjljLTEuMy0uNDUtMi43Mi0uOC00LjI1LTEuMDMtMS41My0uMjMtMy4xMS0uMzQtNC43NC0uMzQtNi4zMiwwLTExLjUxLDEuODItMTUuNTgsNS40Ny00LjA3LDMuNjUtNi44NSw4Ljg1LTguMzUsMTUuNjJoLS42OHYtMTguODVoLTM0LjY3djEwNi4zNWgzNC42N3YtNTYuNDVaIi8+CiAgICA8cGF0aCBkPSJNMzEwLjg1LDMwMy45N2MtNC4zMyw4LjI3LTYuNDksMTguMS02LjQ5LDI5LjQ5di4xYzAsMTEuNDYsMi4xNiwyMS4zMiw2LjQ5LDI5LjU5LDQuMzMsOC4yNywxMC41MywxNC42MywxOC42LDE5LjA5LDguMDcsNC40NiwxNy43MSw2LjY5LDI4LjkxLDYuNjksOC41MywwLDE1LjgtMS4wOSwyMS44My0zLjI3LDYuMDItMi4xOCwxMS01LjAzLDE0Ljk0LTguNTQsMy45NC0zLjUyLDcuMDEtNy4yOCw5LjIzLTExLjI4LDIuMjEtNCwzLjcxLTcuODYsNC40OS0xMS41N2wuMjktMS4xN2gtMzEuMjVsLS4xLjM5Yy0uNTIsMS41LTEuNTUsMy4wOS0zLjA4LDQuNzktMS41MywxLjY5LTMuNiwzLjEyLTYuMiw0LjMtMi42LDEuMTctNS43NiwxLjc2LTkuNDcsMS43Ni00LjMsMC03Ljk5LS45Ni0xMS4wOC0yLjg4LTMuMDktMS45Mi01LjQ3LTQuNjctNy4xMy04LjI1LTEuNTMtMy4zLTIuMzQtNy4yMS0yLjQ3LTExLjcyaDcxLjQ2di0xMC4xNmMwLTEwLjc0LTIuMTUtMjAuMS02LjQ1LTI4LjA4LTQuMy03Ljk3LTEwLjM5LTE0LjE2LTE4LjI2LTE4LjU1LTcuODgtNC4zOS0xNy4xOS02LjU5LTI3LjkzLTYuNTlzLTIwLjA3LDIuMjUtMjcuOTgsNi43NC0xNC4wMywxMC44Ny0xOC4zNiwxOS4xNFpNMzQ3LjY2LDMwNS41M2MyLjk2LTEuODksNi40LTIuODMsMTAuMy0yLjgzczcuMzIuOTMsMTAuMjUsMi43OCw1LjIxLDQuNTksNi44NCw4LjJjLjk3LDIuMTUsMS42NCw0LjU4LDIuMDMsNy4yOGgtMzguMzRjLjM5LTIuNjUsMS4wNi01LjA0LDIuMDItNy4xOCwxLjYzLTMuNjEsMy45Mi02LjM2LDYuODgtOC4yNVoiLz4KICAgIDxwYXRoIGQ9Ik00MzEuMjEsMjk0LjY5Yy0zLjk3LDUuMjEtNi4yNSwxMS4zLTYuODQsMTguMjZsLS4xLDEuMjdoMzEuMjVsLjItLjk4Yy41OS0yLjczLDIuMjEtNS4wNCw0Ljg4LTYuOTMsMi42Ny0xLjg5LDYuMzUtMi44MywxMS4wNC0yLjgzczguMzYsMS4xMiwxMC44NCwzLjM3YzIuNDcsMi4yNSwzLjcxLDUuMjksMy43MSw5LjEzdjUuMjhsLTI0LjIyLDEuNTZjLTEzLjY3LjkxLTI0LjI0LDQuMTUtMzEuNjksOS43Mi03LjQ2LDUuNTctMTEuMTgsMTMuMzYtMTEuMTgsMjMuMzl2LjFjMCw2LjE5LDEuNTEsMTEuNyw0LjU0LDE2LjU1LDMuMDMsNC44NSw3LjI0LDguNjYsMTIuNjUsMTEuNDMsNS40LDIuNzcsMTEuNjUsNC4xNSwxOC43NSw0LjE1LDQuNjIsMCw4Ljg1LS42NSwxMi43LTEuOTUsMy44NC0xLjMsNy4yNi0zLjE5LDEwLjI1LTUuNjYsMi45OS0yLjQ3LDUuNS01LjQ0LDcuNTItOC44OWguNjh2MTUuMDRoMzQuNjd2LTcyLjY2YzAtNy4xNi0xLjk3LTEzLjQ0LTUuOTEtMTguODUtMy45NC01LjQtOS40Ny05LjYtMTYuNi0xMi42LTcuMTMtMi45OS0xNS40NS00LjQ5LTI0Ljk1LTQuNDlzLTE4LjQxLDEuNDYtMjUuNTQsNC4zOS0xMi42OCw3LTE2LjY1LDEyLjIxWk00ODMuNywzNTYuNTZjLTEuNjYsMi4zOC0zLjkxLDQuMjMtNi43NCw1LjU3LTIuODMsMS4zMy02LjEsMi05LjgxLDItNC4yMywwLTcuNjMtLjg5LTEwLjIxLTIuNjktMi41Ny0xLjc5LTMuODYtNC4zNS0zLjg2LTcuNjd2LS4xYzAtMy4xOSwxLjItNS43NSwzLjYxLTcuNjcsMi40MS0xLjkyLDYuMDItMy4wMSwxMC44NC0zLjI3bDE4LjY1LTEuMjh2Ny4xNGMwLDIuOTMtLjgzLDUuNTgtMi40OSw3Ljk2WiIvPgogICAgPHBhdGggZD0iTTU0Ni4wNSwzNTUuNjNjMCwxMS45OCwzLjA0LDIwLjUyLDkuMTMsMjUuNjMsNi4wOSw1LjExLDE1LjU0LDcuNjcsMjguMzcsNy42NywzLjY1LDAsNi44LS4xMyw5LjQ3LS4zOSwyLjY3LS4yNiw0Ljk1LS41NSw2Ljg0LS44OHYtMjQuNjFjLS45OC4xMy0xLjk1LjI0LTIuOTMuMzRzLTIuMTguMTUtMy42MS4xNWMtNC4xNywwLTcuMjktLjk2LTkuMzgtMi44OC0yLjA4LTEuOTItMy4xMi01LjE2LTMuMTItOS43MnYtNDUuMjFoMTkuMDR2LTI1LjM5aC0xOS4wNHYtMjQuNTFoLTM0Ljc3djI0LjUxaC0xNC40NXYyNS4zOWgxNC40NXY0OS45WiIvPgogICAgPHBhdGggZD0iTTY0NC4yOSwyMzkuNzZjLTMuMzktMy4zNS03LjU4LTUuMDMtMTIuNi01LjAzcy05LjEzLDEuNjgtMTIuNTUsNS4wM2MtMy40MiwzLjM1LTUuMTMsNy4zNy01LjEzLDEyLjA2czEuNzEsOC42Myw1LjEzLDEyLjAxYzMuNDIsMy4zOSw3LjYsNS4wOCwxMi41NSw1LjA4czkuMjEtMS42OSwxMi42LTUuMDgsNS4wOC03LjM5LDUuMDgtMTIuMDEtMS42OS04LjcxLTUuMDgtMTIuMDZaIi8+CiAgICA8cmVjdCB4PSI2MTQuNDEiIHk9IjI4MC4zNCIgd2lkdGg9IjM0LjY3IiBoZWlnaHQ9IjEwNi4zNSIvPgogICAgPHBvbHlnb24gcG9pbnRzPSI2OTMuMDIgMzg2LjY5IDczMy4xNiAzODYuNjkgNzY4LjMyIDI4MC4zNCA3MzIuMDkgMjgwLjM0IDcxMy45MiAzNTcuNjggNzEzLjI0IDM1Ny42OCA2OTQuNjkgMjgwLjM0IDY1Ny40OCAyODAuMzQgNjkzLjAyIDM4Ni42OSIvPgogICAgPHBhdGggZD0iTTc5NCwyMzQuNzNjLTQuOTUsMC05LjEzLDEuNjgtMTIuNTUsNS4wMy0zLjQyLDMuMzUtNS4xMyw3LjM3LTUuMTMsMTIuMDZzMS43MSw4LjYzLDUuMTMsMTIuMDFjMy40MiwzLjM5LDcuNiw1LjA4LDEyLjU1LDUuMDhzOS4yMS0xLjY5LDEyLjYtNS4wOCw1LjA4LTcuMzksNS4wOC0xMi4wMS0xLjY5LTguNzEtNS4wOC0xMi4wNmMtMy4zOS0zLjM1LTcuNTgtNS4wMy0xMi42LTUuMDNaIi8+CiAgICA8cmVjdCB4PSI3NzYuNzIiIHk9IjI4MC4zNCIgd2lkdGg9IjM0LjY3IiBoZWlnaHQ9IjEwNi4zNSIvPgogICAgPHBhdGggZD0iTTgzNi45NywzNTUuNjNjMCwxMS45OCwzLjA0LDIwLjUyLDkuMTMsMjUuNjMsNi4wOSw1LjExLDE1LjU0LDcuNjcsMjguMzcsNy42NywzLjY0LDAsNi44LS4xMyw5LjQ3LS4zOSwyLjY3LS4yNiw0Ljk1LS41NSw2Ljg0LS44OHYtMjQuNjFjLS45OC4xMy0xLjk1LjI0LTIuOTMuMzRzLTIuMTguMTUtMy42MS4xNWMtNC4xNywwLTcuMjktLjk2LTkuMzgtMi44OC0yLjA4LTEuOTItMy4xMi01LjE2LTMuMTItOS43MnYtNDUuMjFoMTkuMDR2LTI1LjM5aC0xOS4wNHYtMjQuNTFoLTM0Ljc3djI0LjUxaC0xNC40NXYyNS4zOWgxNC40NXY0OS45WiIvPgogICAgPHBhdGggZD0iTTkzMi4yOCwzODguODNjLS43OCwyLjM0LTIuMjMsNC4xLTQuMzUsNS4yNy0yLjEyLDEuMTctNSwxLjc2LTguNjQsMS43Ni0yLjY3LDAtNS0uMTMtNi45OC0uMzktMS45OS0uMjYtMy41Ni0uNDktNC43NC0uNjh2MjUuMWMyLjAyLjMzLDQuNTcuNjUsNy42Ny45OCwzLjA5LjMzLDYuMzMuNDksOS43Mi40OSw4LjY2LDAsMTYuMzEtMS4wMywyMi45NS0zLjA4czEyLjMyLTUuNjIsMTcuMDQtMTAuNjljNC43Mi01LjA4LDguNTQtMTIuMjEsMTEuNDctMjEuMzlsMzMuODktMTA1Ljg2aC0zNi42MmwtMTguOTQsODAuMzdoLS44OWwtMTkuMDMtODAuMzdoLTM4LjI4bDM2LjUyLDEwNi4zNS0uNzgsMi4xNVoiLz4KICAgIDxwb2x5Z29uIHBvaW50cz0iMzczLjQ0IDU1Ni42OSA0NzAuMDIgNTU2LjY5IDQ3MC4wMiA1MjcuODggNDA5LjI4IDUyNy44OCA0MDkuMjggNDk5LjM2IDQ2Ni40MSA0OTkuMzYgNDY2LjQxIDQ3Mi40MSA0MDkuMjggNDcyLjQxIDQwOS4yOCA0NDQuNTggNDcwLjAyIDQ0NC41OCA0NzAuMDIgNDE1Ljc3IDM3My40NCA0MTUuNzcgMzczLjQ0IDU1Ni42OSIvPgogICAgPHBhdGggZD0iTTQ4Ny44OSw0NTAuMzR2MTA2LjM1aDM0LjY3di02MC4zNWMwLTMuOTcuNzMtNy40NSwyLjItMTAuNDUsMS40Ni0yLjk5LDMuNTMtNS4zNCw2LjItNy4wMywyLjY3LTEuNjksNS44My0yLjU0LDkuNDctMi41NCw1LjY2LDAsOS45MywxLjcxLDEyLjc5LDUuMTMsMi44NiwzLjQyLDQuMyw4LjE1LDQuMywxNC4yMXY2MS4wNGgzNC42N3YtNjguNDZjMC0xMi42My0zLjE3LTIyLjQ4LTkuNTItMjkuNTQtNi4zNS03LjA2LTE1LjM4LTEwLjYtMjcuMS0xMC42LTguMDEsMC0xNC43MSwxLjgyLTIwLjEyLDUuNDctNS40LDMuNjUtOS40Nyw4LjgyLTEyLjIxLDE1LjUzaC0uNjh2LTE4Ljc1aC0zNC42N1oiLz4KICAgIDxwYXRoIGQ9Ik02ODAuMTgsNDY4LjZoLS43OGMtMS43Ni00LjIzLTQuMTctNy44OC03LjIzLTEwLjk0LTMuMDYtMy4wNi02LjY2LTUuNDItMTAuNzktNy4wOC00LjE0LTEuNjYtOC43MS0yLjQ5LTEzLjcyLTIuNDktOC45OCwwLTE2LjY0LDIuMTItMjIuOTUsNi4zNS02LjMyLDQuMjMtMTEuMTcsMTAuMzQtMTQuNTUsMTguMzEtMy4zOSw3Ljk4LTUuMDgsMTcuNzItNS4wOCwyOS4yNXYuMWMwLDEwLjk0LDEuNjYsMjAuMjYsNC45OCwyNy45OHM4LjEyLDEzLjYyLDE0LjQsMTcuNzJjNi4yOCw0LjEsMTMuODUsNi4xNSwyMi43MSw2LjE1LDUuMTQsMCw5LjgzLS43MiwxNC4wNi0yLjE1LDQuMjMtMS40Myw3LjkxLTMuNDUsMTEuMDQtNi4wNSwzLjEyLTIuNiw1LjUzLTUuNzMsNy4yMy05LjM4aC42OHYxNy42OGMwLDQuNzUtMS42NSw4LjU5LTQuOTMsMTEuNTItMy4yOSwyLjkzLTguMTksNC4zOS0xNC43LDQuMzktNS40NywwLTkuOC0uOTEtMTIuOTktMi43My0zLjE5LTEuODItNS4yNC0zLjc0LTYuMTUtNS43NmwtLjItLjU5aC0zMy41bC4xLjg4Yy43OCw1LjkyLDMuMzgsMTEuMjYsNy44MSwxNi4wMiw0LjQzLDQuNzUsMTAuNDMsOC41LDE4LjAyLDExLjIzLDcuNTgsMi43MywxNi40OSw0LjEsMjYuNzEsNC4xLDExLjIsMCwyMC44Ni0xLjY4LDI5LTUuMDMsOC4xNC0zLjM1LDE0LjQyLTcuOTksMTguODUtMTMuOTIsNC40My01LjkyLDYuNjQtMTIuNzYsNi42NC0yMC41MXYtMTAzLjMyaC0zNC42N3YxOC4yNlpNNjgwLjM3LDUwMy4xN2MwLDUuNTMtLjgzLDEwLjMtMi40OSwxNC4zMXMtMy45OSw3LjA4LTYuOTgsOS4yM2MtMywyLjE1LTYuNTEsMy4yMi0xMC41NSwzLjIycy03LjU4LTEuMDctMTAuNjQtMy4yMmMtMy4wNi0yLjE1LTUuNC01LjI0LTcuMDMtOS4yOC0xLjYzLTQuMDQtMi40NC04LjgyLTIuNDQtMTQuMzZ2LS4xYzAtNS42LjgzLTEwLjM4LDIuNDktMTQuMzYsMS42Ni0zLjk3LDQtNy4wMSw3LjAzLTkuMTMsMy4wMy0yLjExLDYuNTYtMy4xNywxMC42LTMuMTdzNy41MywxLjA2LDEwLjUsMy4xN2MyLjk2LDIuMTIsNS4yOSw1LjE4LDYuOTgsOS4xOCwxLjY5LDQsMi41NCw4LjgxLDIuNTQsMTQuNHYuMVoiLz4KICAgIDxyZWN0IHg9IjczMS45NCIgeT0iNDUwLjM0IiB3aWR0aD0iMzQuNjciIGhlaWdodD0iMTA2LjM1Ii8+CiAgICA8cGF0aCBkPSJNNzQ5LjIyLDQwNC43M2MtNC45NSwwLTkuMTMsMS42OC0xMi41NSw1LjAzLTMuNDIsMy4zNS01LjEzLDcuMzctNS4xMywxMi4wNnMxLjcxLDguNjMsNS4xMywxMi4wMWMzLjQyLDMuMzksNy42LDUuMDgsMTIuNTUsNS4wOHM5LjIxLTEuNjksMTIuNi01LjA4LDUuMDgtNy4zOSw1LjA4LTEyLjAxLTEuNjktOC43MS01LjA4LTEyLjA2Yy0zLjM5LTMuMzUtNy41OC01LjAzLTEyLjYtNS4wM1oiLz4KICAgIDxwYXRoIGQ9Ik03ODMuNSw0NTAuMzR2MTA2LjM1aDM0LjY3di02MC4zNWMwLTMuOTcuNzMtNy40NSwyLjItMTAuNDUsMS40Ni0yLjk5LDMuNTMtNS4zNCw2LjItNy4wMywyLjY3LTEuNjksNS44My0yLjU0LDkuNDctMi41NCw1LjY2LDAsOS45MywxLjcxLDEyLjc5LDUuMTMsMi44NiwzLjQyLDQuMyw4LjE1LDQuMywxNC4yMXY2MS4wNGgzNC42N3YtNjguNDZjMC0xMi42My0zLjE3LTIyLjQ4LTkuNTItMjkuNTQtNi4zNS03LjA2LTE1LjM4LTEwLjYtMjcuMS0xMC42LTguMDEsMC0xNC43MSwxLjgyLTIwLjEyLDUuNDctNS40LDMuNjUtOS40Nyw4LjgyLTEyLjIxLDE1LjUzaC0uNjh2LTE4Ljc1aC0zNC42N1oiLz4KICAgIDxwYXRoIGQ9Ik05ODEuNDUsNDU0LjY4Yy03Ljg4LTQuMzktMTcuMTktNi41OS0yNy45My02LjU5cy0yMC4wNywyLjI1LTI3Ljk4LDYuNzQtMTQuMDMsMTAuODctMTguMzYsMTkuMTRjLTQuMzMsOC4yNy02LjQ5LDE4LjEtNi40OSwyOS40OXYuMWMwLDExLjQ2LDIuMTYsMjEuMzIsNi40OSwyOS41OSw0LjMzLDguMjcsMTAuNTMsMTQuNjMsMTguNiwxOS4wOSw4LjA3LDQuNDYsMTcuNzEsNi42OSwyOC45MSw2LjY5LDguNTMsMCwxNS44LTEuMDksMjEuODMtMy4yNyw2LjAyLTIuMTgsMTEtNS4wMywxNC45NC04LjU0LDMuOTQtMy41Miw3LjAxLTcuMjgsOS4yMy0xMS4yOCwyLjIxLTQsMy43MS03Ljg2LDQuNDktMTEuNTdsLjI5LTEuMTdoLTMxLjI1bC0uMS4zOWMtLjUyLDEuNS0xLjU1LDMuMDktMy4wOCw0Ljc5LTEuNTMsMS42OS0zLjYsMy4xMi02LjIsNC4zLTIuNiwxLjE3LTUuNzYsMS43Ni05LjQ3LDEuNzYtNC4zLDAtNy45OS0uOTYtMTEuMDgtMi44OC0zLjA5LTEuOTItNS40Ny00LjY3LTcuMTMtOC4yNS0xLjUzLTMuMy0yLjM0LTcuMjEtMi40Ny0xMS43Mmg3MS40NnYtMTAuMTZjMC0xMC43NC0yLjE1LTIwLjEtNi40NS0yOC4wOC00LjMtNy45Ny0xMC4zOC0xNC4xNi0xOC4yNi0xOC41NVpNOTQ0LDQ3NS41M2MyLjk2LTEuODksNi40LTIuODMsMTAuMy0yLjgzczcuMzIuOTMsMTAuMjUsMi43OCw1LjIxLDQuNTksNi44NCw4LjJjLjk3LDIuMTUsMS42NCw0LjU4LDIuMDMsNy4yOGgtMzguMzRjLjM5LTIuNjUsMS4wNi01LjA0LDIuMDItNy4xOCwxLjYzLTMuNjEsMy45Mi02LjM2LDYuODgtOC4yNVoiLz4KICA8L2c+Cjwvc3ZnPg==" alt="Applied Creativity Engine"><h1><span>ACE 背後的</span><span>故事</span></h1><p class="hero-copy">我們的旅程從一個問題開始：當智慧變得人人都能取得，人類的價值會從哪裡開始顯現？</p><a class="scroll" href="#story-zh">閱讀故事 <i>↓</i></a></div></section>
   <section id="story-zh" class="article"><div class="section-top"><span class="number">01 / 問題</span><h2>我們一開始，並不是想要創造一套工作坊。</h2></div><div class="copy"><p class="lead">一切從一個問題開始。</p><p>2023 年初，生成式 AI 開始進入日常生活。我們三個人不約而同地開始思考：它的快速發展，對像我們這樣的人究竟意味著什麼？</p><p>我們職涯中的大部分時間，都在從零開始打造事物。其中兩個人來自創業與事業開發，另一個人來自設計、品牌與溝通。我們一直很重視自己思考、解決問題、提出想法，並把想法變成現實的能力。</p><p>但隨著 AI 變得愈來愈強，我們開始重新檢視一些最根本的假設。如果許多我們花了多年才培養出的能力，即將變成每個人的標準配備，會發生什麼事？如果知道得更多、分析得更快、做出更好的成果，以及更有效率地執行，幾乎每個人都能做到，這些能力還能讓我們與眾不同嗎？</p><p>如果不能，真正能拉開差異的又會是什麼？</p><p>我們沒有答案，所以決定親自探索這個問題。</p></div><div class="photo-pair photo-trio"><button type="button" aria-label="放大照片"><img src="ace-01.webp" alt="ACE 工作坊照片 1"><span class="photo-caption">2023 創意自信 AI 夏季實驗室</span></button><button type="button" aria-label="放大照片"><img src="ace-02.webp" alt="ACE 工作坊照片 2"><span class="photo-caption">2024 UWC ISAK JAPAN 教師培訓</span></button><button type="button" aria-label="放大照片"><img src="ace-03.webp" alt="ACE 工作坊照片 3"><span class="photo-caption">2025 Junyi 創新學校培訓</span></button></div></section>
   <section class="article"><div class="section-top"><span class="number">02 / 2023—2026</span><h2>一場為期三年的社會實驗。</h2></div><div class="copy"><p>接下來三年，我們在台灣與日本進行了一場社會實驗。超過 500 位、年齡從 12 歲到 65 歲的參與者加入其中，包括學生、專業工作者、創業者、企業主管、備受尊敬的執行長與退休執行長。</p><p>我們邀請他們參加一連串創意挑戰，運用 AI 進行研究、探索想法、做出決定、設計概念，並打造其他人看得見、也能做出回應的成果。</p><p>接著，我們仔細觀察。</p><p>我們關心的不只是 AI 能不能讓人工作得更快，因為這件事已經愈來愈明顯。我們真正想理解的是一個更根本的問題：</p></div><p class="quote">當人與 AI 一起工作，真正屬於人的價值會從哪裡開始顯現？</p><div class="copy"><p>隨著工作坊持續進行，我們觀察不同年齡、職業與經驗程度的參與者，一個一致的模式逐漸浮現。</p><p>長久以來，教育與工作都在訓練我們知道得更多、分析得更快、精準解決問題，並有效率地執行。這些能力幫助許多人建立成功的職涯，也讓我們在專業上脫穎而出。</p><p>這些能力依然重要，但它們也正好是 AI 進步最快的領域。</p><p>知識變得更容易取得。過去需要多年經驗的分析，現在幾分鐘就能完成。想法、簡報、策略、設計、原型與商業計畫，都能以幾年前難以想像的速度產生。</p><p>這些能力不會消失，但正在變得不再稀有。當它們愈來愈普及，要靠這些能力建立有意義的差異，也會變得更加困難。</p></div><div class="photo-pair photo-trio"><button type="button" aria-label="放大照片"><img src="ace-04.webp" alt="ACE 工作坊照片 4"><span class="photo-caption">2025 Sharestart 教育基金會培訓</span></button><button type="button" aria-label="放大照片"><img src="ace-05.webp" alt="ACE 工作坊照片 5"><span class="photo-caption">2024 UWC ISAK JAPAN 教師培訓</span></button><button type="button" aria-label="放大照片"><img src="ace-06.webp" alt="ACE 工作坊照片 6"><span class="photo-caption">2025 中華電信學院培訓</span></button></div></section>
-  <section class="article"><div class="section-top"><span class="number">03 / 發現</span><h2>我們發現了什麼。</h2></div><div class="copy"><p>這個體會，帶領我們開始思考另一組問題。</p><p>如果 AI 幾乎可以幫任何人產生答案，誰來決定哪些問題值得提出？誰能注意到別人錯過的機會？誰來判斷哪些問題具有足夠的意義、值得解決？誰能理解人們真正需要什麼？又是誰能把一個還不清楚的可能，變成其他人看得見、體驗得到、能夠討論，也願意相信的東西？</p><p>我們開始在這些地方，看見人類價值的出現。</p><p>創造出最有意思成果的參與者，並不總是經驗最多、知識最豐富，或技術能力最強的人。</p><p>他們往往願意保持好奇更久。他們會看見第一個明顯答案以外的可能，也會連結不同產業、科技、商業模式、文化與個人經驗。他們努力理解真實的人，而不是只依賴自己的假設，接著再把想法變成其他人能理解、質疑與改進的形式。</p><p>我們逐漸把這些行為視為一種更完整的人類能力，並稱它為「實用創造力」。</p><p>實用創造力不只是產生更多想法，也不只屬於從事創意工作的人。它是運用好奇心、想像力、同理心與判斷力，決定什麼值得探索、哪些問題值得解決、應該創造什麼，以及要為誰創造價值的能力。</p><p>它可以濃縮成一個簡單卻強大的自我掌握心智模型：</p>
+  <section class="article"><div class="section-top"><span class="number">03 / 發現</span><h2>我們發現了什麼。</h2></div><div class="copy"><p>這個體會，帶領我們開始思考另一組問題。</p><p>如果 AI 幾乎可以幫任何人產生答案，誰來決定哪些問題值得提出？誰能注意到別人錯過的機會？誰來判斷哪些問題具有足夠的意義、值得解決？誰能理解人們真正需要什麼？又是誰能把一個還不清楚的可能，變成其他人看得見、體驗得到、能夠討論，也願意相信的東西？</p><p>我們開始在這些地方，看見人類價值的出現。</p><p>創造出最有意思成果的參與者，並不總是經驗最多、知識最豐富，或技術能力最強的人。</p><p>他們往往願意保持好奇更久。他們會看見第一個明顯答案以外的可能，也會連結不同產業、科技、商業模式、文化與個人經驗。他們努力理解真實的人，而不是只依賴自己的假設，接著再把想法變成其他人能理解、質疑與改進的形式。</p><p>他們所展現的是<strong>跨領域創造力</strong>：超越自身專業領域，連結看似不相關的想法與觀點，並把這些連結轉化為有意義且有用之事物的能力。</p><p>我們逐漸把這些行為視為一種獨特的人類能力：一種把跨領域創造力付諸實踐的思考與工作方式。我們稱它為<strong>實用創造力</strong>。</p></div>
+<p class="quote"><strong>「實用創造力」是一種把跨領域創造力付諸實踐的思考與工作方式。</strong></p>
+<div class="copy"><p>實用創造力不只是產生更多想法，也不只屬於從事創意工作的人。它是運用好奇心、想像力、同理心與判斷力，決定什麼值得探索、哪些問題值得解決、應該創造什麼，以及要為誰創造價值的能力。</p><p>它可以濃縮成一個簡單卻強大的自我掌握心智模型：</p>
 </div><div class="principles-gallery" aria-label="實用創造力的四項原則"><figure class="principle-card"><img class="principle-image" src="1.png" alt="在多種方向之間保持好奇的人"><figcaption class="principle-title">1. 保持好奇</figcaption></figure><figure class="principle-card"><img class="principle-image" src="2.png" alt="用放大鏡探索有意義問題的人"><figcaption class="principle-title">2. 找到有意義的問題</figcaption></figure><figure class="principle-card"><img class="principle-image" src="3.png" alt="以燈泡和齒輪象徵創意解決方案"><figcaption class="principle-title">3. 用創意解決問題</figcaption></figure><figure class="principle-card"><img class="principle-image" src="4.png" alt="彼此協助並一起向前的人們"><figcaption class="principle-title">4. 為他人帶來價值</figcaption></figure></div><div class="copy">
 <p>這個心智模型背後的想法非常實際。我們不需要和 AI 比賽，看誰更像一部強大的推理機器。人類提供好奇心、選擇、判斷、意義與方向；AI 則放大我們研究、推理、設計、溝通與執行的能力。</p><p>有了這個心智模型之後，我們開始發展能夠實際練習它的方法。</p></div><div class="photo-pair photo-duo"><button type="button" aria-label="放大照片"><img src="ace-07.webp" alt="ACE 工作坊照片 7"><span class="photo-caption">2026 WAVE 品牌領導力培訓</span></button><button type="button" aria-label="放大照片"><img src="ace-08.webp" alt="ACE 工作坊照片 8"><span class="photo-caption">2026 Gallup CliftonStrengths 優勢培訓</span></button></div></section>
 </div>
@@ -1404,8 +2251,10 @@ button { color: inherit; font: inherit; }
   <section class="hero"><div class="hero-inner"><img class="kicker" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMDkwLjg2IDY1Ny44MiI+CiAgPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDMwLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDIuMS4xIEJ1aWxkIDEyMykgIC0tPgogIDxwYXRoIGQ9Ik0wLDB2NDM0LjU3bDM2My4xNiwyMjMuMjVoNzI3LjdWMEgwWk0xMDU2LjE5LDYyMy4xNUgzNzMuNDRMMzQuNjcsNDE1Ljc3VjM0LjY3aDEwMjEuNTJ2NTg4LjQ4WiIvPgogIDxnPgogICAgPHBhdGggZD0iTTEzMC4zNiwxODUuODNoNDUuOWw4LjgsMzAuODZoMzcuN2wtNDcuNDYtMTQwLjkyaC00My45NWwtNDcuNDYsMTQwLjkyaDM3LjdsOC43Ny0zMC44NlpNMTUzLjYyLDEwNi40M2wxNS4yNiw1My41MmgtMzEuMTZsMTUuMjItNTMuNTJoLjY4WiIvPgogICAgPHBhdGggZD0iTTI2OC41NiwxOTguNDJoLjY4YzEuODIsNC4yMyw0LjI4LDcuODgsNy4zNywxMC45NCwzLjA5LDMuMDYsNi43NSw1LjQyLDEwLjk5LDcuMDgsNC4yMywxLjY2LDguOTIsMi40OSwxNC4wNiwyLjQ5LDguODUsMCwxNi40Mi0yLjE4LDIyLjcxLTYuNTQsNi4yOC00LjM2LDExLjA3LTEwLjY4LDE0LjM2LTE4Ljk1LDMuMjktOC4yNyw0LjkzLTE4LjIzLDQuOTMtMjkuODh2LS4xYzAtMTEuNzItMS42OC0yMS43MS01LjAzLTI5Ljk4LTMuMzUtOC4yNy04LjE5LTE0LjU3LTE0LjUtMTguOS02LjMyLTQuMzMtMTMuOTYtNi40OS0yMi45NS02LjQ5LTUuMDEsMC05LjU5Ljg1LTEzLjcyLDIuNTQtNC4xNCwxLjY5LTcuNzMsNC4xMi0xMC43OSw3LjI4LTMuMDYsMy4xNi01LjUsNi45NS03LjMyLDExLjM4aC0uNzh2LTE4Ljk1aC0zNC42N3YxNDAuNTNoMzQuNjd2LTUyLjQ0Wk0yNjguNDYsMTYzLjQ2YzAtNS42Ni44My0xMC41MSwyLjQ5LTE0LjU1LDEuNjYtNC4wNCw0LTcuMTQsNy4wMy05LjMzLDMuMDMtMi4xOCw2LjUzLTMuMjcsMTAuNS0zLjI3czcuNjMsMS4wNywxMC42LDMuMjJjMi45NiwyLjE1LDUuMjcsNS4yNiw2LjkzLDkuMzMsMS42Niw0LjA3LDIuNDksOC45NCwyLjQ5LDE0LjZ2LjFjMCw1LjYtLjgxLDEwLjQyLTIuNDQsMTQuNDUtMS42Myw0LjA0LTMuOTQsNy4xNi02LjkzLDkuMzgtMywyLjIxLTYuNTQsMy4zMi0xMC42NCwzLjMycy03LjQ3LTEuMDktMTAuNS0zLjI3Yy0zLjAzLTIuMTgtNS4zNy01LjI5LTcuMDMtOS4zMy0xLjY2LTQuMDQtMi40OS04Ljg5LTIuNDktMTQuNTV2LS4xWiIvPgogICAgPHBhdGggZD0iTTM5MS45LDE5OC40MmguNjhjMS44Miw0LjIzLDQuMjgsNy44OCw3LjM3LDEwLjk0LDMuMDksMy4wNiw2Ljc1LDUuNDIsMTAuOTksNy4wOCw0LjIzLDEuNjYsOC45MiwyLjQ5LDE0LjA2LDIuNDksOC44NSwwLDE2LjQyLTIuMTgsMjIuNzEtNi41NCw2LjI4LTQuMzYsMTEuMDctMTAuNjgsMTQuMzYtMTguOTUsMy4yOS04LjI3LDQuOTMtMTguMjMsNC45My0yOS44OHYtLjFjMC0xMS43Mi0xLjY4LTIxLjcxLTUuMDMtMjkuOTgtMy4zNS04LjI3LTguMTktMTQuNTctMTQuNS0xOC45LTYuMzItNC4zMy0xMy45Ni02LjQ5LTIyLjk1LTYuNDktNS4wMSwwLTkuNTkuODUtMTMuNzIsMi41NC00LjE0LDEuNjktNy43Myw0LjEyLTEwLjc5LDcuMjgtMy4wNiwzLjE2LTUuNSw2Ljk1LTcuMzIsMTEuMzhoLS43OHYtMTguOTVoLTM0LjY3djE0MC41M2gzNC42N3YtNTIuNDRaTTM5MS44LDE2My40NmMwLTUuNjYuODMtMTAuNTEsMi40OS0xNC41NSwxLjY2LTQuMDQsNC03LjE0LDcuMDMtOS4zMywzLjAzLTIuMTgsNi41My0zLjI3LDEwLjUtMy4yN3M3LjYzLDEuMDcsMTAuNiwzLjIyYzIuOTYsMi4xNSw1LjI3LDUuMjYsNi45Myw5LjMzLDEuNjYsNC4wNywyLjQ5LDguOTQsMi40OSwxNC42di4xYzAsNS42LS44MSwxMC40Mi0yLjQ0LDE0LjQ1LTEuNjMsNC4wNC0zLjk0LDcuMTYtNi45Myw5LjM4LTMsMi4yMS02LjU0LDMuMzItMTAuNjQsMy4zMnMtNy40Ny0xLjA5LTEwLjUtMy4yN2MtMy4wMy0yLjE4LTUuMzctNS4yOS03LjAzLTkuMzMtMS42Ni00LjA0LTIuNDktOC44OS0yLjQ5LTE0LjU1di0uMVoiLz4KICAgIDxyZWN0IHg9IjQ4MS4xNiIgeT0iNzUuNzciIHdpZHRoPSIzNC42NyIgaGVpZ2h0PSIxNDAuOTIiLz4KICAgIDxwYXRoIGQ9Ik01NTAuNjksOTguOTFjNS4wMSwwLDkuMjEtMS42OSwxMi42LTUuMDhzNS4wOC03LjM5LDUuMDgtMTIuMDEtMS42OS04LjcxLTUuMDgtMTIuMDZjLTMuMzktMy4zNS03LjU4LTUuMDMtMTIuNi01LjAzcy05LjEzLDEuNjgtMTIuNTUsNS4wM2MtMy40MiwzLjM1LTUuMTMsNy4zNy01LjEzLDEyLjA2czEuNzEsOC42Myw1LjEzLDEyLjAxYzMuNDIsMy4zOSw3LjYsNS4wOCwxMi41NSw1LjA4WiIvPgogICAgPHJlY3QgeD0iNTMzLjQxIiB5PSIxMTAuMzQiIHdpZHRoPSIzNC42NyIgaGVpZ2h0PSIxMDYuMzUiLz4KICAgIDxwYXRoIGQ9Ik02MDYuODQsMjEyLjI0YzguMDcsNC40NiwxNy43MSw2LjY5LDI4LjkxLDYuNjksOC41MywwLDE1LjgtMS4wOSwyMS44My0zLjI3LDYuMDItMi4xOCwxMS01LjAzLDE0Ljk0LTguNTQsMy45NC0zLjUyLDcuMDEtNy4yOCw5LjIzLTExLjI4LDIuMjEtNCwzLjcxLTcuODYsNC40OS0xMS41N2wuMjktMS4xN2gtMzEuMjVsLS4xLjM5Yy0uNTIsMS41LTEuNTUsMy4wOS0zLjA4LDQuNzktMS41MywxLjY5LTMuNiwzLjEyLTYuMiw0LjMtMi42LDEuMTctNS43NiwxLjc2LTkuNDcsMS43Ni00LjMsMC03Ljk5LS45Ni0xMS4wOC0yLjg4LTMuMDktMS45Mi01LjQ3LTQuNjctNy4xMy04LjI1LTEuNTMtMy4zLTIuMzQtNy4yMS0yLjQ3LTExLjcyaDcxLjQ2di0xMC4xNmMwLTEwLjc0LTIuMTUtMjAuMS02LjQ1LTI4LjA4LTQuMy03Ljk3LTEwLjM5LTE0LjE2LTE4LjI2LTE4LjU1LTcuODgtNC4zOS0xNy4xOS02LjU5LTI3LjkzLTYuNTlzLTIwLjA3LDIuMjUtMjcuOTgsNi43NC0xNC4wMywxMC44Ny0xOC4zNiwxOS4xNGMtNC4zMyw4LjI3LTYuNDksMTguMS02LjQ5LDI5LjQ5di4xYzAsMTEuNDYsMi4xNiwyMS4zMiw2LjQ5LDI5LjU5LDQuMzMsOC4yNywxMC41MywxNC42MywxOC42LDE5LjA5Wk02MjUuMDYsMTM1LjUzYzIuOTYtMS44OSw2LjQtMi44MywxMC4zLTIuODNzNy4zMi45MywxMC4yNSwyLjc4LDUuMjEsNC41OSw2Ljg0LDguMmMuOTcsMi4xNSwxLjY0LDQuNTgsMi4wMyw3LjI4aC0zOC4zNGMuMzktMi42NSwxLjA2LTUuMDQsMi4wMy03LjE4LDEuNjMtMy42MSwzLjkyLTYuMzYsNi44OC04LjI1WiIvPgogICAgPHBhdGggZD0iTTcxNi44NSwyMTIuMzljNi4zNSw0LjM2LDEzLjk1LDYuNTQsMjIuOCw2LjU0LDcuNjgsMCwxNC4zMi0xLjgxLDE5LjkyLTUuNDIsNS42LTMuNjEsOS43LTguNjEsMTIuMy0xNC45OWguNjh2MTguMTZoMzQuNjdWNzUuNzdoLTM0LjY3djUzLjQyaC0uNjhjLTIuNzMtNi41OC02Ljg4LTExLjczLTEyLjQ1LTE1LjQ4LTUuNTctMy43NC0xMi4xNi01LjYyLTE5Ljc4LTUuNjItOC44NSwwLTE2LjQ2LDIuMTctMjIuOCw2LjQ5LTYuMzUsNC4zMy0xMS4yLDEwLjYxLTE0LjU1LDE4Ljg1LTMuMzUsOC4yNC01LjAzLDE4LjIxLTUuMDMsMjkuOTN2LjFjMCwxMS43MiwxLjY4LDIxLjcxLDUuMDMsMjkuOTgsMy4zNSw4LjI3LDguMiwxNC41OCwxNC41NSwxOC45NVpNNzMyLjQzLDE2My4zN2MwLTUuNi44My0xMC40MywyLjQ5LTE0LjUsMS42Ni00LjA3LDMuOTktNy4xOCw2Ljk4LTkuMzMsMi45OS0yLjE1LDYuNTEtMy4yMiwxMC41NS0zLjIyczcuNTUsMS4wOSwxMC41NSwzLjI3YzIuOTksMi4xOCw1LjM0LDUuMjksNy4wMyw5LjMzLDEuNjksNC4wNCwyLjU0LDguODksMi41NCwxNC41NXYuMWMwLDUuNi0uODMsMTAuNDMtMi40OSwxNC41LTEuNjYsNC4wNy00LDcuMTktNy4wMyw5LjM4LTMuMDMsMi4xOC02LjU2LDMuMjctMTAuNiwzLjI3cy03LjU3LTEuMTEtMTAuNi0zLjMyYy0zLjAzLTIuMjEtNS4zNi01LjM0LTYuOTgtOS4zOC0xLjYzLTQuMDQtMi40NC04Ljg5LTIuNDQtMTQuNTV2LS4xWiIvPgogICAgPHBhdGggZD0iTTE4Mi4zOCwzMzQuMDVjLS44NSw1LjI3LTIuNTcsOS44MS01LjE4LDEzLjYyLTIuNiwzLjgxLTUuOTIsNi43NC05Ljk2LDguNzktNC4wNCwyLjA1LTguNjYsMy4wOC0xMy44NywzLjA4LTYuNTEsMC0xMi4xNy0xLjcyLTE2Ljk5LTUuMTgtNC44Mi0zLjQ1LTguNTMtOC40My0xMS4xMy0xNC45NC0yLjYtNi41MS0zLjkxLTE0LjI5LTMuOTEtMjMuMzR2LS4xYzAtOC45OCwxLjMtMTYuNjgsMy45MS0yMy4xLDIuNi02LjQxLDYuMy0xMS4zNCwxMS4wOC0xNC43OSw0Ljc5LTMuNDUsMTAuNDMtNS4xOCwxNi45NC01LjE4LDUuNTMsMCwxMC4zMiwxLjA3LDE0LjM2LDMuMjIsNC4wNCwyLjE1LDcuMjgsNS4wOSw5LjcyLDguODQsMi40NCwzLjc0LDQuMDUsOC4wOSw0LjgzLDEzLjA0bC4yLDEuMzdoMzQuNTdsLS4xLS44OGMtLjM5LTEwLjU1LTMuMzEtMTkuOTktOC43NC0yOC4zMi01LjQ0LTguMzMtMTIuODYtMTQuOTEtMjIuMjctMTkuNzMtOS40MS00LjgyLTIwLjI2LTcuMjMtMzIuNTctNy4yMy0xNCwwLTI2LjEyLDIuODgtMzYuMzgsOC42NHMtMTguMTgsMTQuMDgtMjMuNzgsMjQuOTVjLTUuNiwxMC44Ny04LjQsMjMuOTYtOC40LDM5LjI2di4xYzAsMTUuMywyLjc4LDI4LjQsOC4zNSwzOS4zMSw1LjU3LDEwLjkxLDEzLjQ4LDE5LjI1LDIzLjczLDI1LjA1LDEwLjI1LDUuOCwyMi40MSw4LjY5LDM2LjQ3LDguNjksMTIuMjQsMCwyMy4wNi0yLjQxLDMyLjQ3LTcuMjMsOS40MS00LjgyLDE2Ljg2LTExLjM4LDIyLjM2LTE5LjY4LDUuNS04LjMsOC40OC0xNy42OSw4Ljk0LTI4LjE3di0xLjA3aC0zNC40N2wtLjIuOThaIi8+CiAgICA8cGF0aCBkPSJNMjY2LjE3LDMzMC4yNGMwLTUuMDEuODYtOS4yMywyLjU5LTEyLjY1LDEuNzItMy40Miw0LjI2LTYuMDEsNy42Mi03Ljc2LDMuMzUtMS43Niw3LjQ3LTIuNjQsMTIuMzUtMi42NCwyLjA4LDAsNC4wOC4xNiw2LjAxLjQ5LDEuOTIuMzMsMy42LjgxLDUuMDMsMS40NnYtMjkuNjljLTEuMy0uNDUtMi43Mi0uOC00LjI1LTEuMDMtMS41My0uMjMtMy4xMS0uMzQtNC43NC0uMzQtNi4zMiwwLTExLjUxLDEuODItMTUuNTgsNS40Ny00LjA3LDMuNjUtNi44NSw4Ljg1LTguMzUsMTUuNjJoLS42OHYtMTguODVoLTM0LjY3djEwNi4zNWgzNC42N3YtNTYuNDVaIi8+CiAgICA8cGF0aCBkPSJNMzEwLjg1LDMwMy45N2MtNC4zMyw4LjI3LTYuNDksMTguMS02LjQ5LDI5LjQ5di4xYzAsMTEuNDYsMi4xNiwyMS4zMiw2LjQ5LDI5LjU5LDQuMzMsOC4yNywxMC41MywxNC42MywxOC42LDE5LjA5LDguMDcsNC40NiwxNy43MSw2LjY5LDI4LjkxLDYuNjksOC41MywwLDE1LjgtMS4wOSwyMS44My0zLjI3LDYuMDItMi4xOCwxMS01LjAzLDE0Ljk0LTguNTQsMy45NC0zLjUyLDcuMDEtNy4yOCw5LjIzLTExLjI4LDIuMjEtNCwzLjcxLTcuODYsNC40OS0xMS41N2wuMjktMS4xN2gtMzEuMjVsLS4xLjM5Yy0uNTIsMS41LTEuNTUsMy4wOS0zLjA4LDQuNzktMS41MywxLjY5LTMuNiwzLjEyLTYuMiw0LjMtMi42LDEuMTctNS43NiwxLjc2LTkuNDcsMS43Ni00LjMsMC03Ljk5LS45Ni0xMS4wOC0yLjg4LTMuMDktMS45Mi01LjQ3LTQuNjctNy4xMy04LjI1LTEuNTMtMy4zLTIuMzQtNy4yMS0yLjQ3LTExLjcyaDcxLjQ2di0xMC4xNmMwLTEwLjc0LTIuMTUtMjAuMS02LjQ1LTI4LjA4LTQuMy03Ljk3LTEwLjM5LTE0LjE2LTE4LjI2LTE4LjU1LTcuODgtNC4zOS0xNy4xOS02LjU5LTI3LjkzLTYuNTlzLTIwLjA3LDIuMjUtMjcuOTgsNi43NC0xNC4wMywxMC44Ny0xOC4zNiwxOS4xNFpNMzQ3LjY2LDMwNS41M2MyLjk2LTEuODksNi40LTIuODMsMTAuMy0yLjgzczcuMzIuOTMsMTAuMjUsMi43OCw1LjIxLDQuNTksNi44NCw4LjJjLjk3LDIuMTUsMS42NCw0LjU4LDIuMDMsNy4yOGgtMzguMzRjLjM5LTIuNjUsMS4wNi01LjA0LDIuMDItNy4xOCwxLjYzLTMuNjEsMy45Mi02LjM2LDYuODgtOC4yNVoiLz4KICAgIDxwYXRoIGQ9Ik00MzEuMjEsMjk0LjY5Yy0zLjk3LDUuMjEtNi4yNSwxMS4zLTYuODQsMTguMjZsLS4xLDEuMjdoMzEuMjVsLjItLjk4Yy41OS0yLjczLDIuMjEtNS4wNCw0Ljg4LTYuOTMsMi42Ny0xLjg5LDYuMzUtMi44MywxMS4wNC0yLjgzczguMzYsMS4xMiwxMC44NCwzLjM3YzIuNDcsMi4yNSwzLjcxLDUuMjksMy43MSw5LjEzdjUuMjhsLTI0LjIyLDEuNTZjLTEzLjY3LjkxLTI0LjI0LDQuMTUtMzEuNjksOS43Mi03LjQ2LDUuNTctMTEuMTgsMTMuMzYtMTEuMTgsMjMuMzl2LjFjMCw2LjE5LDEuNTEsMTEuNyw0LjU0LDE2LjU1LDMuMDMsNC44NSw3LjI0LDguNjYsMTIuNjUsMTEuNDMsNS40LDIuNzcsMTEuNjUsNC4xNSwxOC43NSw0LjE1LDQuNjIsMCw4Ljg1LS42NSwxMi43LTEuOTUsMy44NC0xLjMsNy4yNi0zLjE5LDEwLjI1LTUuNjYsMi45OS0yLjQ3LDUuNS01LjQ0LDcuNTItOC44OWguNjh2MTUuMDRoMzQuNjd2LTcyLjY2YzAtNy4xNi0xLjk3LTEzLjQ0LTUuOTEtMTguODUtMy45NC01LjQtOS40Ny05LjYtMTYuNi0xMi42LTcuMTMtMi45OS0xNS40NS00LjQ5LTI0Ljk1LTQuNDlzLTE4LjQxLDEuNDYtMjUuNTQsNC4zOS0xMi42OCw3LTE2LjY1LDEyLjIxWk00ODMuNywzNTYuNTZjLTEuNjYsMi4zOC0zLjkxLDQuMjMtNi43NCw1LjU3LTIuODMsMS4zMy02LjEsMi05LjgxLDItNC4yMywwLTcuNjMtLjg5LTEwLjIxLTIuNjktMi41Ny0xLjc5LTMuODYtNC4zNS0zLjg2LTcuNjd2LS4xYzAtMy4xOSwxLjItNS43NSwzLjYxLTcuNjcsMi40MS0xLjkyLDYuMDItMy4wMSwxMC44NC0zLjI3bDE4LjY1LTEuMjh2Ny4xNGMwLDIuOTMtLjgzLDUuNTgtMi40OSw3Ljk2WiIvPgogICAgPHBhdGggZD0iTTU0Ni4wNSwzNTUuNjNjMCwxMS45OCwzLjA0LDIwLjUyLDkuMTMsMjUuNjMsNi4wOSw1LjExLDE1LjU0LDcuNjcsMjguMzcsNy42NywzLjY1LDAsNi44LS4xMyw5LjQ3LS4zOSwyLjY3LS4yNiw0Ljk1LS41NSw2Ljg0LS44OHYtMjQuNjFjLS45OC4xMy0xLjk1LjI0LTIuOTMuMzRzLTIuMTguMTUtMy42MS4xNWMtNC4xNywwLTcuMjktLjk2LTkuMzgtMi44OC0yLjA4LTEuOTItMy4xMi01LjE2LTMuMTItOS43MnYtNDUuMjFoMTkuMDR2LTI1LjM5aC0xOS4wNHYtMjQuNTFoLTM0Ljc3djI0LjUxaC0xNC40NXYyNS4zOWgxNC40NXY0OS45WiIvPgogICAgPHBhdGggZD0iTTY0NC4yOSwyMzkuNzZjLTMuMzktMy4zNS03LjU4LTUuMDMtMTIuNi01LjAzcy05LjEzLDEuNjgtMTIuNTUsNS4wM2MtMy40MiwzLjM1LTUuMTMsNy4zNy01LjEzLDEyLjA2czEuNzEsOC42Myw1LjEzLDEyLjAxYzMuNDIsMy4zOSw3LjYsNS4wOCwxMi41NSw1LjA4czkuMjEtMS42OSwxMi42LTUuMDgsNS4wOC03LjM5LDUuMDgtMTIuMDEtMS42OS04LjcxLTUuMDgtMTIuMDZaIi8+CiAgICA8cmVjdCB4PSI2MTQuNDEiIHk9IjI4MC4zNCIgd2lkdGg9IjM0LjY3IiBoZWlnaHQ9IjEwNi4zNSIvPgogICAgPHBvbHlnb24gcG9pbnRzPSI2OTMuMDIgMzg2LjY5IDczMy4xNiAzODYuNjkgNzY4LjMyIDI4MC4zNCA3MzIuMDkgMjgwLjM0IDcxMy45MiAzNTcuNjggNzEzLjI0IDM1Ny42OCA2OTQuNjkgMjgwLjM0IDY1Ny40OCAyODAuMzQgNjkzLjAyIDM4Ni42OSIvPgogICAgPHBhdGggZD0iTTc5NCwyMzQuNzNjLTQuOTUsMC05LjEzLDEuNjgtMTIuNTUsNS4wMy0zLjQyLDMuMzUtNS4xMyw3LjM3LTUuMTMsMTIuMDZzMS43MSw4LjYzLDUuMTMsMTIuMDFjMy40MiwzLjM5LDcuNiw1LjA4LDEyLjU1LDUuMDhzOS4yMS0xLjY5LDEyLjYtNS4wOCw1LjA4LTcuMzksNS4wOC0xMi4wMS0xLjY5LTguNzEtNS4wOC0xMi4wNmMtMy4zOS0zLjM1LTcuNTgtNS4wMy0xMi42LTUuMDNaIi8+CiAgICA8cmVjdCB4PSI3NzYuNzIiIHk9IjI4MC4zNCIgd2lkdGg9IjM0LjY3IiBoZWlnaHQ9IjEwNi4zNSIvPgogICAgPHBhdGggZD0iTTgzNi45NywzNTUuNjNjMCwxMS45OCwzLjA0LDIwLjUyLDkuMTMsMjUuNjMsNi4wOSw1LjExLDE1LjU0LDcuNjcsMjguMzcsNy42NywzLjY0LDAsNi44LS4xMyw5LjQ3LS4zOSwyLjY3LS4yNiw0Ljk1LS41NSw2Ljg0LS44OHYtMjQuNjFjLS45OC4xMy0xLjk1LjI0LTIuOTMuMzRzLTIuMTguMTUtMy42MS4xNWMtNC4xNywwLTcuMjktLjk2LTkuMzgtMi44OC0yLjA4LTEuOTItMy4xMi01LjE2LTMuMTItOS43MnYtNDUuMjFoMTkuMDR2LTI1LjM5aC0xOS4wNHYtMjQuNTFoLTM0Ljc3djI0LjUxaC0xNC40NXYyNS4zOWgxNC40NXY0OS45WiIvPgogICAgPHBhdGggZD0iTTkzMi4yOCwzODguODNjLS43OCwyLjM0LTIuMjMsNC4xLTQuMzUsNS4yNy0yLjEyLDEuMTctNSwxLjc2LTguNjQsMS43Ni0yLjY3LDAtNS0uMTMtNi45OC0uMzktMS45OS0uMjYtMy41Ni0uNDktNC43NC0uNjh2MjUuMWMyLjAyLjMzLDQuNTcuNjUsNy42Ny45OCwzLjA5LjMzLDYuMzMuNDksOS43Mi40OSw4LjY2LDAsMTYuMzEtMS4wMywyMi45NS0zLjA4czEyLjMyLTUuNjIsMTcuMDQtMTAuNjljNC43Mi01LjA4LDguNTQtMTIuMjEsMTEuNDctMjEuMzlsMzMuODktMTA1Ljg2aC0zNi42MmwtMTguOTQsODAuMzdoLS44OWwtMTkuMDMtODAuMzdoLTM4LjI4bDM2LjUyLDEwNi4zNS0uNzgsMi4xNVoiLz4KICAgIDxwb2x5Z29uIHBvaW50cz0iMzczLjQ0IDU1Ni42OSA0NzAuMDIgNTU2LjY5IDQ3MC4wMiA1MjcuODggNDA5LjI4IDUyNy44OCA0MDkuMjggNDk5LjM2IDQ2Ni40MSA0OTkuMzYgNDY2LjQxIDQ3Mi40MSA0MDkuMjggNDcyLjQxIDQwOS4yOCA0NDQuNTggNDcwLjAyIDQ0NC41OCA0NzAuMDIgNDE1Ljc3IDM3My40NCA0MTUuNzcgMzczLjQ0IDU1Ni42OSIvPgogICAgPHBhdGggZD0iTTQ4Ny44OSw0NTAuMzR2MTA2LjM1aDM0LjY3di02MC4zNWMwLTMuOTcuNzMtNy40NSwyLjItMTAuNDUsMS40Ni0yLjk5LDMuNTMtNS4zNCw2LjItNy4wMywyLjY3LTEuNjksNS44My0yLjU0LDkuNDctMi41NCw1LjY2LDAsOS45MywxLjcxLDEyLjc5LDUuMTMsMi44NiwzLjQyLDQuMyw4LjE1LDQuMywxNC4yMXY2MS4wNGgzNC42N3YtNjguNDZjMC0xMi42My0zLjE3LTIyLjQ4LTkuNTItMjkuNTQtNi4zNS03LjA2LTE1LjM4LTEwLjYtMjcuMS0xMC42LTguMDEsMC0xNC43MSwxLjgyLTIwLjEyLDUuNDctNS40LDMuNjUtOS40Nyw4LjgyLTEyLjIxLDE1LjUzaC0uNjh2LTE4Ljc1aC0zNC42N1oiLz4KICAgIDxwYXRoIGQ9Ik02ODAuMTgsNDY4LjZoLS43OGMtMS43Ni00LjIzLTQuMTctNy44OC03LjIzLTEwLjk0LTMuMDYtMy4wNi02LjY2LTUuNDItMTAuNzktNy4wOC00LjE0LTEuNjYtOC43MS0yLjQ5LTEzLjcyLTIuNDktOC45OCwwLTE2LjY0LDIuMTItMjIuOTUsNi4zNS02LjMyLDQuMjMtMTEuMTcsMTAuMzQtMTQuNTUsMTguMzEtMy4zOSw3Ljk4LTUuMDgsMTcuNzItNS4wOCwyOS4yNXYuMWMwLDEwLjk0LDEuNjYsMjAuMjYsNC45OCwyNy45OHM4LjEyLDEzLjYyLDE0LjQsMTcuNzJjNi4yOCw0LjEsMTMuODUsNi4xNSwyMi43MSw2LjE1LDUuMTQsMCw5LjgzLS43MiwxNC4wNi0yLjE1LDQuMjMtMS40Myw3LjkxLTMuNDUsMTEuMDQtNi4wNSwzLjEyLTIuNiw1LjUzLTUuNzMsNy4yMy05LjM4aC42OHYxNy42OGMwLDQuNzUtMS42NSw4LjU5LTQuOTMsMTEuNTItMy4yOSwyLjkzLTguMTksNC4zOS0xNC43LDQuMzktNS40NywwLTkuOC0uOTEtMTIuOTktMi43My0zLjE5LTEuODItNS4yNC0zLjc0LTYuMTUtNS43NmwtLjItLjU5aC0zMy41bC4xLjg4Yy43OCw1LjkyLDMuMzgsMTEuMjYsNy44MSwxNi4wMiw0LjQzLDQuNzUsMTAuNDMsOC41LDE4LjAyLDExLjIzLDcuNTgsMi43MywxNi40OSw0LjEsMjYuNzEsNC4xLDExLjIsMCwyMC44Ni0xLjY4LDI5LTUuMDMsOC4xNC0zLjM1LDE0LjQyLTcuOTksMTguODUtMTMuOTIsNC40My01LjkyLDYuNjQtMTIuNzYsNi42NC0yMC41MXYtMTAzLjMyaC0zNC42N3YxOC4yNlpNNjgwLjM3LDUwMy4xN2MwLDUuNTMtLjgzLDEwLjMtMi40OSwxNC4zMXMtMy45OSw3LjA4LTYuOTgsOS4yM2MtMywyLjE1LTYuNTEsMy4yMi0xMC41NSwzLjIycy03LjU4LTEuMDctMTAuNjQtMy4yMmMtMy4wNi0yLjE1LTUuNC01LjI0LTcuMDMtOS4yOC0xLjYzLTQuMDQtMi40NC04LjgyLTIuNDQtMTQuMzZ2LS4xYzAtNS42LjgzLTEwLjM4LDIuNDktMTQuMzYsMS42Ni0zLjk3LDQtNy4wMSw3LjAzLTkuMTMsMy4wMy0yLjExLDYuNTYtMy4xNywxMC42LTMuMTdzNy41MywxLjA2LDEwLjUsMy4xN2MyLjk2LDIuMTIsNS4yOSw1LjE4LDYuOTgsOS4xOCwxLjY5LDQsMi41NCw4LjgxLDIuNTQsMTQuNHYuMVoiLz4KICAgIDxyZWN0IHg9IjczMS45NCIgeT0iNDUwLjM0IiB3aWR0aD0iMzQuNjciIGhlaWdodD0iMTA2LjM1Ii8+CiAgICA8cGF0aCBkPSJNNzQ5LjIyLDQwNC43M2MtNC45NSwwLTkuMTMsMS42OC0xMi41NSw1LjAzLTMuNDIsMy4zNS01LjEzLDcuMzctNS4xMywxMi4wNnMxLjcxLDguNjMsNS4xMywxMi4wMWMzLjQyLDMuMzksNy42LDUuMDgsMTIuNTUsNS4wOHM5LjIxLTEuNjksMTIuNi01LjA4LDUuMDgtNy4zOSw1LjA4LTEyLjAxLTEuNjktOC43MS01LjA4LTEyLjA2Yy0zLjM5LTMuMzUtNy41OC01LjAzLTEyLjYtNS4wM1oiLz4KICAgIDxwYXRoIGQ9Ik03ODMuNSw0NTAuMzR2MTA2LjM1aDM0LjY3di02MC4zNWMwLTMuOTcuNzMtNy40NSwyLjItMTAuNDUsMS40Ni0yLjk5LDMuNTMtNS4zNCw2LjItNy4wMywyLjY3LTEuNjksNS44My0yLjU0LDkuNDctMi41NCw1LjY2LDAsOS45MywxLjcxLDEyLjc5LDUuMTMsMi44NiwzLjQyLDQuMyw4LjE1LDQuMywxNC4yMXY2MS4wNGgzNC42N3YtNjguNDZjMC0xMi42My0zLjE3LTIyLjQ4LTkuNTItMjkuNTQtNi4zNS03LjA2LTE1LjM4LTEwLjYtMjcuMS0xMC42LTguMDEsMC0xNC43MSwxLjgyLTIwLjEyLDUuNDctNS40LDMuNjUtOS40Nyw4LjgyLTEyLjIxLDE1LjUzaC0uNjh2LTE4Ljc1aC0zNC42N1oiLz4KICAgIDxwYXRoIGQ9Ik05ODEuNDUsNDU0LjY4Yy03Ljg4LTQuMzktMTcuMTktNi41OS0yNy45My02LjU5cy0yMC4wNywyLjI1LTI3Ljk4LDYuNzQtMTQuMDMsMTAuODctMTguMzYsMTkuMTRjLTQuMzMsOC4yNy02LjQ5LDE4LjEtNi40OSwyOS40OXYuMWMwLDExLjQ2LDIuMTYsMjEuMzIsNi40OSwyOS41OSw0LjMzLDguMjcsMTAuNTMsMTQuNjMsMTguNiwxOS4wOSw4LjA3LDQuNDYsMTcuNzEsNi42OSwyOC45MSw2LjY5LDguNTMsMCwxNS44LTEuMDksMjEuODMtMy4yNyw2LjAyLTIuMTgsMTEtNS4wMywxNC45NC04LjU0LDMuOTQtMy41Miw3LjAxLTcuMjgsOS4yMy0xMS4yOCwyLjIxLTQsMy43MS03Ljg2LDQuNDktMTEuNTdsLjI5LTEuMTdoLTMxLjI1bC0uMS4zOWMtLjUyLDEuNS0xLjU1LDMuMDktMy4wOCw0Ljc5LTEuNTMsMS42OS0zLjYsMy4xMi02LjIsNC4zLTIuNiwxLjE3LTUuNzYsMS43Ni05LjQ3LDEuNzYtNC4zLDAtNy45OS0uOTYtMTEuMDgtMi44OC0zLjA5LTEuOTItNS40Ny00LjY3LTcuMTMtOC4yNS0xLjUzLTMuMy0yLjM0LTcuMjEtMi40Ny0xMS43Mmg3MS40NnYtMTAuMTZjMC0xMC43NC0yLjE1LTIwLjEtNi40NS0yOC4wOC00LjMtNy45Ny0xMC4zOC0xNC4xNi0xOC4yNi0xOC41NVpNOTQ0LDQ3NS41M2MyLjk2LTEuODksNi40LTIuODMsMTAuMy0yLjgzczcuMzIuOTMsMTAuMjUsMi43OCw1LjIxLDQuNTksNi44NCw4LjJjLjk3LDIuMTUsMS42NCw0LjU4LDIuMDMsNy4yOGgtMzguMzRjLjM5LTIuNjUsMS4wNi01LjA0LDIuMDItNy4xOCwxLjYzLTMuNjEsMy45Mi02LjM2LDYuODgtOC4yNVoiLz4KICA8L2c+Cjwvc3ZnPg==" alt="Applied Creativity Engine"><h1><span>ACEに込めた</span><span>物語</span></h1><p class="hero-copy">私たちの旅は、一つの問いから始まりました。知性を誰もが利用できるようになるとき、人間の価値はどこに現れ始めるのでしょうか。</p><a class="scroll" href="#story-ja">物語を読む <i>↓</i></a></div></section>
   <section id="story-ja" class="article"><div class="section-top"><span class="number">01 / 問い</span><h2>私たちは最初から、ワークショップをつくろうとしていたわけではありません。</h2></div><div class="copy"><p class="lead">始まりは、一つの問いでした。</p><p>2023年初頭、生成AIが日常生活へ入り始めた頃、私たち三人は、その急速な進化が自分たちのような人に何を意味するのかを考えるようになりました。</p><p>私たちはキャリアの多くを、ゼロから何かをつくることに費やしてきました。二人は起業と事業開発、もう一人はデザイン、ブランディング、コミュニケーションの出身です。考え、問題を解き、アイデアを生み、それを現実のものにする力を大切にしてきました。</p><p>しかしAIがより有能になるにつれ、私たちは根本的な前提を問い直し始めました。長年かけて身につけた能力が、誰にとっても標準装備になったらどうなるのでしょうか。より多くを知り、より速く分析し、より良い成果を出し、効率よく実行することがほぼ誰にでも可能になったら、それでも私たちは際立てるのでしょうか。</p><p>もしそうでないなら、違いを生むものは何でしょうか。</p><p>私たちには答えがなかったため、自分たちでその問いを探ることにしました。</p></div><div class="photo-pair photo-trio"><button type="button" aria-label="写真を拡大"><img src="ace-01.webp" alt="ACEワークショップ写真1"><span class="photo-caption">2023 クリエイティブ・コンフィデンス AI サマーラボ</span></button><button type="button" aria-label="写真を拡大"><img src="ace-02.webp" alt="ACEワークショップ写真2"><span class="photo-caption">2024 UWC ISAK JAPAN 教員研修</span></button><button type="button" aria-label="写真を拡大"><img src="ace-03.webp" alt="ACEワークショップ写真3"><span class="photo-caption">2025 Junyi イノベーションスクール研修</span></button></div></section>
   <section class="article"><div class="section-top"><span class="number">02 / 2023—2026</span><h2>3年間にわたる社会実験。</h2></div><div class="copy"><p>その後の3年間、私たちは台湾と日本で社会実験を行いました。12歳から65歳まで、500人を超える人が参加しました。学生、専門職、起業家、経営者、著名な最高経営責任者、そして元最高経営責任者です。</p><p>参加者は一連の創造的な課題に取り組み、AIを使って調査し、アイデアを探索し、意思決定を行い、コンセプトを設計し、他者が見て反応できるものをつくりました。</p><p>そして私たちは、注意深く観察しました。</p><p>私たちが知りたかったのは、AIが仕事を速くするかどうかだけではありません。それはすでに明らかになりつつありました。もっと根本的なことを理解したかったのです。</p></div><p class="quote">人とAIが共に働くとき、真の人間的価値はどこに現れ始めるのか。</p><div class="copy"><p>さまざまな年齢、職業、経験を持つ人々のワークショップを重ねるうちに、一貫したパターンが見え始めました。</p><p>長い間、教育と仕事は、より多くを知り、より速く分析し、正確に問題を解き、効率よく実行するよう私たちを訓練してきました。これらの能力は、多くの人が成功したキャリアを築き、専門家として際立つ助けになりました。</p><p>それらは今も重要です。しかし同時に、AIが最も速く進歩している領域でもあります。</p><p>知識へのアクセスは容易になり、かつて何年もの経験を要した分析は数分で行えます。アイデア、プレゼンテーション、戦略、デザイン、試作品、事業計画まで、数年前には想像できなかった速さでつくれるようになりました。</p><p>これらの能力は消えませんが、希少ではなくなりつつあります。広く利用できるようになるほど、それだけで意味のある違いを生み出すことは難しくなります。</p></div><div class="photo-pair photo-trio"><button type="button" aria-label="写真を拡大"><img src="ace-04.webp" alt="ACEワークショップ写真4"><span class="photo-caption">2025 Sharestart 教育財団研修</span></button><button type="button" aria-label="写真を拡大"><img src="ace-05.webp" alt="ACEワークショップ写真5"><span class="photo-caption">2024 UWC ISAK JAPAN 教員研修</span></button><button type="button" aria-label="写真を拡大"><img src="ace-06.webp" alt="ACEワークショップ写真6"><span class="photo-caption">2025 中華電信学院研修</span></button></div></section>
-  <section class="article"><div class="section-top"><span class="number">03 / 発見</span><h2>私たちが発見したこと。</h2></div><div class="copy"><p>その気づきから、私たちは別の問いを考えるようになりました。</p><p>AIがほとんど誰にでも答えを生み出せるなら、どの問いに価値があるかを決めるのは誰でしょうか。見落とされた機会に気づくのは誰でしょうか。どの問題が解くに値するほど意味を持つかを判断するのは誰でしょうか。人々が本当に必要としているものを理解するのは誰でしょうか。そして、まだ曖昧な可能性を、他者が見て、体験し、議論し、信じられる形にするのは誰でしょうか。</p><p>私たちは、そこに人間の価値が現れ始めると考えました。</p><p>最も興味深い成果を生んだ参加者は、必ずしも経験、知識、技術力が最も高い人ではありませんでした。</p><p>多くの場合、彼らは好奇心をより長く保ち、最初の明白な答えの先を見ていました。異なる業界、技術、事業モデル、文化、個人的経験を結びつけ、自分の思い込みだけに頼らず、実在する人を理解しようとしていました。そして、他者が理解し、問い直し、改善できる形をアイデアに与えていました。</p><p>私たちはこれらの行動を、一つの大きな人間の能力として捉えるようになりました。それを「応用創造性」と呼んでいます。</p><p>応用創造性は、単に多くのアイデアを出すことではなく、創造的な職業の人だけのものでもありません。好奇心、想像力、共感、判断を使い、何を探るべきか、どの問題を解くべきか、何をつくるべきか、誰のために価値を生むべきかを決める力です。</p><p>これは、シンプルでありながら力強い自己修練の思考モデルに凝縮できます：</p>
-</div><div class="principles-gallery" aria-label="応用創造性の四つの原則"><figure class="principle-card"><img class="principle-image" src="1.png" alt="多くの方向の中で好奇心を持つ人"><figcaption class="principle-title">1. 好奇心を持つ</figcaption></figure><figure class="principle-card"><img class="principle-image" src="2.png" alt="虫眼鏡で意味のある問題を探る人"><figcaption class="principle-title">2. 意味のある問題を見つける</figcaption></figure><figure class="principle-card"><img class="principle-image" src="3.png" alt="電球と歯車で表した創造的な解決"><figcaption class="principle-title">3. 創造的に解決する</figcaption></figure><figure class="principle-card"><img class="principle-image" src="4.png" alt="助け合いながら共に前へ進む人々"><figcaption class="principle-title">4. 他者へ価値を届ける</figcaption></figure></div><div class="copy">
+  <section class="article"><div class="section-top"><span class="number">03 / 発見</span><h2>私たちが発見したこと。</h2></div><div class="copy"><p>その気づきから、私たちは別の問いを考えるようになりました。</p><p>AIがほとんど誰にでも答えを生み出せるなら、どの問いに価値があるかを決めるのは誰でしょうか。見落とされた機会に気づくのは誰でしょうか。どの問題が解くに値するほど意味を持つかを判断するのは誰でしょうか。人々が本当に必要としているものを理解するのは誰でしょうか。そして、まだ曖昧な可能性を、他者が見て、体験し、議論し、信じられる形にするのは誰でしょうか。</p><p>私たちは、そこに人間の価値が現れ始めると考えました。</p><p>最も興味深い成果を生んだ参加者は、必ずしも経験、知識、技術力が最も高い人ではありませんでした。</p><p>多くの場合、彼らは好奇心をより長く保ち、最初の明白な答えの先を見ていました。異なる業界、技術、事業モデル、文化、個人的経験を結びつけ、自分の思い込みだけに頼らず、実在する人を理解しようとしていました。そして、他者が理解し、問い直し、改善できる形をアイデアに与えていました。</p><p>彼らが示していたのは<strong>分野横断的な創造力</strong>でした。自分の専門領域を越えて見渡し、一見関係のないアイデアや視点をつなぎ、そのつながりを意味のある役立つものへ変える力です。</p><p>私たちはこれらの行動を、一つの独自の人間の力として捉えるようになりました。それは、分野横断的な創造力を実践に移すための、思考と仕事の方法です。私たちはそれを<strong>実用創造力</strong>と呼んでいます。</p></div>
+<p class="quote"><strong>「実用創造力」とは、分野横断的な創造力を実践に移すための、思考と仕事の方法です。</strong></p>
+<div class="copy"><p>実用創造力は、単に多くのアイデアを出すことではなく、創造的な職業の人だけのものでもありません。好奇心、想像力、共感、判断を使い、何を探るべきか、どの問題を解くべきか、何をつくるべきか、誰のために価値を生むべきかを決める力です。</p><p>これは、シンプルでありながら力強い自己修練の思考モデルに凝縮できます：</p>
+</div><div class="principles-gallery" aria-label="実用創造力の四つの原則"><figure class="principle-card"><img class="principle-image" src="1.png" alt="多くの方向の中で好奇心を持つ人"><figcaption class="principle-title">1. 好奇心を持つ</figcaption></figure><figure class="principle-card"><img class="principle-image" src="2.png" alt="虫眼鏡で意味のある問題を探る人"><figcaption class="principle-title">2. 意味のある問題を見つける</figcaption></figure><figure class="principle-card"><img class="principle-image" src="3.png" alt="電球と歯車で表した創造的な解決"><figcaption class="principle-title">3. 創造的に解決する</figcaption></figure><figure class="principle-card"><img class="principle-image" src="4.png" alt="助け合いながら共に前へ進む人々"><figcaption class="principle-title">4. 他者へ価値を届ける</figcaption></figure></div><div class="copy">
 <p>この思考モデルの背景にある考え方は、実践的なものです。より優れた推論機械になろうとしてAIと競う必要はありません。人間は好奇心、選択、判断、意味、方向を提供し、AIは調査、推論、設計、伝達、実行の力を増幅します。</p><p>この思考モデルを土台に、私たちは実際に練習できる方法の開発を始めました。</p></div><div class="photo-pair photo-duo"><button type="button" aria-label="写真を拡大"><img src="ace-07.webp" alt="ACEワークショップ写真7"><span class="photo-caption">2026 WAVE ブランド・リーダーシップ研修</span></button><button type="button" aria-label="写真を拡大"><img src="ace-08.webp" alt="ACEワークショップ写真8"><span class="photo-caption">2026 Gallup CliftonStrengths 強み研修</span></button></div></section>
 </div>
 
@@ -1493,7 +2342,7 @@ button { color: inherit; font: inherit; }
 
     <div id="methodology-japanese" class="methodology-language hidden" lang="ja">
   <section class="article"><div class="section-top"><span class="number">実践</span><h2>発見を、実践できる方法へ。</h2></div><div class="copy"><p>実験を重ねる中で、私たちは自己学習サイクルをつくりました。</p><p><strong>好奇心を探る → 組み直す → 共感する → 物語をつくる</strong></p><p>「好奇心を探る」とは、明白な答えの先を探り、より良い問いを立てること。「組み直す」とは、普段は並ばないアイデア、技術、産業、事業モデル、経験をつなぐこと。「共感する」とは、自分の思い込みを越えて、実在する人と、彼らが本当に大切にしていることを理解すること。「物語をつくる」とは、曖昧な可能性を、他者が理解し、体験し、議論し、前へ進められるものに変えることです。</p></div><div class="learning-cycle-visual" role="img" aria-label="ACE Learning Cycle"><img class="learning-cycle-layer learning-cycle-rotating" src="ACE-Learning-Cycle-1.png" alt="" aria-hidden="true"><img class="learning-cycle-layer learning-cycle-stationary" src="ACE-Learning-Cycle-2.png" alt="" aria-hidden="true"></div><div class="copy"><p>このサイクルは、やがてACEワークショップの土台になりました。</p><p>参加者は案内に沿った模擬体験に入り、実在するよく知られたブランドを選び、その経営者の役割を担います。そして、シンプルな問いに向き合います。</p></div><p class="quote">このブランドは、次に何をつくるべきか。</p><div class="copy"><p>答えを見つけるために、機会を探り、調査を行い、異なる分野のアイデアを結び、潜在的な利用者を理解し、製品について判断し、実際に見て議論できるMVPプロダクトコンセプトと体験をつくります。</p><p>AIは体験の全体に関わりますが、主役ではありません。意図と方向を与えるのは人間であり、AIは可能性を現実へ近づけます。</p></div></section>
-  <section class="article closing"><div class="section-top"><span class="number">信念</span><h2>私たちを最も驚かせたこと。</h2></div><div class="copy"><p>私たちは、参加者が面白いアイデアをつくると予想していました。しかし本当に驚いたのは、参加者が何度も自分自身を驚かせたことでした。</p><p>学生が創業者のように考え始める姿を見ました。経験豊富な経営者が好奇心を取り戻す姿も見ました。自分を創造的だと思ったことのない人が、独創的で、思慮深く、現実感のあるアイデアを生み出す姿も見ました。</p><p>年齢や職業にかかわらず、参加者は自分がつくれると思っていた水準を何度も超えていきました。</p><p>その経験から、私たちはより深い信念を持つようになりました。創造性は、少数の創造的な人だけに与えられた才能ではないのかもしれません。多くの人の中にすでにあるエンジンが、長い間十分に使われていなかっただけなのかもしれません。</p><p>自己学習サイクルは、そのエンジンを再び始動させる方法です。サイクルを一周するたびに、より多くの可能性を見つけ、より強いつながりをつくり、人をより深く理解し、不確かなアイデアを現実のものへ変える練習をします。</p><p>だから私たちは、それを「実用創造力エンジン」、ACEと呼んでいます。</p><p>ACEは、台湾と日本の500人を超える参加者と行った3年間の実社会での実験から生まれた学習の枠組みです。知性を誰もが利用できるようになるとき、人間の価値に何が起こるのか。そして今、どの人間的能力を強めるべきなのか。それを理解しようとする私たちなりの試みです。</p><p>私たちは、AI時代において、応用創造性が人間にとって最も重要な能力の一つになる可能性があると考えています。AIと競争するためではありません。AIを何に使うべきか、何をつくる価値があるのか、そしてなぜそれが人にとって大切なのかを決めるためです。</p><p>私たちの旅は一つの問いから始まりました。ACEは、今のところ私たちが見つけた答えです。</p><p class="lead">次の一歩は、あなた自身が体験することです。</p></div></section>
+  <section class="article closing"><div class="section-top"><span class="number">信念</span><h2>私たちを最も驚かせたこと。</h2></div><div class="copy"><p>私たちは、参加者が面白いアイデアをつくると予想していました。しかし本当に驚いたのは、参加者が何度も自分自身を驚かせたことでした。</p><p>学生が創業者のように考え始める姿を見ました。経験豊富な経営者が好奇心を取り戻す姿も見ました。自分を創造的だと思ったことのない人が、独創的で、思慮深く、現実感のあるアイデアを生み出す姿も見ました。</p><p>年齢や職業にかかわらず、参加者は自分がつくれると思っていた水準を何度も超えていきました。</p><p>その経験から、私たちはより深い信念を持つようになりました。創造性は、少数の創造的な人だけに与えられた才能ではないのかもしれません。多くの人の中にすでにあるエンジンが、長い間十分に使われていなかっただけなのかもしれません。</p><p>自己学習サイクルは、そのエンジンを再び始動させる方法です。サイクルを一周するたびに、より多くの可能性を見つけ、より強いつながりをつくり、人をより深く理解し、不確かなアイデアを現実のものへ変える練習をします。</p><p>だから私たちは、それを「実用創造力エンジン」、ACEと呼んでいます。</p><p>ACEは、台湾と日本の500人を超える参加者と行った3年間の実社会での実験から生まれた学習の枠組みです。知性を誰もが利用できるようになるとき、人間の価値に何が起こるのか。そして今、どの人間的能力を強めるべきなのか。それを理解しようとする私たちなりの試みです。</p><p>私たちは、AI時代において、実用創造力が人間にとって最も重要な能力の一つになる可能性があると考えています。AIと競争するためではありません。AIを何に使うべきか、何をつくる価値があるのか、そしてなぜそれが人にとって大切なのかを決めるためです。</p><p>私たちの旅は一つの問いから始まりました。ACEは、今のところ私たちが見つけた答えです。</p><p class="lead">次の一歩は、あなた自身が体験することです。</p></div></section>
 </div>
 
   </main>
@@ -1871,33 +2720,33 @@ button { color: inherit; font: inherit; }
 
   <script>
   (() => {
-    const pageNames = ['about','methodology','leadership','communication'];
+    const pageNames = ['home','about','methodology','leadership','communication'];
     const titles = {
       en: {
-        about: 'About | Applied Creativity Engine', methodology: 'Methodology | Applied Creativity Engine',
+        home: 'Applied Creativity Engine', about: 'Story | Applied Creativity Engine', methodology: 'Methodology | Applied Creativity Engine',
         leadership: 'Creative Leadership Workshops | Applied Creativity Engine', communication: 'Creative Communication Workshops | Applied Creativity Engine'
       },
       ja: {
-        about: 'ACEについて | 実用創造力エンジン', methodology: '方法論 | 実用創造力エンジン',
+        home: '実用創造力エンジン', about: 'ストーリー | 実用創造力エンジン', methodology: '方法論 | 実用創造力エンジン',
         leadership: 'クリエイティブ・リーダーシップ・ワークショップ | 実用創造力エンジン', communication: 'クリエイティブ・コミュニケーション・ワークショップ | 実用創造力エンジン'
       },
       'zh-TW': {
-        about: '關於 ACE | 實用創造力引擎', methodology: '方法論 | 實用創造力引擎',
+        home: '實用創造力引擎', about: '故事 | 實用創造力引擎', methodology: '方法論 | 實用創造力引擎',
         leadership: '創意領導力工作坊 | 實用創造力引擎', communication: '創造力傳達工作坊 | 實用創造力引擎'
       }
     };
     const navLabels = {
-      en: {about:'About',methodology:'Methodology',leadership:'CL Workshops',communication:'CC Workshops'},
-      ja: {about:'概要',methodology:'方法論',leadership:'CLワークショップ',communication:'CCワークショップ'},
-      'zh-TW': {about:'關於我們',methodology:'方法論',leadership:'創造力領導工作坊',communication:'創造力傳達工作坊'}
+      en: {about:'Story',methodology:'Methodology',leadership:'CL Workshops',communication:'CC Workshops'},
+      ja: {about:'ストーリー',methodology:'方法論',leadership:'CLワークショップ',communication:'CCワークショップ'},
+      'zh-TW': {about:'故事',methodology:'方法論',leadership:'創造力領導工作坊',communication:'創造力傳達工作坊'}
     };
     const organizationNames = {en:'Applied Creativity Engine',ja:'実用創造力エンジン','zh-TW':'實用創造力引擎'};
-    const backgrounds = {about:'var(--paper)',methodology:'var(--paper)',leadership:'var(--paper)',communication:'var(--paper)'};
+    const backgrounds = {home:'var(--paper)',about:'var(--paper)',methodology:'var(--paper)',leadership:'var(--paper)',communication:'var(--paper)'};
     const views = Object.fromEntries(pageNames.map(name => [name, document.getElementById(name + '-view')]));
     const nav = document.querySelector('.site-header nav');
     const menu = document.querySelector('.menu-toggle');
     const languageButtons = [...document.querySelectorAll('[data-language]')];
-    let currentPage = 'leadership';
+    let currentPage = 'home';
     let currentLanguage = 'en';
 
     function closeMenu() {
@@ -1928,6 +2777,7 @@ button { color: inherit; font: inherit; }
       const methodologyLanguages = {en:document.getElementById('methodology-english'),ja:document.getElementById('methodology-japanese'),'zh-TW':document.getElementById('methodology-chinese')};
       Object.entries(methodologyLanguages).forEach(([key,page]) => page && page.classList.toggle('hidden', key !== locale));
       document.querySelectorAll('#about-view [data-people-locale]').forEach(section => section.hidden = section.dataset.peopleLocale !== locale);
+      document.querySelectorAll('#home-view .locale-page').forEach(page => page.hidden = page.dataset.locale !== locale);
       document.querySelectorAll('#leadership-view .locale-page, #communication-view .locale-page').forEach(page => page.hidden = page.dataset.locale !== locale);
       document.title = titles[locale][currentPage];
       closeMenu();
@@ -1935,7 +2785,7 @@ button { color: inherit; font: inherit; }
     }
 
     function showPage(page, updateHash = true) {
-      if (!pageNames.includes(page)) page = 'leadership';
+      if (!pageNames.includes(page)) page = 'home';
       currentPage = page;
       Object.entries(views).forEach(([name,view]) => view.hidden = name !== page);
       document.body.dataset.page = page;
@@ -1956,6 +2806,11 @@ button { color: inherit; font: inherit; }
     document.querySelectorAll('[data-page]').forEach(link => link.addEventListener('click', event => {
       event.preventDefault();
       showPage(link.dataset.page);
+    }));
+    document.querySelectorAll('#home-view [data-home-scroll]').forEach(button => button.addEventListener('click', () => {
+      const page = button.closest('.locale-page');
+      const target = page?.querySelector('[data-home-section="' + button.dataset.homeScroll + '"]');
+      if (target) target.scrollIntoView({behavior:'smooth'});
     }));
     languageButtons.forEach(button => button.addEventListener('click', () => setLanguage(button.dataset.language)));
     window.addEventListener('popstate', () => showPage(location.hash.slice(1), false));
@@ -1990,9 +2845,35 @@ button { color: inherit; font: inherit; }
       if (lightbox.classList.contains('open') && event.target.closest('.photo-lightbox')) lightbox.classList.remove('open');
     });
 
+    const embeddedAceLogo = document.querySelector('#about-view .kicker')?.src || document.querySelector('.ace-logo')?.src;
+    if (embeddedAceLogo) {
+      document.querySelectorAll('#home-view .home-stamp').forEach(stamp => {
+        const logo = document.createElement('img');
+        logo.className = 'home-logo ace-logo';
+        logo.src = embeddedAceLogo;
+        logo.alt = stamp.getAttribute('aria-label') || 'Applied Creativity Engine';
+        stamp.replaceWith(logo);
+      });
+    }
+
+    const homeView = document.getElementById('home-view');
+    if (homeView && !homeView.querySelector('.home-orbs')) {
+      const orbLayer = document.createElement('div');
+      orbLayer.className = 'home-orbs';
+      orbLayer.setAttribute('aria-hidden', 'true');
+      [0.08, 0.14, 0.05, 0.18, 0.11, 0.22, 0.07, 0.16, 0.10, 0.20, 0.06, 0.24, 0.12, 0.04].forEach(speed => {
+        const orb = document.createElement('i');
+        orb.className = 'home-orb';
+        orb.dataset.speed = speed;
+        orbLayer.appendChild(orb);
+      });
+      homeView.prepend(orbLayer);
+    }
+
     let brushTicking = false;
     function moveBrushes() {
       document.querySelectorAll('.marker-svg').forEach(marker => marker.style.setProperty('--parallax-y', `${-window.scrollY * Number(marker.dataset.speed)}px`));
+      document.querySelectorAll('#home-view .home-orb').forEach(orb => orb.style.setProperty('--orb-y', `${window.scrollY * Number(orb.dataset.speed)}px`));
       brushTicking = false;
     }
     window.addEventListener('scroll', () => {
@@ -2023,8 +2904,8 @@ button { color: inherit; font: inherit; }
     });
 
     setLanguage('en', false);
-    showPage('leadership', false);
-    if (location.hash !== '#leadership') history.replaceState({page:'leadership'},'',location.pathname + location.search + '#leadership');
+    showPage('home', false);
+    if (location.hash !== '#home') history.replaceState({page:'home'},'',location.pathname + location.search + '#home');
   })();
   </script>
 </body>
