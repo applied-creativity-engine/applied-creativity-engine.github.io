@@ -2021,6 +2021,11 @@ button { color: inherit; font: inherit; }
     transform:rotate(-1deg)!important;
     pointer-events:none!important;
   }
+  #home-view .home-marker-line,
+  #home-view .home-marker-lead,
+  #home-view .home-marker-tail {
+    display:inline;
+  }
   @media(max-width:760px){
     #home-view .locale-page[data-locale="en"] .home-marker{
       white-space:normal!important;
@@ -2032,6 +2037,23 @@ button { color: inherit; font: inherit; }
     #home-view .locale-page[data-locale="en"] .home-marker::before{
       content:none!important;
       display:none!important;
+    }
+    #home-view .locale-page[data-locale="ja"] .home-marker-lead,
+    #home-view .locale-page[data-locale="ja"] .home-marker-tail,
+    #home-view .locale-page[data-locale="zh-TW"] .home-marker-lead{
+      display:block!important;
+    }
+    #home-view .locale-page[data-locale="ja"] .home-marker-line,
+    #home-view .locale-page[data-locale="zh-TW"] .home-marker-line{
+      display:block!important;
+      margin:.22em 0!important;
+      text-align:center!important;
+      line-height:1.12!important;
+    }
+    #home-view .locale-page[data-locale="ja"] .home-marker,
+    #home-view .locale-page[data-locale="zh-TW"] .home-marker{
+      display:inline-block!important;
+      white-space:nowrap!important;
     }
   }
   #home-view .home-pathways {
@@ -2205,7 +2227,7 @@ button { color: inherit; font: inherit; }
         <p class="home-subtitle">AI時代の強みは、単に多くを知ることでも、速く働くことでもありません。自分の専門領域を越えて見渡し、異なる分野のアイデアをつなぎ、他の人が見落としているものから意味のある何かを生み出す力です。</p>
         <div class="home-questions" aria-label="三つの問い"><article class="home-question"><small>01</small><h2>他の人に見えないものが、<br>見えますか？</h2><p>明白なものの先にある機会を見つける。</p></article><article class="home-question"><small>02</small><h2>まだ誰も結んでいないものを、<br>つなげますか？</h2><p>普段は交わらないアイデアと視点を結び合わせる。</p></article><article class="home-question"><small>03</small><h2>まだ存在しないものを、<br>つくれますか？</h2><p>新しいつながりを、意味のある現実へ変える。</p></article></div>
       </div></section>
-      <section class="home-section home-capacity" data-home-section="capacity"><div class="home-shell"><p class="home-eyebrow">人間の力</p><h2>この人間の力は、実践によって育てられます。</h2><p class="home-highlight">私たちはそれを<span class="home-marker">「実用創造力」</span>と呼びます。</p><p class="home-bridge">方法を学び、実際に活かす。</p></div></section>
+      <section class="home-section home-capacity" data-home-section="capacity"><div class="home-shell"><p class="home-eyebrow">人間の力</p><h2>この人間の力は、実践によって育てられます。</h2><p class="home-highlight"><span class="home-marker-lead">私たちはそれを</span><span class="home-marker-line"><span class="home-marker">実用創造力</span></span><span class="home-marker-tail">と呼びます。</span></p><p class="home-bridge">方法を学び、実際に活かす。</p></div></section>
       <section class="home-section home-practice"><div class="home-shell"><div class="home-heading"><p class="home-eyebrow">実践</p><h2>セルフラーニング・<span class="home-outline">サイクル</span></h2></div><div class="home-method-grid"><div class="home-cycle" role="img" aria-label="ACEセルフラーニング・サイクル"><img src="ACE-Learning-Cycle-1.png" alt="" aria-hidden="true"><img src="ACE-Learning-Cycle-2.png" alt="" aria-hidden="true"></div><div class="home-method-copy"><p class="home-cycle-line"><strong>好奇心を探る</strong><span>→</span><strong>組み直す</strong><span>→</span><strong>共感する</strong><span>→</span><strong>物語をつくる</strong></p><h3>好奇心を、意味のある創造へ変えるための反復可能な実践。</h3><div class="home-stage-list"><p><b>好奇心を探る</b><span>明白な答えの先を探り、より良い問いを立てます。</span></p><p><b>組み直す</b><span>普段は並ばないアイデア、技術、産業、事業モデル、経験をつなぎます。</span></p><p><b>共感する</b><span>思い込みを越えて、実在する人と、彼らが本当に大切にしていることを理解します。</span></p><p><b>物語をつくる</b><span>曖昧な可能性を、他者が理解し、体験し、議論し、前へ進められるものに変えます。</span></p></div><a class="home-link" href="#methodology" data-page="methodology">方法論を見る <span aria-hidden="true">↗</span></a></div></div></div></section>
       <section class="home-section home-pathways"><div class="home-shell"><div class="home-pathways-intro"><p class="home-eyebrow">実際に活かす</p><h2>どこで、この力を活かしますか？</h2><p>二つの道。一つの創造力エンジン。</p></div><div class="home-pathway-grid">
         <article class="home-pathway leadership"><div class="home-pathway-top"><span>01 / リーダーのために</span><span>2回のワークショップ</span></div><img src="who-its-for-leadership.png" alt="分野を越えて新しい可能性を見渡すリーダー"><p class="home-eyebrow">現代のリーダー</p><h3>専門領域の<br><span class="home-outline">その先へ。</span></h3><p class="home-pathway-copy">分野を越えて全体を見渡し、取り組む価値のある問題を見つけ、次に何をつくるべきかを決める必要があるリーダーのために。</p><blockquote>前例も正解もないとき、あなたは導けますか？</blockquote><a class="home-link" href="#leadership" data-page="leadership">創造力リーダーシップを見る <span aria-hidden="true">↗</span></a></article>
@@ -2220,7 +2242,7 @@ button { color: inherit; font: inherit; }
         <p class="home-subtitle">在 AI 時代，你的優勢不只是知道得更多或工作得更快，而是能夠超越自己的專業領域、連結不同領域的想法，並從別人忽略的事物中創造出有意義的成果。</p>
         <div class="home-questions" aria-label="三個問題"><article class="home-question"><small>01</small><h2>你能看見<br>別人沒看見的嗎？</h2><p>在顯而易見之外，發現新的機會。</p></article><article class="home-question"><small>02</small><h2>你能連結<br>別人尚未連結的嗎？</h2><p>讓平常不會相遇的想法與觀點產生連結。</p></article><article class="home-question"><small>03</small><h2>你能創造<br>尚未存在的事物嗎？</h2><p>把新的連結變成真實而有意義的成果。</p></article></div>
       </div></section>
-      <section class="home-section home-capacity" data-home-section="capacity"><div class="home-shell"><p class="home-eyebrow">人類的能力</p><h2>這種人類能力，可以透過實踐逐步培養。</h2><p class="home-highlight">我們稱它為<span class="home-marker">「實用創造力」。</span></p><p class="home-bridge">學會方法，然後實際運用。</p></div></section>
+      <section class="home-section home-capacity" data-home-section="capacity"><div class="home-shell"><p class="home-eyebrow">人類的能力</p><h2>這種人類能力，可以透過實踐逐步培養。</h2><p class="home-highlight"><span class="home-marker-lead">我們稱它為</span><span class="home-marker-line"><span class="home-marker">實用創造力</span><span class="home-marker-punctuation">。</span></span></p><p class="home-bridge">學會方法，然後實際運用。</p></div></section>
       <section class="home-section home-practice"><div class="home-shell"><div class="home-heading"><p class="home-eyebrow">實踐方法</p><h2>自我學習<span class="home-outline">循環</span></h2></div><div class="home-method-grid"><div class="home-cycle" role="img" aria-label="ACE 自我學習循環"><img src="ACE-Learning-Cycle-1.png" alt="" aria-hidden="true"><img src="ACE-Learning-Cycle-2.png" alt="" aria-hidden="true"></div><div class="home-method-copy"><p class="home-cycle-line"><strong>好奇探索</strong><span>→</span><strong>重新組合</strong><span>→</span><strong>移情同理</strong><span>→</span><strong>打造故事</strong></p><h3>一套可以反覆練習，把好奇心轉化為有意義創造的方法。</h3><div class="home-stage-list"><p><b>好奇探索</b><span>超越顯而易見的答案，提出更好的問題。</span></p><p><b>重新組合</b><span>連結原本不會放在一起的想法、科技、產業、商業模式與經驗。</span></p><p><b>移情同理</b><span>放下自己的假設，理解真實的人，以及他們真正重視的事。</span></p><p><b>打造故事</b><span>把模糊的可能，變成其他人能理解、體驗、討論，並繼續推進的事物。</span></p></div><a class="home-link" href="#methodology" data-page="methodology">探索方法論 <span aria-hidden="true">↗</span></a></div></div></div></section>
       <section class="home-section home-pathways"><div class="home-shell"><div class="home-pathways-intro"><p class="home-eyebrow">實際運用</p><h2>你會把這股力量用在哪裡？</h2><p>兩條路徑，一具創造力引擎。</p></div><div class="home-pathway-grid">
         <article class="home-pathway leadership"><div class="home-pathway-top"><span>01 / 為領導者而設</span><span>2 堂工作坊</span></div><img src="who-its-for-leadership.png" alt="跨越不同領域、看向新可能的領導者"><p class="home-eyebrow">現代領導者</p><h3>跨越你的<br><span class="home-outline">專業領域。</span></h3><p class="home-pathway-copy">適合需要跨領域看見全貌、發現哪些問題值得解決，並決定下一步應該創造什麼的領導者。</p><blockquote>當沒有現成的成功模式時，你能帶領團隊前進嗎？</blockquote><a class="home-link" href="#leadership" data-page="leadership">探索創造力領導工作坊 <span aria-hidden="true">↗</span></a></article>
