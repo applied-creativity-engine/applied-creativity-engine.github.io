@@ -53,6 +53,7 @@ button { color: inherit; font: inherit; }
 
 .blank-page { flex: 1 0 auto; min-height: calc(100svh - 196px); background: var(--page-bg); }
 .site-footer { min-height: 120px; display: flex; align-items: center; justify-content: center; padding: 30px 5.5vw; background: var(--ink); color: white; border-top: 3px solid var(--ink); font-size: 14px; font-weight: 800; text-align: center; }
+.mobile-footer-break { display: none; }
 
 @media (max-width: 980px) {
   .site-header nav { position: absolute; top: calc(100% + 3px); right: 0; left: 0; display: grid; max-height: 0; gap: 0; overflow: hidden; background: var(--paper); border-bottom: 0 solid var(--ink); opacity: 0; transition: max-height 220ms ease, opacity 180ms ease, border-width 180ms ease; }
@@ -72,6 +73,7 @@ button { color: inherit; font: inherit; }
   .language-switcher button { min-height: 30px; padding-inline: 8px; font-size: 11px; }
   .blank-page { min-height: calc(100svh - 190px); }
   .site-footer { padding: 38px 20px; }
+  .mobile-footer-break { display: block; }
 }
 
 @media (max-width: 420px) {
@@ -2774,7 +2776,7 @@ button { color: inherit; font: inherit; }
 </div>
 
   </section>
-  <footer class="site-footer"><span>Copyright © 2026 Applied Creativity Engine. All rights reserved.</span></footer>
+  <footer class="site-footer"><span>Copyright © 2026 Applied Creativity Engine. <br class="mobile-footer-break">All rights reserved.</span></footer>
 
   <script>
   (() => {
@@ -2823,8 +2825,7 @@ button { color: inherit; font: inherit; }
         button.setAttribute('aria-pressed', String(active));
       });
       document.querySelectorAll('.nav-button').forEach(link => link.textContent = navLabels[locale][link.dataset.page]);
-      document.querySelector('.site-header .brand').textContent = organizationNames[locale];
-      document.querySelector('.site-footer span').textContent = 'Copyright © 2026 ' + organizationNames[locale] + '. All rights reserved.';
+      document.querySelector('.site-header .brand').textContent = 'Applied Creativity Engine';
       document.querySelectorAll('.ace-logo').forEach(image => {
         const root = image.closest('[data-locale], #english, #japanese, #chinese');
         const imageLocale = root?.dataset.locale || ({english:'en',japanese:'ja',chinese:'zh-TW'}[root?.id]) || 'en';
