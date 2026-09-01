@@ -2046,20 +2046,38 @@ button { color: inherit; font: inherit; }
   #home-view .home-marker-tail {
     display:inline;
   }
+  #home-view .home-marker-first,
+  #home-view .home-marker-second {
+    display:inline;
+  }
   @media(max-width:760px){
     #home-view .locale-page[data-locale="en"] .home-marker{
-      white-space:normal!important;
-      padding:0 .08em!important;
-      background:var(--ace-flow)!important;
-      background-size:100% 86%!important;
-      background-position:center bottom!important;
-      background-repeat:no-repeat!important;
-      -webkit-box-decoration-break:clone!important;
-      box-decoration-break:clone!important;
+      display:inline-flex!important;
+      flex-direction:column!important;
+      align-items:center!important;
+      vertical-align:middle!important;
+      white-space:nowrap!important;
+      padding:0!important;
+      background:none!important;
     }
     #home-view .locale-page[data-locale="en"] .home-marker::before{
       content:none!important;
       display:none!important;
+    }
+    #home-view .locale-page[data-locale="en"] .home-marker-first,
+    #home-view .locale-page[data-locale="en"] .home-marker-second{
+      display:block!important;
+      width:fit-content!important;
+      padding:0 .08em!important;
+      background-size:100% 86%!important;
+      background-position:center bottom!important;
+      background-repeat:no-repeat!important;
+    }
+    #home-view .locale-page[data-locale="en"] .home-marker-first{
+      background-image:linear-gradient(90deg,#00F4A4 0%,#6AFF14 50%,#EEB800 100%)!important;
+    }
+    #home-view .locale-page[data-locale="en"] .home-marker-second{
+      background-image:linear-gradient(90deg,#EEB800 0%,#FF850B 33.333%,#FF392C 66.667%,#F20072 100%)!important;
     }
     #home-view .locale-page[data-locale="ja"] .home-marker-lead,
     #home-view .locale-page[data-locale="ja"] .home-marker-tail,
@@ -2578,7 +2596,7 @@ button { color: inherit; font: inherit; }
         <p class="home-subtitle">In the age of AI, your advantage is not simply knowing more or working faster. It is your ability to see beyond your expertise, connect ideas across disciplines, and create something meaningful from what others overlook.</p>
         <div class="home-questions" aria-label="Three questions"><article class="home-question"><small>01</small><h2>Can you see<br>what others don’t?</h2><p>Discover opportunities beyond the obvious.</p></article><article class="home-question"><small>02</small><h2>Can you connect<br>what others haven’t?</h2><p>Bring together ideas and perspectives that rarely meet.</p></article><article class="home-question"><small>03</small><h2>Can you create<br>what doesn’t yet exist?</h2><p>Turn new connections into something meaningful and real.</p></article></div>
       </div></section>
-      <section class="home-section home-capacity" data-home-section="capacity"><div class="home-shell"><p class="home-eyebrow">THE HUMAN CAPACITY</p><h2>There’s a practical way to develop this human capacity.</h2><p class="home-highlight">We call it<span class="home-three-spaces" aria-hidden="true">   </span><span class="home-marker">Applied Creativity.</span></p><p class="home-bridge">Learn the practice. Then put it to work.</p></div></section>
+      <section class="home-section home-capacity" data-home-section="capacity"><div class="home-shell"><p class="home-eyebrow">THE HUMAN CAPACITY</p><h2>There’s a practical way to develop this human capacity.</h2><p class="home-highlight">We call it<span class="home-three-spaces" aria-hidden="true">   </span><span class="home-marker"><span class="home-marker-first">Applied</span> <span class="home-marker-second">Creativity.</span></span></p><p class="home-bridge">Learn the practice. Then put it to work.</p></div></section>
       <section class="home-section home-practice"><div class="home-shell"><div class="home-heading"><p class="home-eyebrow">THE PRACTICE</p><h2>The Self-Learning <span class="home-outline">Cycle</span></h2></div><div class="home-method-grid"><div class="home-cycle" role="img" aria-label="ACE Self-Learning Cycle"><img src="ACE-Learning-Cycle-1.png" alt="" aria-hidden="true"><img src="ACE-Learning-Cycle-2.png" alt="" aria-hidden="true"></div><div class="home-method-copy"><p class="home-cycle-line"><strong>Curious</strong><span>→</span><strong>Remix</strong><span>→</span><strong>Empathize</strong><span>→</span><strong>Storycraft</strong></p><h3>A repeatable practice for turning curiosity into meaningful creation.</h3><div class="home-stage-list"><p><b>Curious</b><span>Explore beyond the obvious and ask better questions.</span></p><p><b>Remix</b><span>Connect ideas, technologies, industries, business models, and experiences that do not normally sit together.</span></p><p><b>Empathize</b><span>Move beyond assumptions to understand real people and what genuinely matters to them.</span></p><p><b>Storycraft</b><span>Turn a vague possibility into something others can understand, experience, discuss, and move forward.</span></p></div><a class="home-link" href="#methodology" data-page="methodology">Explore the Methodology <span aria-hidden="true">↗</span></a></div></div></div></section>
       <section class="home-section home-pathways"><div class="home-shell"><div class="home-pathways-intro"><p class="home-eyebrow">PUT IT TO WORK</p><h2>Where will you put it to work?</h2><p>Two pathways. One creative engine.</p></div><div class="home-pathway-grid">
         <article class="home-pathway leadership"><div class="home-pathway-top"><span>01 / FOR LEADERS</span><span>2 WORKSHOP SESSIONS</span></div><img src="who-its-for-leadership.png" alt="A leader looking across disciplines toward new possibilities"><p class="home-eyebrow">MODERN-DAY LEADERS</p><h3>Think Beyond<br><span class="home-outline">Your Expertise.</span></h3><p class="home-pathway-copy">For leaders who need to see across disciplines, discover which problems are worth solving, and decide what should be created next.</p><blockquote>Can you lead when there is no proven playbook?</blockquote><a class="home-link" href="#leadership" data-page="leadership">Explore Creative Leadership <span aria-hidden="true">↗</span></a></article>
