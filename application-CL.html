@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Submit your work and apply for an ACE Certification.">
+  <title>Get Your ACE Creative Leadership Certificate</title>
+  <style>
+    @font-face {
+      font-family: "ACE About English";
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url("ACE-About-English-Latin-Ext.woff2") format("woff2");
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    @font-face {
+      font-family: "ACE About English";
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url("ACE-About-English-Latin.woff2") format("woff2");
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    :root {
+      --mint: #00F4A4;
+      --green: #6AFF14;
+      --yellow: #EEB800;
+      --orange: #FF850B;
+      --red: #FF392C;
+      --pink: #F20072;
+      --ink: #171717;
+      --paper: #FFFDF7;
+      --muted: #62625F;
+      --line: #171717;
+      --pale-mint: #E5FFF6;
+      --pale-yellow: #FFF8DA;
+      --pale-pink: #FFF0F7;
+      --ace-flow: linear-gradient(90deg, var(--mint) 0%, var(--green) 20%, var(--yellow) 40%, var(--orange) 60%, var(--red) 80%, var(--pink) 100%);
+      --page-pad: clamp(20px, 5vw, 76px);
+    }
+
+    * { box-sizing: border-box; }
+    html body, html body * {
+      font-family: "ACE About English", -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif !important;
+      font-kerning: normal !important;
+      font-variant-ligatures: common-ligatures contextual !important;
+      font-optical-sizing: auto;
+      text-rendering: optimizeLegibility;
+    }
+    h1, h2 { font-weight: 950; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "ACE About English", -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      font-kerning: normal;
+      font-variant-ligatures: common-ligatures contextual;
+      font-optical-sizing: auto;
+      text-rendering: optimizeLegibility;
+    }
+
+    button,
+    input { font: inherit; }
+
+    .site-header {
+      position: relative;
+      overflow: hidden;
+      min-height: min(76vh, 760px);
+      display: flex;
+      align-items: flex-end;
+      padding: clamp(42px, 7vw, 96px) var(--page-pad);
+      color: #fff;
+      background: var(--ink);
+      isolation: isolate;
+    }
+
+    .site-header::before,
+    .site-header::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .site-header::before {
+      width: clamp(360px, 55vw, 820px);
+      aspect-ratio: 1;
+      top: clamp(-310px, -22vw, -90px);
+      right: clamp(-260px, -13vw, -50px);
+      background: var(--ace-flow);
+      opacity: .86;
+    }
+
+    .site-header::after {
+      width: clamp(180px, 25vw, 390px);
+      aspect-ratio: 1;
+      left: clamp(-130px, -7vw, -30px);
+      bottom: clamp(-190px, -10vw, -80px);
+      background: var(--mint);
+      opacity: .72;
+    }
+
+    .brand {
+      position: absolute;
+      top: 28px;
+      left: var(--page-pad);
+      margin: 0;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    .hero-inner {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 25px;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .kicker::before {
+      content: "";
+      width: 58px;
+      height: 12px;
+      background: var(--ace-flow);
+      transform: rotate(-3deg);
+    }
+
+    h1 {
+      max-width: 1000px;
+      margin: 0;
+      font-size: clamp(58px, 10vw, 148px);
+      line-height: .8;
+      letter-spacing: -.055em;
+      text-wrap: balance;
+    }
+
+    h1 span {
+      display: inline;
+      padding: 0 .025em;
+      color: #fff;
+      background-image: var(--ace-flow);
+      background-size: 100% .4em;
+      background-position: left bottom .12em;
+      background-repeat: no-repeat;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+    }
+
+    .hero-copy {
+      max-width: 630px;
+      margin: clamp(34px, 5vw, 60px) 0 0;
+      font-size: clamp(17px, 1.7vw, 22px);
+      font-weight: 700;
+    }
+
+    main { overflow: hidden; }
+
+    .form-shell {
+      width: min(1180px, calc(100% - (2 * var(--page-pad))));
+      margin: 0 auto;
+      padding: clamp(38px, 6vw, 84px) 0 clamp(70px, 10vw, 150px);
+    }
+
+    form { counter-reset: section; }
+
+    .form-section {
+      display: grid;
+      grid-template-columns: minmax(210px, .36fr) minmax(0, 1fr);
+      gap: clamp(36px, 7vw, 100px);
+      padding: clamp(48px, 7vw, 92px) 0;
+      border-top: 2px solid var(--line);
+    }
+
+    .section-heading { align-self: start; }
+
+    .section-number {
+      display: block;
+      margin-bottom: 18px;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .16em;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      font-size: clamp(34px, 4.6vw, 66px);
+      line-height: .94;
+      letter-spacing: -.055em;
+    }
+
+    .section-heading::after {
+      content: "";
+      display: block;
+      width: 72px;
+      height: 13px;
+      margin-top: 25px;
+      background: var(--section-accent, var(--ace-flow));
+      transform: rotate(-3deg);
+    }
+
+    .form-section:nth-of-type(1) { --section-accent: var(--mint); }
+    .form-section:nth-of-type(2) { --section-accent: var(--yellow); }
+    .form-section:nth-of-type(3) { --section-accent: var(--pink); }
+    .form-section:first-of-type { padding-top: 0; border-top: 0; }
+
+    .fields {
+      display: grid;
+      gap: 30px;
+      min-width: 0;
+    }
+
+    .field label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: clamp(15px, 1.5vw, 18px);
+      font-weight: 900;
+      letter-spacing: .04em;
+    }
+
+    .field small {
+      display: block;
+      max-width: 660px;
+      margin: -2px 0 13px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    input[type="url"],
+    input[type="email"],
+    input[type="text"] {
+      width: 100%;
+      min-height: 62px;
+      padding: 15px 18px;
+      color: var(--ink);
+      background: #fff;
+      border: 2px solid var(--line);
+      border-radius: 0;
+      outline: 0;
+      box-shadow: 7px 7px 0 var(--field-shadow, var(--mint));
+      transition: transform .16s ease, box-shadow .16s ease;
+    }
+
+    .field:nth-child(1) { --field-shadow: var(--mint); }
+    .field:nth-child(2) { --field-shadow: var(--yellow); }
+    .field:nth-child(3) { --field-shadow: var(--pink); }
+
+    input:focus {
+      transform: translate(-2px, -2px);
+      box-shadow: 10px 10px 0 var(--field-shadow, var(--mint));
+    }
+
+    input::placeholder { color: #92928D; }
+
+    .agreements {
+      display: grid;
+      gap: 14px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .agreement {
+      position: relative;
+      display: grid;
+      grid-template-columns: 16px 1fr;
+      gap: 16px;
+      align-items: start;
+      padding: clamp(18px, 3vw, 27px);
+      background: var(--agreement-bg, var(--pale-mint));
+      border: 2px solid var(--line);
+      font-size: clamp(15px, 1.5vw, 18px);
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .agreement:nth-child(2) { --agreement-bg: var(--pale-yellow); }
+    .agreement:nth-child(3) { --agreement-bg: var(--pale-pink); }
+
+    .agreement::before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      margin-top: .38em;
+      border-radius: 50%;
+      background: var(--mint);
+    }
+
+    .agreement:nth-child(2)::before { background: var(--yellow); }
+    .agreement:nth-child(3)::before { background: var(--pink); }
+
+    .submit-area {
+      position: relative;
+      padding: clamp(42px, 6vw, 72px) 0 0;
+      text-align: center;
+      background: transparent;
+      border: 0;
+    }
+
+    .submit-button {
+      position: relative;
+      z-index: 0;
+      min-width: min(330px, 100%);
+      min-height: 72px;
+      padding: 19px 34px;
+      color: #fff;
+      background: var(--ink);
+      border: 2px solid var(--ink);
+      border-radius: 0;
+      box-shadow: 10px 10px 0 var(--pink);
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+
+    .submit-button:hover { transform: translate(-3px, -3px); box-shadow: 13px 13px 0 var(--pink); }
+    .submit-button:active { transform: translate(6px, 6px); box-shadow: 4px 4px 0 var(--pink); }
+    .submit-button:focus-visible { outline: 4px solid var(--orange); outline-offset: 5px; }
+    .submit-button:disabled { cursor: not-allowed; opacity: .38; transform: none; box-shadow: 7px 7px 0 var(--pink); }
+    .submit-button.is-submitting:disabled { cursor: wait; opacity: .7; }
+
+    .legal {
+      max-width: 960px;
+      margin: 30px auto 0;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 900;
+      line-height: 1.5;
+      letter-spacing: .04em;
+    }
+
+    .legal-line { display: block; text-wrap: balance; }
+
+    .status {
+      min-height: 24px;
+      margin: 18px 0 0;
+      color: #9A003F;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .honeypot { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+    .success-screen {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      padding: var(--page-pad);
+      background: var(--ink);
+      color: #fff;
+      isolation: isolate;
+    }
+
+    .success-screen[hidden] { display: none; }
+
+    .success-card {
+      position: relative;
+      width: min(890px, 100%);
+      padding: clamp(38px, 8vw, 100px);
+      color: var(--ink);
+      background: var(--paper);
+      border: 2px solid #fff;
+      box-shadow: clamp(12px, 2vw, 24px) clamp(12px, 2vw, 24px) 0 var(--pink);
+    }
+
+    .success-card::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 16px;
+      margin-bottom: clamp(32px, 5vw, 58px);
+      background: var(--ace-flow);
+    }
+
+    .success-card h2 {
+      max-width: 720px;
+      margin: 0;
+      font-size: clamp(45px, 8vw, 92px);
+      line-height: .9;
+      letter-spacing: -.065em;
+    }
+
+    .success-card p {
+      max-width: 680px;
+      margin: 32px 0 0;
+      font-size: clamp(17px, 2vw, 22px);
+      font-weight: 700;
+    }
+
+    .success-card strong { background: linear-gradient(transparent 48%, var(--yellow) 48%); }
+
+    @media (max-width: 760px) {
+      .site-header { min-height: 660px; padding-bottom: 58px; }
+      .brand { top: 21px; }
+      h1 { font-size: clamp(40px, 11.5vw, 84px); }
+      .hero-copy { max-width: 500px; }
+      .form-shell { width: min(100% - 40px, 680px); padding: 38px 0 80px; }
+      .form-section { grid-template-columns: 1fr; gap: 34px; padding: 54px 0; }
+      .section-heading::after { margin-top: 18px; }
+      input[type="url"], input[type="email"], input[type="text"] { min-height: 58px; box-shadow: 5px 5px 0 var(--field-shadow, var(--mint)); }
+      .agreement { grid-template-columns: 14px 1fr; gap: 13px; }
+      .submit-area { margin-top: 12px; }
+      .submit-button { min-height: 66px; box-shadow: 8px 8px 0 var(--pink); }
+    }
+
+    @media (max-width: 420px) {
+      :root { --page-pad: 20px; }
+      .site-header { min-height: 610px; }
+      h1 { font-size: clamp(32px, 11.5vw, 48px); }
+      .hero-copy { font-size: 16px; }
+      .form-shell { width: calc(100% - 32px); }
+      .section-heading h2 { font-size: 39px; }
+      .submit-area { padding-inline: 19px; }
+      .success-card { padding: 28px 24px 50px; box-shadow: 10px 10px 0 var(--pink); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div id="applicationView">
+    <header class="site-header">
+      <div class="hero-inner">
+        <p class="kicker">ACE Certification</p>
+        <h1>Get Your ACE <span>Creative Leadership</span> Certificate</h1>
+        <p class="hero-copy">Submit the work you created during the workshop. Once reviewed and approved, your digital certificate will be sent directly to your email address.</p>
+      </div>
+    </header>
+
+    <main>
+      <div class="form-shell">
+        <form id="applicationForm" novalidate>
+          <section class="form-section" aria-labelledby="submit-work-title">
+            <div class="section-heading">
+              <span class="section-number">01 / YOUR WORK</span>
+              <h2 id="submit-work-title">Submit Your Work</h2>
+            </div>
+            <div class="fields">
+              <div class="field">
+                <label for="storybook">User Journey Storybook</label>
+                <input id="storybook" name="User Journey Storybook" type="url" inputmode="url" autocomplete="url" placeholder="https://" required>
+              </div>
+              <div class="field">
+                <label for="whitepaper">MVP PRD White Paper</label>
+                <input id="whitepaper" name="MVP PRD White Paper" type="url" inputmode="url" autocomplete="url" placeholder="https://" required>
+              </div>
+              <div class="field">
+                <label for="website">Customer-Facing Website</label>
+                <input id="website" name="Customer-Facing Website" type="url" inputmode="url" autocomplete="url" placeholder="https://" required>
+              </div>
+            </div>
+          </section>
+
+          <section class="form-section" aria-labelledby="agreement-title">
+            <div class="section-heading">
+              <span class="section-number">02 / CONSENT</span>
+              <h2 id="agreement-title">Agreement</h2>
+            </div>
+            <ul class="agreements">
+              <li class="agreement"><span>I confirm that the ideas underlying the three works submitted above were conceived by me during the workshop.</span></li>
+              <li class="agreement"><span>I consent to these works being displayed on the official ACE website.</span></li>
+              <li class="agreement"><span>I authorize ACE to reinterpret and adapt my submitted works.</span></li>
+            </ul>
+          </section>
+
+          <section class="form-section" aria-labelledby="personal-info-title">
+            <div class="section-heading">
+              <span class="section-number">03 / ABOUT YOU</span>
+              <h2 id="personal-info-title">Personal Information</h2>
+            </div>
+            <div class="fields">
+              <div class="field">
+                <label for="email">Your email address</label>
+                <small>We will send your digital certificate to this email address.</small>
+                <input id="email" name="Email Address" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" required>
+              </div>
+              <div class="field">
+                <label for="certificateName">Your name on certificate</label>
+                <small>Enter your name exactly as you would like it to appear on your certificate.</small>
+                <input id="certificateName" name="Name on Certificate" type="text" autocomplete="name" placeholder="Your full name" maxlength="120" required>
+              </div>
+            </div>
+          </section>
+
+          <div class="honeypot" aria-hidden="true">
+            <label for="companySite">Leave this field empty</label>
+            <input id="companySite" type="text" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="submit-area">
+            <button class="submit-button" type="submit" disabled>Submit</button>
+            <p class="legal"><span class="legal-line">By clicking Submit, I agree to submit my work, accept all three statements in the</span> <span class="legal-line">Agreement section, and confirm that all information I have provided is accurate.</span></p>
+            <p id="formStatus" class="status" role="alert" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <section id="successView" class="success-screen" hidden aria-labelledby="success-title">
+    <div class="success-card">
+      <p class="kicker">Submission received</p>
+      <h2 id="success-title" tabindex="-1">Thank you for your submission.</h2>
+      <p>We will carefully review your materials. Once your application has been approved, your digital certificate will be sent to the email address you provided.</p>
+      <p>This process usually takes approximately <strong>seven days</strong>. Thank you for your patience. You may now close this page.</p>
+    </div>
+  </section>
+
+  <script>
+    (() => {
+      const form = document.getElementById('applicationForm');
+      const button = form.querySelector('.submit-button');
+      const status = document.getElementById('formStatus');
+      const applicationView = document.getElementById('applicationView');
+      const successView = document.getElementById('successView');
+      const endpoint = 'https://formsubmit.co/ajax/joshuachao@appliedcreativity.ai';
+
+      const updateSubmitState = () => {
+        if (button.classList.contains('is-submitting')) return;
+        button.disabled = !form.checkValidity();
+      };
+
+      form.addEventListener('input', updateSubmitState);
+      form.addEventListener('change', updateSubmitState);
+      updateSubmitState();
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        if (!form.reportValidity()) return;
+        if (document.getElementById('companySite').value) return;
+
+        const certificateName = document.getElementById('certificateName').value.trim();
+        const payload = {
+          'User Journey Storybook': document.getElementById('storybook').value.trim(),
+          'MVP PRD White Paper': document.getElementById('whitepaper').value.trim(),
+          'Customer-Facing Website': document.getElementById('website').value.trim(),
+          'Email Address': document.getElementById('email').value.trim(),
+          'Name on Certificate': certificateName,
+          '_subject': `Application: ${certificateName}`,
+          '_template': 'basic'
+        };
+
+        button.disabled = true;
+        button.classList.add('is-submitting');
+        button.textContent = 'Submitting…';
+        status.textContent = '';
+
+        try {
+          const response = await fetch(endpoint, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify(payload)
+          });
+          const result = await response.json().catch(() => ({}));
+          if (!response.ok || result.success === false) throw new Error('Submission failed');
+
+          applicationView.hidden = true;
+          successView.hidden = false;
+          window.scrollTo({ top: 0, behavior: 'auto' });
+          successView.querySelector('h2').focus();
+        } catch (error) {
+          status.textContent = 'We could not submit your application. Please check your internet connection and try again.';
+          button.classList.remove('is-submitting');
+          button.textContent = 'Submit';
+          updateSubmitState();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
