@@ -96,7 +96,7 @@
       aspect-ratio: 1;
       top: clamp(-310px, -22vw, -90px);
       right: clamp(-260px, -13vw, -50px);
-      background: var(--ace-flow);
+      background: linear-gradient(45deg, var(--mint) 0%, var(--green) 20%, var(--yellow) 40%, var(--orange) 60%, var(--red) 80%, var(--pink) 100%);
       opacity: .86;
     }
 
@@ -405,7 +405,7 @@
     @media (max-width: 760px) {
       .site-header { min-height: 660px; padding-bottom: 58px; }
       .brand { top: 21px; }
-      h1 { font-size: clamp(40px, 11.5vw, 84px); }
+      h1 { font-size: clamp(40px, 11.5vw, 84px); line-height: 1.2; }
       .hero-copy { max-width: 500px; }
       .form-shell { width: min(100% - 40px, 680px); padding: 38px 0 80px; }
       .form-section { grid-template-columns: 1fr; gap: 34px; padding: 54px 0; }
