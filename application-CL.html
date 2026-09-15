@@ -382,7 +382,7 @@
     .success-card h2 {
       max-width: 720px;
       margin: 0;
-      font-size: clamp(20px, 8.6cqw, 58px);
+      font-size: clamp(20px, 12cqw, 82px);
       line-height: 1;
       letter-spacing: -.065em;
     }
@@ -394,7 +394,12 @@
       font-weight: 700;
     }
 
-    .success-card strong { background: linear-gradient(transparent 48%, var(--yellow) 48%); }
+    .success-card .kicker { margin: 0 0 24px; }
+    .success-card strong {
+      background: linear-gradient(transparent 48%, var(--yellow) 48%);
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+    }
     .success-title-line { display: block; white-space: nowrap; }
 
     @media (max-width: 760px) {
@@ -508,7 +513,7 @@
     <div class="success-card">
       <p class="kicker">Submission received</p>
       <h2 id="success-title" tabindex="-1"><span class="success-title-line">Thank you for</span> <span class="success-title-line">your submission.</span></h2>
-      <p>We will carefully review your materials. Once your application has been approved, your digital certificate will be sent to the email address you provided.</p>
+      <p>We will carefully review your materials. Once your application has been approved, your <strong>digital certificate</strong> will be sent to the email address you provided.</p>
       <p>This process usually takes approximately <strong>seven days</strong>. Thank you for your patience. You may now close this page.</p>
     </div>
   </section>
